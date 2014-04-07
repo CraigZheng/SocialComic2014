@@ -65,9 +65,13 @@
         Comic *comic = [comics objectAtIndex:indexPath.row];
         titleLabel.text = comic.zipFileURL.lastPathComponent;
         //cover image - TODO: load freshly downloaded image
-        if (comic.coverFile) {
-            UIImage *image = [UIImage imageWithContentsOfFile:comic.coverFile.absoluteString];
-            coverImageView.image = image;
+        if (comic.localCoverFile) {
+            UIImage *image = [UIImage imageWithContentsOfFile:comic.localCoverFile];
+            if (image)
+                coverImageView.image = image;
+            else {
+                //TODO: change the image to indicate that the cover file has yet to be downloaded
+            }
         }
     }
     
@@ -92,7 +96,7 @@
         NSString *saveToPath = [userInfo objectForKey:@"SavePath"];
         for (Comic *comic in comics) {
             if ([comic.coverFileURL isEqualToString:[userInfo objectForKey:@"ImageURL"]]) {
-                comic.coverFile = [NSURL fileURLWithPath:saveToPath];
+                comic.localCoverFile = saveToPath;
             }
         }
         [self.tableView reloadData];

@@ -71,6 +71,7 @@
         [downloadingImage addObject:imgDownloader];
     } else {
         NSLog(@"no more downloads!");
+        [self stopAllDownloading];
     }
 }
 

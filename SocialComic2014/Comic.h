@@ -14,8 +14,8 @@
 @property NSString *zipFileURL;
 @property NSString *descriptionFileURL;
 //local URL
-@property NSURL *coverFile;
-@property NSURL *zipFile;
-@property NSURL *descriptionFile;
+@property NSString *localCoverFile;
+@property NSString *localZipFile;
+@property NSString *localDescriptionFile;
 @property NSString *unzipToFolder;
 @end

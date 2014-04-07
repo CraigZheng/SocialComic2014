@@ -24,7 +24,8 @@
 -(void)downloadImage:(NSString*)imgURL :(NSString*)toFolder{
     imageURL = imgURL;
     saveToFolder = toFolder;
-    urlConnection = [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[@"http://" stringByAppendingString:imgURL]]] delegate:self];
+    NSURL *url = [NSURL URLWithString:[[@"http://" stringByAppendingString:imgURL] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    urlConnection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:url] delegate:self startImmediately:NO];
 }
 
 #pragma mark - NSURLConnectionDelegate
@@ -53,7 +54,7 @@
         [self.delegate downloadOfImageFinished:NO :imageURL :nil];
         NSLog(@"%@", error);
     } else
-        [self.delegate downloadOfImageFinished:YES :imageURL :saveToFolder];
+        [self.delegate downloadOfImageFinished:YES :imageURL :saveToFile];
 }
 
 -(void)start {
