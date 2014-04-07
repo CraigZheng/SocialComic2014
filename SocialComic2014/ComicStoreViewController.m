@@ -10,6 +10,8 @@
 #import "XMLDownloader.h"
 #import "XMLProsessor.h"
 #import "Comic.h"
+#import "Toast+UIView.h"
+#import "AppDelegate.h"
 #import "ImageCentre.h"
 #import "DACircularProgressView.h"
 
@@ -26,12 +28,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     comics = [NSArray new];
+    [self startDownloadingComicList];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
+}
+
+-(void)startDownloadingComicList{
     imageCentre = [ImageCentre new];
     XMLDownloader *xmlDownloader = [XMLDownloader new];
     xmlDownloader.delegate = self;
     [xmlDownloader downloadXML];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
+    [[[AppDelegate sharedAppDelegate] window] makeToastActivity];
 }
 
 -(void)downloadOfXMLCompleted:(BOOL)success :(NSData *)xmlData{
@@ -44,6 +51,7 @@
         NSLog(@"size %d", comics.count);
         [self.tableView reloadData];
     }
+    [[[AppDelegate sharedAppDelegate] window] hideToastActivity];
 }
 
 #pragma mark - UITableViewDataSource

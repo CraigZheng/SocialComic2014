@@ -32,6 +32,7 @@
 		448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC76D18F2887200FF49A6 /* ZIPCentre.m */; };
 		448CC77218F28C2500FF49A6 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 448CC77118F28C2500FF49A6 /* icon_144.png */; };
 		448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77518F28CA200FF49A6 /* DACircularProgressView.m */; };
+		448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77918F2927A00FF49A6 /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		448CC77118F28C2500FF49A6 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
 		448CC77418F28CA200FF49A6 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
 		448CC77518F28CA200FF49A6 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		448CC77818F2927A00FF49A6 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		448CC77918F2927A00FF49A6 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
 				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+				448CC77718F2927A00FF49A6 /* Toast */,
 				448CC77318F28CA200FF49A6 /* DACircularProgress */,
 				448CC77018F28C1600FF49A6 /* Images */,
 				448CC76F18F2887600FF49A6 /* ZIP */,
@@ -261,6 +265,15 @@
 			path = DACircularProgress;
 			sourceTree = "<group>";
 		};
+		448CC77718F2927A00FF49A6 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				448CC77818F2927A00FF49A6 /* Toast+UIView.h */,
+				448CC77918F2927A00FF49A6 /* Toast+UIView.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,6 +383,7 @@
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
 				448CC71018F2342D00FF49A6 /* main.m in Sources */,
+				448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */,
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
 				448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */,
 			);
