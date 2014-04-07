@@ -14,15 +14,20 @@
 		448CC71018F2342D00FF49A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC70F18F2342D00FF49A6 /* main.m */; };
 		448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC71318F2342D00FF49A6 /* AppDelegate.m */; };
 		448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */; };
-		448CC71A18F2342D00FF49A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448CC71818F2342D00FF49A6 /* Main_iPad.storyboard */; };
-		448CC71D18F2342D00FF49A6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC71C18F2342D00FF49A6 /* FirstViewController.m */; };
-		448CC72018F2342D00FF49A6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC71F18F2342D00FF49A6 /* SecondViewController.m */; };
 		448CC72218F2342D00FF49A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448CC72118F2342D00FF49A6 /* Images.xcassets */; };
 		448CC72918F2342D00FF49A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC72818F2342D00FF49A6 /* XCTest.framework */; };
 		448CC72A18F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC72B18F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
 		448CC73318F2342D00FF49A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 448CC73118F2342D00FF49A6 /* InfoPlist.strings */; };
 		448CC73518F2342D00FF49A6 /* SocialComic2014Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC73418F2342D00FF49A6 /* SocialComic2014Tests.m */; };
+		448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */; };
+		448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC74218F237E500FF49A6 /* XMLDownloader.m */; };
+		448CC74618F237F600FF49A6 /* XMLProsessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC74518F237F600FF49A6 /* XMLProsessor.m */; };
+		448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC74818F23BA000FF49A6 /* SMXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC74C18F23C0E00FF49A6 /* Comic.m */; };
+		448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC75018F248DE00FF49A6 /* ImageCentre.m */; };
+		448CC75318F24A7F00FF49A6 /* coverSample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 448CC75218F24A7F00FF49A6 /* coverSample.jpg */; };
+		448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC75918F24C5B00FF49A6 /* ImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,17 +52,28 @@
 		448CC71218F2342D00FF49A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		448CC71318F2342D00FF49A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		448CC71618F2342D00FF49A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		448CC71918F2342D00FF49A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		448CC71B18F2342D00FF49A6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		448CC71C18F2342D00FF49A6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		448CC71E18F2342D00FF49A6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		448CC71F18F2342D00FF49A6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		448CC72118F2342D00FF49A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		448CC72718F2342D00FF49A6 /* SocialComic2014Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialComic2014Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC72818F2342D00FF49A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		448CC73018F2342D00FF49A6 /* SocialComic2014Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialComic2014Tests-Info.plist"; sourceTree = "<group>"; };
 		448CC73218F2342D00FF49A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		448CC73418F2342D00FF49A6 /* SocialComic2014Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialComic2014Tests.m; sourceTree = "<group>"; };
+		448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicStoreViewController.h; sourceTree = "<group>"; };
+		448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicStoreViewController.m; sourceTree = "<group>"; };
+		448CC74118F237E500FF49A6 /* XMLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDownloader.h; sourceTree = "<group>"; };
+		448CC74218F237E500FF49A6 /* XMLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDownloader.m; sourceTree = "<group>"; };
+		448CC74418F237F600FF49A6 /* XMLProsessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLProsessor.h; sourceTree = "<group>"; };
+		448CC74518F237F600FF49A6 /* XMLProsessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLProsessor.m; sourceTree = "<group>"; };
+		448CC74718F23BA000FF49A6 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
+		448CC74818F23BA000FF49A6 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
+		448CC74B18F23C0E00FF49A6 /* Comic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comic.h; sourceTree = "<group>"; };
+		448CC74C18F23C0E00FF49A6 /* Comic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comic.m; sourceTree = "<group>"; };
+		448CC74F18F248DE00FF49A6 /* ImageCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCentre.h; sourceTree = "<group>"; };
+		448CC75018F248DE00FF49A6 /* ImageCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCentre.m; sourceTree = "<group>"; };
+		448CC75218F24A7F00FF49A6 /* coverSample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coverSample.jpg; sourceTree = "<group>"; };
+		448CC75818F24C5B00FF49A6 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		448CC75918F24C5B00FF49A6 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		448CC75B18F24FA500FF49A6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,13 +136,15 @@
 				448CC71218F2342D00FF49A6 /* AppDelegate.h */,
 				448CC71318F2342D00FF49A6 /* AppDelegate.m */,
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
-				448CC71818F2342D00FF49A6 /* Main_iPad.storyboard */,
-				448CC71B18F2342D00FF49A6 /* FirstViewController.h */,
-				448CC71C18F2342D00FF49A6 /* FirstViewController.m */,
-				448CC71E18F2342D00FF49A6 /* SecondViewController.h */,
-				448CC71F18F2342D00FF49A6 /* SecondViewController.m */,
+				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
+				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+				448CC75418F24B2700FF49A6 /* Image */,
+				448CC74E18F248BE00FF49A6 /* XML */,
+				448CC74B18F23C0E00FF49A6 /* Comic.h */,
+				448CC74C18F23C0E00FF49A6 /* Comic.m */,
 				448CC72118F2342D00FF49A6 /* Images.xcassets */,
 				448CC70A18F2342D00FF49A6 /* Supporting Files */,
+				448CC75B18F24FA500FF49A6 /* Constants.h */,
 			);
 			path = SocialComic2014;
 			sourceTree = "<group>";
@@ -158,6 +176,39 @@
 				448CC73118F2342D00FF49A6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		448CC74A18F23BA400FF49A6 /* SMXMLDocument */ = {
+			isa = PBXGroup;
+			children = (
+				448CC74718F23BA000FF49A6 /* SMXMLDocument.h */,
+				448CC74818F23BA000FF49A6 /* SMXMLDocument.m */,
+			);
+			name = SMXMLDocument;
+			sourceTree = "<group>";
+		};
+		448CC74E18F248BE00FF49A6 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				448CC74A18F23BA400FF49A6 /* SMXMLDocument */,
+				448CC74118F237E500FF49A6 /* XMLDownloader.h */,
+				448CC74218F237E500FF49A6 /* XMLDownloader.m */,
+				448CC74418F237F600FF49A6 /* XMLProsessor.h */,
+				448CC74518F237F600FF49A6 /* XMLProsessor.m */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
+		448CC75418F24B2700FF49A6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				448CC75218F24A7F00FF49A6 /* coverSample.jpg */,
+				448CC74F18F248DE00FF49A6 /* ImageCentre.h */,
+				448CC75018F248DE00FF49A6 /* ImageCentre.m */,
+				448CC75818F24C5B00FF49A6 /* ImageDownloader.h */,
+				448CC75918F24C5B00FF49A6 /* ImageDownloader.m */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448CC71A18F2342D00FF49A6 /* Main_iPad.storyboard in Resources */,
+				448CC75318F24A7F00FF49A6 /* coverSample.jpg in Resources */,
 				448CC72218F2342D00FF49A6 /* Images.xcassets in Resources */,
 				448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */,
 				448CC70E18F2342D00FF49A6 /* InfoPlist.strings in Resources */,
@@ -258,10 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448CC72018F2342D00FF49A6 /* SecondViewController.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
-				448CC71D18F2342D00FF49A6 /* FirstViewController.m in Sources */,
+				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
+				448CC74618F237F600FF49A6 /* XMLProsessor.m in Sources */,
+				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
+				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
+				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
 				448CC71018F2342D00FF49A6 /* main.m in Sources */,
+				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
+				448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +354,6 @@
 				448CC71618F2342D00FF49A6 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		448CC71818F2342D00FF49A6 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				448CC71918F2342D00FF49A6 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		448CC73118F2342D00FF49A6 /* InfoPlist.strings */ = {
@@ -476,6 +524,7 @@
 				448CC73A18F2342D00FF49A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		448CC73B18F2342D00FF49A6 /* Build configuration list for PBXNativeTarget "SocialComic2014Tests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +533,7 @@
 				448CC73D18F2342D00FF49A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ComicStoreViewController.h
 //  SocialComic2014
 //
 //  Created by Craig on 7/04/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface ComicStoreViewController : UIViewController
 
 @end
