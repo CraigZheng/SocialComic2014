@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self checkFolders];
     return YES;
 }
 							
@@ -41,6 +42,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)checkFolders {
+    NSString *libraryFolder = [NSSearchPathForDirectoriesInDomains(
+                                                         NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *coverFolder = [libraryFolder stringByAppendingPathComponent:@"ComicCovers"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:coverFolder]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:coverFolder withIntermediateDirectories:YES attributes:nil error:nil];
+    }
 }
 
 +(AppDelegate *)sharedAppDelegate{

@@ -11,6 +11,7 @@
 @interface ImageDownloader()
 @property NSMutableData *receivedData;
 @property long long fileSize;
+@property NSString *saveToFolder;
 @end
 
 @implementation ImageDownloader
@@ -18,10 +19,12 @@
 @synthesize imageURL;
 @synthesize receivedData;
 @synthesize fileSize;
+@synthesize saveToFolder;
 
--(void)downloadImage:(NSString*)imgURL {
-    self.imageURL = imgURL;
-    urlConnection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imgURL]] delegate:self startImmediately:YES];
+-(void)downloadImage:(NSString*)imgURL :(NSString*)toFolder{
+    imageURL = imgURL;
+    saveToFolder = toFolder;
+    urlConnection = [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[@"http://" stringByAppendingString:imgURL]]] delegate:self];
 }
 
 #pragma mark - NSURLConnectionDelegate
@@ -38,11 +41,36 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [self.delegate downloadOfImageFinished:NO :nil :nil];
+    [self.delegate downloadOfImageFinished:NO :imageURL :nil];
     NSLog(@"%@", error);
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    
+    NSString *saveToFile = [saveToFolder stringByAppendingPathComponent:imageURL.lastPathComponent];
+    NSError *error;
+    [receivedData writeToFile:saveToFile options:NSDataWritingAtomic error:&error];
+    if (error){
+        [self.delegate downloadOfImageFinished:NO :imageURL :nil];
+        NSLog(@"%@", error);
+    } else
+        [self.delegate downloadOfImageFinished:YES :imageURL :saveToFolder];
+}
+
+-(void)start {
+    [urlConnection start];
+}
+
+-(void)stop {
+    [urlConnection cancel];
+}
+
+-(NSUInteger)hash{
+    return imageURL.hash;
+}
+
+-(BOOL)isEqual:(id)object{
+    if ([object isKindOfClass:[self class]])
+        return [[(ImageDownloader*)object imageURL] isEqualToString:self.imageURL];
+    return NO;
 }
 @end

@@ -21,5 +21,7 @@
 @property NSURLConnection *urlConnection;
 
 
--(void)downloadImage:(NSString*)imgURL;
+-(void)downloadImage:(NSString*)imgURL :(NSString*)toFolder;
+-(void)start;
+-(void)stop;
 @end

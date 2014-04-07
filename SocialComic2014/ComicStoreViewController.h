@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComicStoreViewController : UIViewController
+@interface ComicStoreViewController : UITableViewController
 
 @end

@@ -12,4 +12,6 @@
 @interface ImageCentre : NSObject
 
 -(void)downloadImageWithURL:(NSString*)imgURL;
+-(void)stopDownloadingOfURL:(NSString*)imgURL;
+-(void)stopAllDownloading;
 @end
