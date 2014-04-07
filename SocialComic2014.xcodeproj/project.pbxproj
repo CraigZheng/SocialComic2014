@@ -28,6 +28,8 @@
 		448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC75018F248DE00FF49A6 /* ImageCentre.m */; };
 		448CC75318F24A7F00FF49A6 /* coverSample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 448CC75218F24A7F00FF49A6 /* coverSample.jpg */; };
 		448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC75918F24C5B00FF49A6 /* ImageDownloader.m */; };
+		448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC76918F2885A00FF49A6 /* TXTCentre.m */; };
+		448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC76D18F2887200FF49A6 /* ZIPCentre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		448CC75818F24C5B00FF49A6 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		448CC75918F24C5B00FF49A6 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		448CC75B18F24FA500FF49A6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		448CC76818F2885A00FF49A6 /* TXTCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXTCentre.h; sourceTree = "<group>"; };
+		448CC76918F2885A00FF49A6 /* TXTCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTCentre.m; sourceTree = "<group>"; };
+		448CC76C18F2887200FF49A6 /* ZIPCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIPCentre.h; sourceTree = "<group>"; };
+		448CC76D18F2887200FF49A6 /* ZIPCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIPCentre.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
 				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+				448CC76F18F2887600FF49A6 /* ZIP */,
+				448CC76B18F2886000FF49A6 /* TXT */,
 				448CC75418F24B2700FF49A6 /* Image */,
 				448CC74E18F248BE00FF49A6 /* XML */,
 				448CC74B18F23C0E00FF49A6 /* Comic.h */,
@@ -209,6 +217,24 @@
 				448CC75918F24C5B00FF49A6 /* ImageDownloader.m */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		448CC76B18F2886000FF49A6 /* TXT */ = {
+			isa = PBXGroup;
+			children = (
+				448CC76818F2885A00FF49A6 /* TXTCentre.h */,
+				448CC76918F2885A00FF49A6 /* TXTCentre.m */,
+			);
+			name = TXT;
+			sourceTree = "<group>";
+		};
+		448CC76F18F2887600FF49A6 /* ZIP */ = {
+			isa = PBXGroup;
+			children = (
+				448CC76C18F2887200FF49A6 /* ZIPCentre.h */,
+				448CC76D18F2887200FF49A6 /* ZIPCentre.m */,
+			);
+			name = ZIP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +335,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
 				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
 				448CC74618F237F600FF49A6 /* XMLProsessor.m in Sources */,
+				448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */,
 				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,

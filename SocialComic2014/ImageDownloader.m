@@ -12,6 +12,7 @@
 @property NSMutableData *receivedData;
 @property long long fileSize;
 @property NSString *saveToFolder;
+@property NSString *saveToFile;
 @end
 
 @implementation ImageDownloader
@@ -20,6 +21,7 @@
 @synthesize receivedData;
 @synthesize fileSize;
 @synthesize saveToFolder;
+@synthesize saveToFile;
 
 -(void)downloadImage:(NSString*)imgURL :(NSString*)toFolder{
     imageURL = imgURL;
@@ -32,6 +34,11 @@
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     receivedData = [NSMutableData new];
     fileSize = [(NSHTTPURLResponse*)response expectedContentLength];
+    saveToFile = [saveToFolder stringByAppendingPathComponent:response.suggestedFilename];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:saveToFile]) {
+        [connection cancel];
+        [self.delegate downloadOfImageFinished:YES :imageURL :saveToFile];
+    }
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
@@ -47,7 +54,6 @@
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSString *saveToFile = [saveToFolder stringByAppendingPathComponent:imageURL.lastPathComponent];
     NSError *error;
     [receivedData writeToFile:saveToFile options:NSDataWritingAtomic error:&error];
     if (error){

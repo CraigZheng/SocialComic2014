@@ -64,7 +64,6 @@
         //assign properties of comic to this cell
         Comic *comic = [comics objectAtIndex:indexPath.row];
         titleLabel.text = comic.zipFileURL.lastPathComponent;
-        //cover image - TODO: load freshly downloaded image
         if (comic.localCoverFile) {
             UIImage *image = [UIImage imageWithContentsOfFile:comic.localCoverFile];
             if (image)
