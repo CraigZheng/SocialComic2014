@@ -30,6 +30,8 @@
 		448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC75918F24C5B00FF49A6 /* ImageDownloader.m */; };
 		448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC76918F2885A00FF49A6 /* TXTCentre.m */; };
 		448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC76D18F2887200FF49A6 /* ZIPCentre.m */; };
+		448CC77218F28C2500FF49A6 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 448CC77118F28C2500FF49A6 /* icon_144.png */; };
+		448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77518F28CA200FF49A6 /* DACircularProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,9 @@
 		448CC76918F2885A00FF49A6 /* TXTCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTCentre.m; sourceTree = "<group>"; };
 		448CC76C18F2887200FF49A6 /* ZIPCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIPCentre.h; sourceTree = "<group>"; };
 		448CC76D18F2887200FF49A6 /* ZIPCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIPCentre.m; sourceTree = "<group>"; };
+		448CC77118F28C2500FF49A6 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
+		448CC77418F28CA200FF49A6 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
+		448CC77518F28CA200FF49A6 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,8 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
 				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+				448CC77318F28CA200FF49A6 /* DACircularProgress */,
+				448CC77018F28C1600FF49A6 /* Images */,
 				448CC76F18F2887600FF49A6 /* ZIP */,
 				448CC76B18F2886000FF49A6 /* TXT */,
 				448CC75418F24B2700FF49A6 /* Image */,
@@ -210,7 +217,6 @@
 		448CC75418F24B2700FF49A6 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				448CC75218F24A7F00FF49A6 /* coverSample.jpg */,
 				448CC74F18F248DE00FF49A6 /* ImageCentre.h */,
 				448CC75018F248DE00FF49A6 /* ImageCentre.m */,
 				448CC75818F24C5B00FF49A6 /* ImageDownloader.h */,
@@ -235,6 +241,24 @@
 				448CC76D18F2887200FF49A6 /* ZIPCentre.m */,
 			);
 			name = ZIP;
+			sourceTree = "<group>";
+		};
+		448CC77018F28C1600FF49A6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				448CC75218F24A7F00FF49A6 /* coverSample.jpg */,
+				448CC77118F28C2500FF49A6 /* icon_144.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		448CC77318F28CA200FF49A6 /* DACircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				448CC77418F28CA200FF49A6 /* DACircularProgressView.h */,
+				448CC77518F28CA200FF49A6 /* DACircularProgressView.m */,
+			);
+			path = DACircularProgress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +340,7 @@
 				448CC75318F24A7F00FF49A6 /* coverSample.jpg in Resources */,
 				448CC72218F2342D00FF49A6 /* Images.xcassets in Resources */,
 				448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */,
+				448CC77218F28C2500FF49A6 /* icon_144.png in Resources */,
 				448CC70E18F2342D00FF49A6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */,
+				448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
 				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
 				448CC74618F237F600FF49A6 /* XMLProsessor.m in Sources */,

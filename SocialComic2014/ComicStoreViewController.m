@@ -11,6 +11,7 @@
 #import "XMLProsessor.h"
 #import "Comic.h"
 #import "ImageCentre.h"
+#import "DACircularProgressView.h"
 
 @interface ComicStoreViewController ()<XMLDownloaderDelegate>
 @property NSArray *comics;
@@ -30,6 +31,7 @@
     xmlDownloader.delegate = self;
     [xmlDownloader downloadXML];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
 }
 
 -(void)downloadOfXMLCompleted:(BOOL)success :(NSData *)xmlData{
@@ -60,22 +62,65 @@
         UILabel *titleLabel = (UILabel*)[cell viewWithTag:2];
         UITextView *descriptionTextView = (UITextView*)[cell viewWithTag:3];
         UIButton *downloadButton = (UIButton*)[cell viewWithTag:4];
+        DACircularProgressView *circularView = (DACircularProgressView*)[cell viewWithTag:5];
+        
         [downloadButton addTarget:self action:@selector(downloadComic:) forControlEvents:UIControlEventTouchUpInside];
         //assign properties of comic to this cell
         Comic *comic = [comics objectAtIndex:indexPath.row];
         titleLabel.text = comic.zipFileURL.lastPathComponent;
         if (comic.localCoverFile) {
             UIImage *image = [UIImage imageWithContentsOfFile:comic.localCoverFile];
-            if (image)
+            if (image) {
                 coverImageView.image = image;
+                [coverImageView setAlpha:1.0];
+                circularView.hidden = YES;
+            }
+            /*
             else {
                 //TODO: change the image to indicate that the cover file has yet to be downloaded
+                [coverImageView setAlpha:0.5];
+                circularView.hidden = NO;
             }
+             */
         }
     }
     
     return cell;
 }
+
+#pragma mark notification handler - image downloading progress update
+-(void)imageDownloadProgressUpdated:(NSNotification*)notification{
+    NSString *imgURL = [notification.userInfo objectForKey:@"ImageURL"];
+    CGFloat progress = [[notification.userInfo objectForKey:@"Progress"] floatValue];
+    if (imgURL){
+        NSInteger updateIndex = -1;
+        for (Comic *comic in comics) {
+            if ([comic.coverFileURL isEqualToString:imgURL]){
+                updateIndex = [comics indexOfObject:comic];
+                break;
+            }
+        }
+        if (updateIndex > -1){
+            UITableViewCell *cellToUpdate = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:updateIndex inSection:0]];
+            DACircularProgressView *circularProgressView = (DACircularProgressView*)[cellToUpdate viewWithTag:5];
+            UIImageView *coverImageView = (UIImageView*)[cellToUpdate viewWithTag:1];
+            circularProgressView.trackTintColor = [UIColor lightGrayColor];
+            if (circularProgressView){
+                if (progress < 1.0f)
+                {
+                    circularProgressView.hidden = NO;
+                    circularProgressView.progress = progress;
+                    [coverImageView setAlpha:0.5];
+
+                } else {
+                    circularProgressView.hidden = YES;
+                }
+                [circularProgressView setNeedsDisplay];
+            }
+        }
+    }
+}
+
 
 -(void)downloadComic:(id)sender {
     UIView *view = [sender superview];

@@ -47,6 +47,7 @@
     }
 }
 
+#pragma mark - ImageDownloaderDelegate
 -(void)downloadOfImageFinished:(BOOL)success :(NSString *)imageURL :(NSString*)savePath {
     NSDictionary *userInfo;
     if (success)
@@ -60,6 +61,11 @@
         [downloadingImage removeObject:imgDownloader];
     }
     [self activateNextDownload];
+}
+
+-(void)downloadOfImageProgressUpdated:(CGFloat)progress :(NSString *)imageURL{
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[imageURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ImageURL", @"Progress"]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ImageDownloadProgressUpdated" object:nil userInfo:userInfo];
 }
 
 -(void)activateNextDownload {

@@ -44,7 +44,9 @@
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     [receivedData appendData:data];
     if ([self.delegate respondsToSelector:@selector(downloadOfImageProgressUpdated::)]){
-        [self.delegate downloadOfImageProgressUpdated:receivedData.length / fileSize :imageURL];
+        CGFloat progress = (float)receivedData.length / (float)fileSize;
+        NSLog(@"progress %f", progress);
+        [self.delegate downloadOfImageProgressUpdated: progress:imageURL];
     }
 }
 
