@@ -30,7 +30,7 @@
     comics = [NSArray new];
     [self startDownloadingComicList];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
 }
 
 -(void)startDownloadingComicList{
@@ -69,10 +69,10 @@
         UIImageView *coverImageView = (UIImageView*)[cell viewWithTag:1];
         UILabel *titleLabel = (UILabel*)[cell viewWithTag:2];
         UITextView *descriptionTextView = (UITextView*)[cell viewWithTag:3];
-        UIButton *downloadButton = (UIButton*)[cell viewWithTag:4];
+        //UIButton *downloadButton = (UIButton*)[cell viewWithTag:4];
         DACircularProgressView *circularView = (DACircularProgressView*)[cell viewWithTag:5];
         
-        [downloadButton addTarget:self action:@selector(downloadComic:) forControlEvents:UIControlEventTouchUpInside];
+        //[downloadButton addTarget:self action:@selector(downloadComic:) forControlEvents:UIControlEventTouchUpInside];
         //assign properties of comic to this cell
         Comic *comic = [comics objectAtIndex:indexPath.row];
         titleLabel.text = comic.zipFileURL.lastPathComponent;
@@ -83,13 +83,11 @@
                 [coverImageView setAlpha:1.0];
                 circularView.hidden = YES;
             }
-            /*
             else {
                 //TODO: change the image to indicate that the cover file has yet to be downloaded
                 [coverImageView setAlpha:0.5];
                 circularView.hidden = NO;
             }
-             */
         }
     }
     
