@@ -13,32 +13,47 @@
 #import "Toast+UIView.h"
 #import "AppDelegate.h"
 #import "ImageCentre.h"
+#import "ZIPCentre.h"
+#import "TXTCentre.h"
 #import "DACircularProgressView.h"
 
 @interface ComicStoreViewController ()<XMLDownloaderDelegate>
 @property NSArray *comics;
 @property ImageCentre *imageCentre;
+@property TXTCentre *txtCentre;
+@property ZIPCentre *zipCentre;
+@property AppDelegate *mAppDelegate;
 @end
 
 @implementation ComicStoreViewController
 @synthesize comics;
 @synthesize imageCentre;
+@synthesize txtCentre;
+@synthesize zipCentre;
+@synthesize mAppDelegate;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    mAppDelegate = [AppDelegate sharedAppDelegate];
     comics = [NSArray new];
     [self startDownloadingComicList];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(txtDownloaded:) name:@"TXTDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
 }
 
 -(void)startDownloadingComicList{
+    [[mAppDelegate window] makeToastActivity];
     imageCentre = [ImageCentre new];
+    zipCentre = [ZIPCentre new];
+    txtCentre = [TXTCentre new];
     XMLDownloader *xmlDownloader = [XMLDownloader new];
     xmlDownloader.delegate = self;
     [xmlDownloader downloadXML];
-    [[[AppDelegate sharedAppDelegate] window] makeToastActivity];
 }
 
 -(void)downloadOfXMLCompleted:(BOOL)success :(NSData *)xmlData{
@@ -47,11 +62,12 @@
         //download all the covers
         for (Comic *comic in comics) {
             [imageCentre downloadImageWithURL:comic.coverFileURL];
+            [txtCentre downloadTXT:comic.descriptionFileURL];
         }
         NSLog(@"size %d", comics.count);
         [self.tableView reloadData];
     }
-    [[[AppDelegate sharedAppDelegate] window] hideToastActivity];
+    [[mAppDelegate window] hideToastActivity];
 }
 
 #pragma mark - UITableViewDataSource
@@ -74,24 +90,32 @@
         
         //[downloadButton addTarget:self action:@selector(downloadComic:) forControlEvents:UIControlEventTouchUpInside];
         //assign properties of comic to this cell
+        //name
         Comic *comic = [comics objectAtIndex:indexPath.row];
-        titleLabel.text = comic.zipFileURL.lastPathComponent;
-        if (comic.localCoverFile) {
-            UIImage *image = [UIImage imageWithContentsOfFile:comic.localCoverFile];
-            if (image) {
-                coverImageView.image = image;
-                [coverImageView setAlpha:1.0];
-                circularView.hidden = YES;
-            }
-            else {
-                //TODO: change the image to indicate that the cover file has yet to be downloaded
-                [coverImageView setAlpha:0.5];
-                circularView.hidden = NO;
-            }
+        titleLabel.text = comic.name;
+        //cover
+        if (comic.cover) {
+            coverImageView.image = comic.cover;
+            [coverImageView setAlpha:1.0];
+            circularView.hidden = YES;
+        } else {
+            [coverImageView setAlpha:0.5];
+            circularView.hidden = YES;
+            coverImageView.image = [UIImage imageNamed:@"icon_144"];
+        }
+        //description
+        if (comic.description.length > 0) {
+            descriptionTextView.text = comic.description;
         }
     }
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Comic *selectedComic = [comics objectAtIndex:indexPath.row];
+    [self downloadComic:selectedComic];
 }
 
 #pragma mark notification handler - image downloading progress update
@@ -128,15 +152,9 @@
 }
 
 
--(void)downloadComic:(id)sender {
-    UIView *view = [sender superview];
-    while (view != [UITableViewCell class]) {
-        view = [view superview];
-    }
-    UITableViewCell *cell = (UITableViewCell*)view;
-    NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:cell];
-    Comic *selectedComic = [comics objectAtIndex:selectedIndexPath.row];
+-(void)downloadComic:(Comic*)comic {
     //TODO: download zip file for the comic
+    [zipCentre downloadZIP:comic.zipFileURL];
 }
 
 #pragma mark - NSNotification handler - image downloaded
@@ -149,7 +167,35 @@
                 comic.localCoverFile = saveToPath;
             }
         }
-        [self.tableView reloadData];
+        [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+}
+
+#pragma mark - NSNotification handler - txt downloader 
+-(void)txtDownloaded:(NSNotification*)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    for (Comic *comic in comics) {
+        if ([comic.descriptionFileURL isEqualToString:[userInfo objectForKey:@"TXTURL"]]) {
+            comic.localDescriptionFile = [userInfo objectForKey:@"SavePath"];
+        }
+    }
+    if ([[userInfo objectForKey:@"Success"] boolValue]) {
+        [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+#pragma mark - NSNotification handler - zip downloaded
+-(void)zipDownloaded:(NSNotification*)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    if ([[userInfo objectForKey:@"Success"] boolValue]) {
+        NSLog(@"download of zip successed!");
+    } else {
+        NSLog(@"download of zip failed!");
+    }
+}
+
+-(void)zipDownloadProgressUpdated:(NSNotification*)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    NSLog(@"progress update: %f", [[userInfo objectForKey:@"Progress"] floatValue]);
 }
 @end

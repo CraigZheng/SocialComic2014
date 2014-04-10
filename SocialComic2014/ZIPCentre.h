@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+
 
 @interface ZIPCentre : NSObject
+@property AppDelegate *mAppDelegate;
 
+-(void)downloadZIP:(NSString*)zipURL;
+
+-(void)stopAllDownloading;
 @end

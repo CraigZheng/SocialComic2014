@@ -8,12 +8,14 @@
 
 #import "ImageCentre.h"
 #import "ImageDownloader.h"
+#import "AppDelegate.h"
 
 @interface ImageCentre() <ImageDownloaderDelegate>
 @property NSURLConnection *urlConnection;
 @property NSMutableOrderedSet *downloadQueue;
 @property NSMutableOrderedSet *downloadingImage;
 @property NSString *libraryFolder;
+@property AppDelegate *mAppDelegate;
 @end
 
 @implementation ImageCentre
@@ -21,6 +23,7 @@
 @synthesize downloadingImage;
 @synthesize downloadQueue;
 @synthesize libraryFolder;
+@synthesize mAppDelegate;
 
 -(id)init{
     self = [super init];
@@ -29,6 +32,7 @@
         downloadingImage = [NSMutableOrderedSet new];
         libraryFolder = [NSSearchPathForDirectoriesInDomains(
                                                     NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        mAppDelegate = [AppDelegate sharedAppDelegate];
     }
     return self;
 }
@@ -84,7 +88,7 @@
 -(ImageDownloader*)createImageDownloaderWithURL:(NSString*)imgURL {
     ImageDownloader *imgDownloader = [ImageDownloader new];
     imgDownloader.delegate = self;
-    [imgDownloader downloadImage:imgURL :[libraryFolder stringByAppendingPathComponent:@"ComicCovers"]];
+    [imgDownloader downloadImage:imgURL :mAppDelegate.coverImageFolder];
     return imgDownloader;
 }
 
@@ -100,6 +104,7 @@
     for (ImageDownloader *downloader in downloadingImage) {
         [downloader stop];
     }
+    [downloadingImage removeAllObjects];
     [downloadQueue removeAllObjects];
 }
 @end

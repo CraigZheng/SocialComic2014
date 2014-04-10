@@ -33,6 +33,8 @@
 		448CC77218F28C2500FF49A6 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 448CC77118F28C2500FF49A6 /* icon_144.png */; };
 		448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77518F28CA200FF49A6 /* DACircularProgressView.m */; };
 		448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77918F2927A00FF49A6 /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77C18F61AF900FF49A6 /* TXTDownloader.m */; };
+		448CC78018F6257900FF49A6 /* ZIPDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77F18F6257900FF49A6 /* ZIPDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		448CC77518F28CA200FF49A6 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
 		448CC77818F2927A00FF49A6 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
 		448CC77918F2927A00FF49A6 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		448CC77B18F61AF900FF49A6 /* TXTDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXTDownloader.h; sourceTree = "<group>"; };
+		448CC77C18F61AF900FF49A6 /* TXTDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTDownloader.m; sourceTree = "<group>"; };
+		448CC77E18F6257900FF49A6 /* ZIPDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIPDownloader.h; sourceTree = "<group>"; };
+		448CC77F18F6257900FF49A6 /* ZIPDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIPDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,8 @@
 			children = (
 				448CC76818F2885A00FF49A6 /* TXTCentre.h */,
 				448CC76918F2885A00FF49A6 /* TXTCentre.m */,
+				448CC77B18F61AF900FF49A6 /* TXTDownloader.h */,
+				448CC77C18F61AF900FF49A6 /* TXTDownloader.m */,
 			);
 			name = TXT;
 			sourceTree = "<group>";
@@ -243,6 +251,8 @@
 			children = (
 				448CC76C18F2887200FF49A6 /* ZIPCentre.h */,
 				448CC76D18F2887200FF49A6 /* ZIPCentre.m */,
+				448CC77E18F6257900FF49A6 /* ZIPDownloader.h */,
+				448CC77F18F6257900FF49A6 /* ZIPDownloader.m */,
 			);
 			name = ZIP;
 			sourceTree = "<group>";
@@ -321,9 +331,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Craig;
 				TargetAttributes = {
-					448CC6FF18F2342D00FF49A6 = {
-						DevelopmentTeam = 9EBE9MWW9X;
-					};
 					448CC72618F2342D00FF49A6 = {
 						TestTargetID = 448CC6FF18F2342D00FF49A6;
 					};
@@ -380,6 +387,7 @@
 				448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
 				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
+				448CC78018F6257900FF49A6 /* ZIPDownloader.m in Sources */,
 				448CC74618F237F600FF49A6 /* XMLProsessor.m in Sources */,
 				448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */,
 				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
@@ -389,6 +397,7 @@
 				448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */,
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
 				448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */,
+				448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,14 +524,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Haozheng Zheng (4A2A95RH7T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Haozheng Zheng (4A2A95RH7T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "19E319A1-99CB-4833-9290-A6D974D9E08F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,7 +548,7 @@
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "19E319A1-99CB-4833-9290-A6D974D9E08F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

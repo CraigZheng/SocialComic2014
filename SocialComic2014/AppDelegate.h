@@ -11,6 +11,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property NSString *coverImageFolder;
+@property NSString *descriptionFileFolder;
+@property NSString *zipFileFolder;
 
 +(AppDelegate*)sharedAppDelegate;
 @end

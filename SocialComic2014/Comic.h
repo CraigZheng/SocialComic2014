@@ -18,4 +18,8 @@
 @property NSString *localZipFile;
 @property NSString *localDescriptionFile;
 @property NSString *unzipToFolder;
+//attributes
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) UIImage *cover;
 @end

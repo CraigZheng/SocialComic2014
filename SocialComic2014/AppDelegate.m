@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize coverImageFolder;
+@synthesize zipFileFolder;
+@synthesize descriptionFileFolder;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -47,10 +50,23 @@
 -(void)checkFolders {
     NSString *libraryFolder = [NSSearchPathForDirectoriesInDomains(
                                                          NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *coverFolder = [libraryFolder stringByAppendingPathComponent:@"ComicCovers"];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:coverFolder]) {
-        [[NSFileManager defaultManager] createDirectoryAtPath:coverFolder withIntermediateDirectories:YES attributes:nil error:nil];
+    coverImageFolder = [libraryFolder stringByAppendingPathComponent:@"ComicCovers"];
+    zipFileFolder = [libraryFolder stringByAppendingPathComponent:@"ZipFiles"];
+    descriptionFileFolder = [libraryFolder stringByAppendingPathComponent:@"DescriptionFiles"];
+    [self checkOrCreateFolder:coverImageFolder];
+    [self checkOrCreateFolder:zipFileFolder];
+    [self checkOrCreateFolder:descriptionFileFolder];
+}
+
+-(BOOL)checkOrCreateFolder:(NSString*)folder {
+    NSError *error;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:folder]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:&error];
     }
+    if (error) {
+        return NO;
+    }
+    return YES;
 }
 
 +(AppDelegate *)sharedAppDelegate{

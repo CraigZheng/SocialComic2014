@@ -7,7 +7,90 @@
 //
 
 #import "ZIPCentre.h"
+#import "ZIPDownloader.h"
 
+@interface ZIPCentre()<ZIPDownloaderProtocol>
+@property NSMutableOrderedSet *downloadQueue;
+@property NSMutableOrderedSet *downloadingZip;
+@end
 @implementation ZIPCentre
+@synthesize mAppDelegate;
+@synthesize downloadingZip;
+@synthesize downloadQueue;
 
+-(id)init {
+    self = [super init];
+    if (self) {
+        mAppDelegate = [AppDelegate sharedAppDelegate];
+        downloadQueue = [NSMutableOrderedSet new];
+        downloadingZip = [NSMutableOrderedSet new];
+    }
+    return self;
+}
+
+-(void)downloadZIP:(NSString *)zipURL {
+    if ([downloadQueue containsObject:zipURL])
+        return;
+    if (downloadingZip.count < 3) {
+        ZIPDownloader *downloader = [self createDownloaderWithURL:zipURL];
+        if ([downloadingZip containsObject:downloader]){
+            return;
+        }
+        [downloader start];
+        [downloadingZip addObject:downloader];
+    } else {
+        [downloadQueue addObject:zipURL];
+    }
+}
+
+-(ZIPDownloader*)createDownloaderWithURL:(NSString*)url {
+    ZIPDownloader *downloader = [ZIPDownloader new];
+    downloader.delegate = self;
+    [downloader downloadTXT:url :mAppDelegate.zipFileFolder];
+    return downloader;
+}
+
+-(void)activateNextDownload {
+    if (downloadingZip.count < 3 && downloadQueue.count > 0) {
+        NSString *imgURL = [downloadQueue firstObject];
+        [downloadQueue removeObjectAtIndex:0];
+        ZIPDownloader *downloader = [self createDownloaderWithURL:imgURL];
+        [downloader start];
+        [downloadingZip addObject:downloader];
+    } else {
+        NSLog(@"no more downloads!");
+        [self stopAllDownloading];
+    }
+}
+
+-(void)stopAllDownloading {
+    for (ZIPDownloader *downloader in downloadingZip) {
+        [downloader stop];
+    }
+    [downloadingZip removeAllObjects];
+    [downloadQueue removeAllObjects];
+}
+
+#pragma mark - ZIPDownloaderDelegate
+-(void)ZIPDownloaded:(NSString *)zipURL :(BOOL)success :(NSString *)savePath{
+    NSDictionary *userInfo;
+    if (success)
+        userInfo = [NSDictionary dictionaryWithObjects:@[zipURL, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPURL", @"SavePath", @"Success"]];
+    else
+        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:success] forKey:@"Success"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];
+    //remove the just finished downloader
+    if (zipURL) {
+        ZIPDownloader *downloader = [self createDownloaderWithURL:zipURL];
+        [downloadingZip removeObject:downloader];
+    }
+    [self activateNextDownload];
+}
+
+-(void)ZIPDownloadProgressUpdated:(NSString *)zipURL :(CGFloat)progress {
+    if (zipURL || progress) {
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[zipURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ZIPURL", @"Progress"]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ZipDownloadProgressUpdate" object:self userInfo:userInfo];
+    }
+}
 @end

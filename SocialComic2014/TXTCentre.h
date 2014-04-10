@@ -10,4 +10,5 @@
 
 @interface TXTCentre : NSObject
 
+-(void)downloadTXT:(NSString*) txtURL;
 @end
