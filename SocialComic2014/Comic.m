@@ -11,9 +11,9 @@
 @implementation Comic
 
 -(NSString *)name{
-    if (self.zipFileURL)
+    if (self.localZipFile)
     {
-        return [[[self.zipFileURL.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension];
+        return [[[self.localZipFile.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension];
     }
     return @"Name Not Available";
 }

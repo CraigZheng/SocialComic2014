@@ -196,6 +196,24 @@
 
 -(void)zipDownloadProgressUpdated:(NSNotification*)notification {
     NSDictionary *userInfo = notification.userInfo;
-    NSLog(@"progress update: %f", [[userInfo objectForKey:@"Progress"] floatValue]);
+    CGFloat progress = [[userInfo objectForKey:@"Progress"] floatValue];
+    NSLog(@"progress update: %f", progress);
+    NSString *updateZipURL = [userInfo objectForKey:@"ZIPURL"];
+    NSArray *visibleIndexes = [self.tableView indexPathsForVisibleRows];
+    for (NSIndexPath *indexPath in visibleIndexes) {
+        Comic *comic = [comics objectAtIndex:indexPath.row];
+        if ([comic.zipFileURL isEqualToString:updateZipURL]) {
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            DACircularProgressView *circularProgressView = (DACircularProgressView*)[cell viewWithTag:5];
+            if (circularProgressView) {
+                circularProgressView.hidden = NO;
+                circularProgressView.alpha = 0.9f;
+                circularProgressView.progress = progress;
+            }
+            if (progress == 1.0f && circularProgressView) {
+                circularProgressView.hidden = YES;
+            }
+        }
+    }
 }
 @end

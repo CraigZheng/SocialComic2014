@@ -35,6 +35,8 @@
 		448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77918F2927A00FF49A6 /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77C18F61AF900FF49A6 /* TXTDownloader.m */; };
 		448CC78018F6257900FF49A6 /* ZIPDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC77F18F6257900FF49A6 /* ZIPDownloader.m */; };
+		448CC78318F6657100FF49A6 /* BookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC78218F6657100FF49A6 /* BookCollectionViewController.m */; };
+		448CC78518F666A900FF49A6 /* NoImageAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,9 @@
 		448CC77C18F61AF900FF49A6 /* TXTDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXTDownloader.m; sourceTree = "<group>"; };
 		448CC77E18F6257900FF49A6 /* ZIPDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIPDownloader.h; sourceTree = "<group>"; };
 		448CC77F18F6257900FF49A6 /* ZIPDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIPDownloader.m; sourceTree = "<group>"; };
+		448CC78118F6657100FF49A6 /* BookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewController.h; sourceTree = "<group>"; };
+		448CC78218F6657100FF49A6 /* BookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewController.m; sourceTree = "<group>"; };
+		448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NoImageAvailable.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,8 @@
 				448CC71218F2342D00FF49A6 /* AppDelegate.h */,
 				448CC71318F2342D00FF49A6 /* AppDelegate.m */,
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
+				448CC78118F6657100FF49A6 /* BookCollectionViewController.h */,
+				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
 				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
 				448CC77718F2927A00FF49A6 /* Toast */,
@@ -260,6 +267,7 @@
 		448CC77018F28C1600FF49A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */,
 				448CC75218F24A7F00FF49A6 /* coverSample.jpg */,
 				448CC77118F28C2500FF49A6 /* icon_144.png */,
 			);
@@ -364,6 +372,7 @@
 				448CC72218F2342D00FF49A6 /* Images.xcassets in Resources */,
 				448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */,
 				448CC77218F28C2500FF49A6 /* icon_144.png in Resources */,
+				448CC78518F666A900FF49A6 /* NoImageAvailable.jpg in Resources */,
 				448CC70E18F2342D00FF49A6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +407,7 @@
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
 				448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */,
 				448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */,
+				448CC78318F6657100FF49A6 /* BookCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

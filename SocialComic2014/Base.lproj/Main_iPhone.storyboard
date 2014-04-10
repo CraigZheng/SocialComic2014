@@ -17,6 +17,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="oE1-X1-h3O" kind="relationship" relationship="viewControllers" id="1Dk-lW-nJi"/>
+                        <segue destination="RqM-xz-XFE" kind="relationship" relationship="viewControllers" id="76W-4a-mE6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -124,8 +125,70 @@
             </objects>
             <point key="canvasLocation" x="653" y="-229"/>
         </scene>
+        <!--Book Collection View Controller - Item-->
+        <scene sceneID="ehI-Db-YU9">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="RqM-xz-XFE" customClass="BookCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="cQj-e7-V5c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="evH-hu-PX2">
+                            <size key="itemSize" width="80" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="comic_cover_identifier" id="M4S-Xu-IOo">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImageAvailable.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="08G-U5-QBO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="7f5-DG-0fe"/>
+                                                <constraint firstAttribute="width" constant="80" id="WbY-us-lgL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="80" translatesAutoresizingMaskIntoConstraints="NO" id="tIa-Mb-CyJ">
+                                            <rect key="frame" x="0.0" y="80" width="80" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="08G-U5-QBO" secondAttribute="trailing" id="3RJ-YY-wWN"/>
+                                    <constraint firstAttribute="trailing" secondItem="tIa-Mb-CyJ" secondAttribute="trailing" id="BSo-pL-kbT"/>
+                                    <constraint firstItem="08G-U5-QBO" firstAttribute="top" secondItem="M4S-Xu-IOo" secondAttribute="top" id="PLV-F5-6tb"/>
+                                    <constraint firstAttribute="bottom" secondItem="tIa-Mb-CyJ" secondAttribute="bottom" id="QaL-dh-QGb"/>
+                                    <constraint firstItem="tIa-Mb-CyJ" firstAttribute="top" secondItem="08G-U5-QBO" secondAttribute="bottom" id="r6U-vV-HBI"/>
+                                    <constraint firstItem="tIa-Mb-CyJ" firstAttribute="leading" secondItem="M4S-Xu-IOo" secondAttribute="leading" id="sw1-vd-LD4"/>
+                                    <constraint firstItem="08G-U5-QBO" firstAttribute="leading" secondItem="M4S-Xu-IOo" secondAttribute="leading" id="vCG-Od-AGD"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="RqM-xz-XFE" id="0E1-l9-T2W"/>
+                            <outlet property="delegate" destination="RqM-xz-XFE" id="qAM-FQ-Hor"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="KPp-QR-D1U"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mob-0W-1nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="449"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="NoImageAvailable.jpg" width="500" height="500"/>
         <image name="icon_144.png" width="144" height="144"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

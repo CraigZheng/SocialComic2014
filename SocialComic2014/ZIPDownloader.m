@@ -75,7 +75,7 @@
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     receivedData = [NSMutableData new];
     fileSize = response.expectedContentLength;
-    saveToFile = [saveToFolder stringByAppendingString:response.suggestedFilename];
+    saveToFile = [saveToFolder stringByAppendingPathComponent:response.suggestedFilename];
     if ([[NSFileManager defaultManager] fileExistsAtPath:saveToFile]) {
         [self.delegate ZIPDownloaded:zipURL :YES :saveToFile];
         [urlConnection cancel];
