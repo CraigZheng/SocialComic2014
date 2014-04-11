@@ -9,22 +9,25 @@
 #import "BookCollectionViewController.h"
 #import "AppDelegate.h"
 #import "Comic.h"
+#import "LocalComicSingleton.h"
 
 @interface BookCollectionViewController ()
 @property NSMutableArray *comics;
 @property AppDelegate *mAppDelegate;
+@property LocalComicSingleton *comicSingleton;
 @end
 
 @implementation BookCollectionViewController
 @synthesize mAppDelegate;
 @synthesize comics;
-
+@synthesize comicSingleton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     mAppDelegate = [AppDelegate sharedAppDelegate];
+    comicSingleton = [LocalComicSingleton getInstance];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, 44, 0)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [self scanForComicFiles];
@@ -37,37 +40,11 @@
 
 -(void)scanForComicFiles {
     comics = [NSMutableArray new];
-    NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:mAppDelegate.zipFileFolder error:nil];
-    for (NSString* file in files) {
-        if ([file.pathExtension.lowercaseString isEqualToString:@"zip"]) {
-            Comic *newComic = [self constructComicBasedOnZip:[mAppDelegate.zipFileFolder stringByAppendingPathComponent:file]];
-            if (newComic)
-                [comics addObject:newComic];
-        }
-    }
+    [comicSingleton scanForLocalComics];
+    [comics addObjectsFromArray:comicSingleton.localComics];
     [self.collectionView reloadData];
 }
 
--(Comic*)constructComicBasedOnZip:(NSString*)zipFile {
-    if (zipFile && [zipFile.pathExtension.lowercaseString isEqualToString:@"zip"]) {
-        Comic *newComic = [Comic new];
-        newComic.localZipFile = zipFile;
-        NSString *fileName = [newComic.localZipFile.lastPathComponent stringByDeletingPathExtension];
-        newComic.localDescriptionFile = [[mAppDelegate.descriptionFileFolder stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:@"txt"];
-        newComic.localCoverFile = [[mAppDelegate.coverImageFolder stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:@"jpg"];
-
-        /*
-        if (![[NSFileManager defaultManager] fileExistsAtPath:newComic.localDescriptionFile]) {
-            newComic.localDescriptionFile = nil;
-        }
-        if (![[NSFileManager defaultManager] fileExistsAtPath:newComic.localCoverFile]) {
-            newComic.localCoverFile = nil;
-        }
-         */
-        return newComic;
-    }
-    return nil;
-}
 #pragma mark - UICollectionViewController datasource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return comics.count;
@@ -89,6 +66,12 @@
         titleLabel.text = comic.name;
     }
     return cell;
+}
+
+#pragma mark - UICollectionViewControllerDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    Comic *selectedComic = [comics objectAtIndex:indexPath.row];
+    //TODO: present the selectedComic
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded

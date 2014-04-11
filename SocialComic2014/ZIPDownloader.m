@@ -85,8 +85,13 @@
 
 -(BOOL)isEqual:(id)object{
     if ([object isKindOfClass:[self class]]){
-        return [[(ZIPDownloader*) object zipURL] isEqualToString:zipURL];
+        BOOL equal = [[(ZIPDownloader*) object zipURL] isEqualToString:zipURL];
+        return equal;
     }
     return NO;
+}
+
+-(NSUInteger)hash {
+    return zipURL.hash;
 }
 @end

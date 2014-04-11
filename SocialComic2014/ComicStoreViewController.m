@@ -16,6 +16,7 @@
 #import "ZIPCentre.h"
 #import "TXTCentre.h"
 #import "DACircularProgressView.h"
+#import "LocalComicSingleton.h"
 
 @interface ComicStoreViewController ()<XMLDownloaderDelegate>
 @property NSArray *comics;
@@ -213,11 +214,12 @@
 #pragma mark - NSNotification handler - zip downloaded
 -(void)zipDownloaded:(NSNotification*)notification {
     NSDictionary *userInfo = notification.userInfo;
+    NSString *savePath = [userInfo objectForKey:@"SavePath"];
+
     if ([[userInfo objectForKey:@"Success"] boolValue]) {
         NSLog(@"download of zip successed!");
-        NSString *savePath = [userInfo objectForKey:@"SavePath"];
         UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:nil message:[NSString stringWithFormat:@"Download of %@ is finished!",
+                                  initWithTitle:nil message:[NSString stringWithFormat:@"%@ is ready to read in My Library!",
                                                              [[[savePath.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension]]
                                   delegate:nil
                                                   cancelButtonTitle:nil
@@ -225,6 +227,14 @@
         [alertView show];
     } else {
         NSLog(@"download of zip failed!");
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:nil message:[NSString stringWithFormat:@"The download of %@ has failed, please try again later", [[[savePath.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension]]
+                                                             
+                                  delegate:nil
+                                  cancelButtonTitle:nil
+                                  otherButtonTitles:@"OK", nil];
+        [alertView show];
+
     }
 }
 

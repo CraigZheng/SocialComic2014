@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="653" y="-229"/>
         </scene>
-        <!--Book Collection View Controller - Item-->
+        <!--Book Collection View Controller - My Library-->
         <scene sceneID="ehI-Db-YU9">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="RqM-xz-XFE" customClass="BookCollectionViewController" sceneMemberID="viewController">
@@ -180,7 +180,7 @@
                             <outlet property="delegate" destination="RqM-xz-XFE" id="qAM-FQ-Hor"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="KPp-QR-D1U"/>
+                    <tabBarItem key="tabBarItem" title="My Library" id="KPp-QR-D1U"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mob-0W-1nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
