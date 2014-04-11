@@ -38,6 +38,7 @@
 		448CC78318F6657100FF49A6 /* BookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448CC78218F6657100FF49A6 /* BookCollectionViewController.m */; };
 		448CC78518F666A900FF49A6 /* NoImageAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */; };
 		44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */; };
+		44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NoImageAvailable.jpg; sourceTree = "<group>"; };
 		44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalComicSingleton.h; sourceTree = "<group>"; };
 		44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalComicSingleton.m; sourceTree = "<group>"; };
+		44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerTableViewController.h; sourceTree = "<group>"; };
+		44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManagerTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
 				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+				44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */,
+				44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */,
 				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
 				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
 				448CC77718F2927A00FF49A6 /* Toast */,
@@ -408,6 +413,7 @@
 				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
+				44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */,
 				448CC71018F2342D00FF49A6 /* main.m in Sources */,
 				448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */,
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,

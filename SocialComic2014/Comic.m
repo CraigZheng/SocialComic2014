@@ -44,4 +44,13 @@
     }
     return NO;
 }
+
+-(NSUInteger)hash {
+    if (self.zipFileURL) {
+        return self.zipFileURL.hash;
+    }
+    else if (self.localZipFile)
+        return self.localZipFile.hash;
+    return [super hash];
+}
 @end

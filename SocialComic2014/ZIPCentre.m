@@ -20,18 +20,18 @@
 
 
 
--(void)downloadZIP:(NSString *)zipURL {
-    if ([downloadQueue containsObject:zipURL])
+-(void)downloadComic:(Comic *)comic {
+    if ([downloadQueue containsObject:comic])
         return;
     if (downloadingZip.count < 3) {
-        ZIPDownloader *downloader = [self createDownloaderWithURL:zipURL];
+        ZIPDownloader *downloader = [self createDownloaderWithURL:comic.zipFileURL];
         if ([downloadingZip containsObject:downloader]){
             return;
         }
         [downloader start];
         [downloadingZip addObject:downloader];
     } else {
-        [downloadQueue addObject:zipURL];
+        [downloadQueue addObject:comic];
     }
 }
 

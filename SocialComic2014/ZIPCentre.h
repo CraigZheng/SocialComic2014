@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
-
+#import "Comic.h"
 
 @interface ZIPCentre : NSObject
 @property AppDelegate *mAppDelegate;
 
--(void)downloadZIP:(NSString*)zipURL;
+-(void)downloadComic:(Comic*)comic;
 
 -(void)stopAllDownloading;
 

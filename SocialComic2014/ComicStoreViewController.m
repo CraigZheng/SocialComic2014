@@ -173,7 +173,7 @@
 
 -(void)downloadComic:(Comic*)comic {
     //TODO: download zip file for the comic
-    [zipCentre downloadZIP:comic.zipFileURL];
+    [zipCentre downloadComic:comic];
 }
 
 #pragma mark - NSNotification handler - image downloaded
