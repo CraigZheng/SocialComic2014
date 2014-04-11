@@ -94,4 +94,6 @@
 -(NSUInteger)hash {
     return zipURL.hash;
 }
+
+
 @end

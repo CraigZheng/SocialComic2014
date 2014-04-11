@@ -14,4 +14,6 @@
 -(void)downloadImageWithURL:(NSString*)imgURL;
 -(void)stopDownloadingOfURL:(NSString*)imgURL;
 -(void)stopAllDownloading;
+
++(id)getInstance;
 @end

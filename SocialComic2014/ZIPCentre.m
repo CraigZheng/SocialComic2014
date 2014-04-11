@@ -18,15 +18,7 @@
 @synthesize downloadingZip;
 @synthesize downloadQueue;
 
--(id)init {
-    self = [super init];
-    if (self) {
-        mAppDelegate = [AppDelegate sharedAppDelegate];
-        downloadQueue = [NSMutableOrderedSet new];
-        downloadingZip = [NSMutableOrderedSet new];
-    }
-    return self;
-}
+
 
 -(void)downloadZIP:(NSString *)zipURL {
     if ([downloadQueue containsObject:zipURL])
@@ -92,5 +84,26 @@
         NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[zipURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ZIPURL", @"Progress"]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ZipDownloadProgressUpdate" object:self userInfo:userInfo];
     }
+}
+
+#pragma mark - singleton initialiser
+-(id)init {
+    self = [super init];
+    if (self) {
+        mAppDelegate = [AppDelegate sharedAppDelegate];
+        downloadQueue = [NSMutableOrderedSet new];
+        downloadingZip = [NSMutableOrderedSet new];
+    }
+    return self;
+}
+
++ (id)getInstance {
+    static ZIPCentre *sharedMyManager = nil;
+    @synchronized(self) {
+        if (sharedMyManager == nil) {
+            sharedMyManager = [[self alloc] init];
+        }
+    }
+    return sharedMyManager;
 }
 @end

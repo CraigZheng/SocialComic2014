@@ -16,4 +16,6 @@
 -(void)downloadZIP:(NSString*)zipURL;
 
 -(void)stopAllDownloading;
+
++(id)getInstance;
 @end

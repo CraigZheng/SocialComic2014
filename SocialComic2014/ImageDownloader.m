@@ -82,4 +82,5 @@
         return [[(ImageDownloader*)object imageURL] isEqualToString:self.imageURL];
     return NO;
 }
+
 @end

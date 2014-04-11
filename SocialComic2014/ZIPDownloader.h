@@ -23,4 +23,5 @@
 -(void)downloadTXT:(NSString*)zipurl :(NSString*)toFolder;
 -(void)start;
 -(void)stop;
+
 @end

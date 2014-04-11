@@ -25,17 +25,6 @@
 @synthesize libraryFolder;
 @synthesize mAppDelegate;
 
--(id)init{
-    self = [super init];
-    if (self){
-        downloadQueue = [NSMutableOrderedSet new];
-        downloadingImage = [NSMutableOrderedSet new];
-        libraryFolder = [NSSearchPathForDirectoriesInDomains(
-                                                    NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        mAppDelegate = [AppDelegate sharedAppDelegate];
-    }
-    return self;
-}
 -(void)downloadImageWithURL:(NSString *)imgURL {
     if ([downloadQueue containsObject:imgURL])
         return;
@@ -106,5 +95,28 @@
     }
     [downloadingImage removeAllObjects];
     [downloadQueue removeAllObjects];
+}
+
+#pragma mark - singleton initialiser
+-(id)init{
+    self = [super init];
+    if (self){
+        downloadQueue = [NSMutableOrderedSet new];
+        downloadingImage = [NSMutableOrderedSet new];
+        libraryFolder = [NSSearchPathForDirectoriesInDomains(
+                                                             NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        mAppDelegate = [AppDelegate sharedAppDelegate];
+    }
+    return self;
+}
+
++ (id)getInstance {
+    static ImageCentre *sharedMyManager = nil;
+    @synchronized(self) {
+        if (sharedMyManager == nil) {
+            sharedMyManager = [[self alloc] init];
+        }
+    }
+    return sharedMyManager;
 }
 @end

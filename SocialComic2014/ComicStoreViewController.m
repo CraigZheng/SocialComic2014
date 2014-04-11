@@ -56,8 +56,8 @@
 
 -(void)startDownloadingComicList{
     [[mAppDelegate window] makeToastActivity];
-    imageCentre = [ImageCentre new];
-    zipCentre = [ZIPCentre new];
+    imageCentre = [ImageCentre getInstance];
+    zipCentre = [ZIPCentre getInstance];
     txtCentre = [TXTCentre new];
     XMLDownloader *xmlDownloader = [XMLDownloader new];
     xmlDownloader.delegate = self;
