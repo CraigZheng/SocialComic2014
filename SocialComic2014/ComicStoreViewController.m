@@ -38,12 +38,19 @@
     // Do any additional setup after loading the view.
     mAppDelegate = [AppDelegate sharedAppDelegate];
     comics = [NSArray new];
-    [self startDownloadingComicList];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(txtDownloaded:) name:@"TXTDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.tableView setContentInset:UIEdgeInsetsMake(20, 0, 44, 0)];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (comics.count == 0)
+        [self startDownloadingComicList];
 }
 
 -(void)startDownloadingComicList{
@@ -72,7 +79,7 @@
 
 #pragma mark - UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return comics.count;
+    return comics.count + 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //last cell
@@ -112,8 +119,19 @@
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == comics.count)
+        return 44;
+    return tableView.rowHeight;
+}
+
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //select last row
+    if (indexPath.row == comics.count) {
+        [self startDownloadingComicList];
+        return;
+    }
     Comic *selectedComic = [comics objectAtIndex:indexPath.row];
     [self downloadComic:selectedComic];
 }
@@ -165,22 +183,30 @@
         for (Comic *comic in comics) {
             if ([comic.coverFileURL isEqualToString:[userInfo objectForKey:@"ImageURL"]]) {
                 comic.localCoverFile = saveToPath;
+                NSIndexPath *indexToUpdate = [NSIndexPath indexPathForRow:[comics indexOfObject:comic] inSection:0];
+                [self.tableView reloadRowsAtIndexPaths:@[indexToUpdate] withRowAnimation:UITableViewRowAnimationAutomatic];
             }
         }
-        [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationAutomatic];
+        /*
+        for (NSIndexPath *indexPath in [self.tableView indexPathsForVisibleRows]) {
+            
+        }
+        [self.tableView reloadRowsAtIndexPaths: withRowAnimation:UITableViewRowAnimationAutomatic];
+         */
     }
 }
 
 #pragma mark - NSNotification handler - txt downloader 
 -(void)txtDownloaded:(NSNotification*)notification {
     NSDictionary *userInfo = notification.userInfo;
-    for (Comic *comic in comics) {
-        if ([comic.descriptionFileURL isEqualToString:[userInfo objectForKey:@"TXTURL"]]) {
-            comic.localDescriptionFile = [userInfo objectForKey:@"SavePath"];
-        }
-    }
     if ([[userInfo objectForKey:@"Success"] boolValue]) {
-        [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationAutomatic];
+        for (Comic *comic in comics) {
+            if ([comic.descriptionFileURL isEqualToString:[userInfo objectForKey:@"TXTURL"]]) {
+                comic.localDescriptionFile = [userInfo objectForKey:@"SavePath"];
+                NSIndexPath *indexToUpdate = [NSIndexPath indexPathForRow:[comics indexOfObject:comic] inSection:0];
+                [self.tableView reloadRowsAtIndexPaths:@[indexToUpdate] withRowAnimation:UITableViewRowAnimationAutomatic];
+            }
+        }
     }
 }
 
@@ -189,6 +215,14 @@
     NSDictionary *userInfo = notification.userInfo;
     if ([[userInfo objectForKey:@"Success"] boolValue]) {
         NSLog(@"download of zip successed!");
+        NSString *savePath = [userInfo objectForKey:@"SavePath"];
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:nil message:[NSString stringWithFormat:@"Download of %@ is finished!",
+                                                             [[[savePath.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension]]
+                                  delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"OK", nil];
+        [alertView show];
     } else {
         NSLog(@"download of zip failed!");
     }
@@ -197,10 +231,11 @@
 -(void)zipDownloadProgressUpdated:(NSNotification*)notification {
     NSDictionary *userInfo = notification.userInfo;
     CGFloat progress = [[userInfo objectForKey:@"Progress"] floatValue];
-    NSLog(@"progress update: %f", progress);
     NSString *updateZipURL = [userInfo objectForKey:@"ZIPURL"];
     NSArray *visibleIndexes = [self.tableView indexPathsForVisibleRows];
     for (NSIndexPath *indexPath in visibleIndexes) {
+        if (indexPath.row == comics.count)
+            return;
         Comic *comic = [comics objectAtIndex:indexPath.row];
         if ([comic.zipFileURL isEqualToString:updateZipURL]) {
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];

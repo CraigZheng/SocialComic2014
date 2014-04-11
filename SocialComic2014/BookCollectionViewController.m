@@ -25,12 +25,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     mAppDelegate = [AppDelegate sharedAppDelegate];
+    [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, 44, 0)];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
+    [self scanForComicFiles];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self scanForComicFiles];
-    [self.collectionView reloadData];
 }
 
 -(void)scanForComicFiles {
@@ -43,6 +45,7 @@
                 [comics addObject:newComic];
         }
     }
+    [self.collectionView reloadData];
 }
 
 -(Comic*)constructComicBasedOnZip:(NSString*)zipFile {
@@ -86,5 +89,12 @@
         titleLabel.text = comic.name;
     }
     return cell;
+}
+
+#pragma mark - NSNotification handler - comic zip file downloaded
+-(void)zipDownloaded:(NSNotification*)notification {
+    if ([[notification.userInfo objectForKey:@"Success"] boolValue]) {
+        [self scanForComicFiles];
+    }
 }
 @end

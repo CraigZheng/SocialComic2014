@@ -11,9 +11,10 @@
 @implementation Comic
 
 -(NSString *)name{
-    if (self.localZipFile)
+    if (self.localZipFile || self.zipFileURL)
     {
-        return [[[self.localZipFile.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension];
+        NSString *fileURL = self.localZipFile ? self.localZipFile : self.zipFileURL;
+        return [[[fileURL.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension];
     }
     return @"Name Not Available";
 }
@@ -32,5 +33,15 @@
         return image;
     }
     return nil;
+}
+
+-(BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[self class]]) {
+        Comic *comic = (Comic*)object;
+        if ([comic.zipFileURL isEqualToString:self.zipFileURL] || [comic.localZipFile isEqualToString:self.localZipFile])
+            return YES;
+        return NO;
+    }
+    return NO;
 }
 @end
