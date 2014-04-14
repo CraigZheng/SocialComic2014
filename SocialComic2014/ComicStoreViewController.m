@@ -44,8 +44,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.tableView setContentInset:UIEdgeInsetsMake(20, 0, 44, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 44, 0)];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
+    //add header view
+    UIImage *bannerImage = [UIImage imageNamed:@"bannerImage"];
+    UIImageView *bannerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 640, 116)];
+    bannerImageView.image = bannerImage;
+    bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.tableView.tableHeaderView = bannerImageView;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -172,8 +178,8 @@
 
 
 -(void)downloadComic:(Comic*)comic {
-    //TODO: download zip file for the comic
     [zipCentre downloadComic:comic];
+    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name]];
 }
 
 #pragma mark - NSNotification handler - image downloaded

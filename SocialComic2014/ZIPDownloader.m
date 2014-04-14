@@ -24,6 +24,7 @@
 @synthesize saveToFile;
 @synthesize saveToFolder;
 @synthesize mAppDelegate;
+@synthesize comic;
 
 -(id)init{
     self = [super init];
@@ -35,9 +36,21 @@
 
 -(void)downloadTXT:(NSString *)zipurl :(NSString *)toFolder{
     zipURL = zipurl;
+    if (!comic) {
+        comic = [Comic new];
+        comic.zipFileURL = zipurl;
+    }
     saveToFolder = toFolder;
     NSURL *url = [NSURL URLWithString:[[@"http://" stringByAppendingString:zipURL] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     urlConnection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:url] delegate:self startImmediately:NO];
+    self.backgroundTaskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [urlConnection cancel];
+    }];
+}
+
+-(void)downloadComic:(Comic *)com :(NSString *)toFolder{
+    self.comic = com;
+    [self downloadTXT:com.zipFileURL :toFolder];
 }
 
 -(void)start {
@@ -60,7 +73,7 @@
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
     [self.delegate ZIPDownloaded:zipURL :NO :nil];
-
+    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskID];
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -70,6 +83,7 @@
         [self.delegate ZIPDownloaded:zipURL :NO :saveToFile];
     }
     [self.delegate ZIPDownloaded:zipURL :YES :saveToFile];
+    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskID];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

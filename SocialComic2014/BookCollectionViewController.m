@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Comic.h"
 #import "LocalComicSingleton.h"
+#import "Toast+UIView.h"
 
 @interface BookCollectionViewController ()
 @property NSMutableArray *comics;
@@ -72,6 +73,7 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     Comic *selectedComic = [comics objectAtIndex:indexPath.row];
     //TODO: present the selectedComic
+    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"You've selected %@, but this function is yet to implement", selectedComic.name]];
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded

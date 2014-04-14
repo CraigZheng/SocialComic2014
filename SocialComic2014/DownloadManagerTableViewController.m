@@ -7,31 +7,24 @@
 //
 
 #import "DownloadManagerTableViewController.h"
+#import "ZIPCentre.h"
+
 
 @interface DownloadManagerTableViewController ()
-
+@property ZIPCentre *zipCenre;
+@property NSMutableArray *comics;
 @end
 
 @implementation DownloadManagerTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize zipCenre;
+@synthesize comics;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    zipCenre = [ZIPCentre getInstance];
+    comics = [NSMutableArray arrayWithArray:zipCenre.downloadingZip.array];
+    [comics addObjectsFromArray:zipCenre.downloadQueue.array];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,30 +35,43 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return comics.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comic_cell_identifier" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    if (cell) {
+        UIImageView *coverImageView = (UIImageView*)[cell viewWithTag:1];
+        UILabel *titleLabel = (UILabel*)[cell viewWithTag:2];
+        UITextView *descriptionTextView = (UITextView*)[cell viewWithTag:3];
+        
+        //assign properties of comic to this cell
+        //name
+        Comic *comic = [comics objectAtIndex:indexPath.row];
+        titleLabel.text = comic.name;
+        //cover
+        if (comic.cover) {
+            coverImageView.image = comic.cover;
+            [coverImageView setAlpha:1.0];
+        } else {
+            [coverImageView setAlpha:0.5];
+            coverImageView.image = [UIImage imageNamed:@"icon_144"];
+        }
+        //description
+        if (comic.description.length > 0) {
+            descriptionTextView.text = comic.description;
+        }
+
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

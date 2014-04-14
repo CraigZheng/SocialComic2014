@@ -10,8 +10,6 @@
 #import "ZIPDownloader.h"
 
 @interface ZIPCentre()<ZIPDownloaderProtocol>
-@property NSMutableOrderedSet *downloadQueue;
-@property NSMutableOrderedSet *downloadingZip;
 @end
 @implementation ZIPCentre
 @synthesize mAppDelegate;
@@ -24,7 +22,7 @@
     if ([downloadQueue containsObject:comic])
         return;
     if (downloadingZip.count < 3) {
-        ZIPDownloader *downloader = [self createDownloaderWithURL:comic.zipFileURL];
+        ZIPDownloader *downloader = [self createDownloaderWithComic:comic];
         if ([downloadingZip containsObject:downloader]){
             return;
         }
@@ -35,18 +33,24 @@
     }
 }
 
--(ZIPDownloader*)createDownloaderWithURL:(NSString*)url {
+-(ZIPDownloader*)createDownloaderWithComic:(Comic*)comic {
     ZIPDownloader *downloader = [ZIPDownloader new];
     downloader.delegate = self;
-    [downloader downloadTXT:url :mAppDelegate.zipFileFolder];
+    [downloader downloadComic:comic :mAppDelegate.zipFileFolder];
+    return downloader;
+}
+
+-(ZIPDownloader*)createDownloaderWithURL:(NSString*)zipUrl {
+    ZIPDownloader *downloader = [ZIPDownloader new];
+    [downloader downloadTXT:zipUrl :mAppDelegate.zipFileFolder];
     return downloader;
 }
 
 -(void)activateNextDownload {
     if (downloadingZip.count < 3 && downloadQueue.count > 0) {
-        NSString *imgURL = [downloadQueue firstObject];
+        Comic *comic = [downloadQueue firstObject];
         [downloadQueue removeObjectAtIndex:0];
-        ZIPDownloader *downloader = [self createDownloaderWithURL:imgURL];
+        ZIPDownloader *downloader = [self createDownloaderWithComic:comic];
         [downloader start];
         [downloadingZip addObject:downloader];
     } else {

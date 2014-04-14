@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Comic.h"
 
 @protocol ZIPDownloaderProtocol <NSObject>
 -(void)ZIPDownloaded:(NSString*)zipURL :(BOOL)success :(NSString*)savePath;
@@ -17,10 +18,12 @@
 @property NSString *zipURL;
 @property NSString *saveToFolder;
 @property NSString *saveToFile;
-
+@property Comic *comic;
+@property UIBackgroundTaskIdentifier backgroundTaskID;
 @property id<ZIPDownloaderProtocol> delegate;
 
 -(void)downloadTXT:(NSString*)zipurl :(NSString*)toFolder;
+-(void)downloadComic:(Comic*)comic :(NSString*)toFolder;
 -(void)start;
 -(void)stop;
 

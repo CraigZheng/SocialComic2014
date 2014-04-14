@@ -12,6 +12,8 @@
 
 @interface ZIPCentre : NSObject
 @property AppDelegate *mAppDelegate;
+@property NSMutableOrderedSet *downloadQueue;
+@property NSMutableOrderedSet *downloadingZip;
 
 -(void)downloadComic:(Comic*)comic;
 
