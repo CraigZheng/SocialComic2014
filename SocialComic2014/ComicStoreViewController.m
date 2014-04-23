@@ -17,6 +17,7 @@
 #import "TXTCentre.h"
 #import "DACircularProgressView.h"
 #import "LocalComicSingleton.h"
+#import "ComicStorePreviewAndDownloadViewController.h"
 
 @interface ComicStoreViewController ()<XMLDownloaderDelegate>
 @property NSArray *comics;
@@ -24,6 +25,7 @@
 @property TXTCentre *txtCentre;
 @property ZIPCentre *zipCentre;
 @property AppDelegate *mAppDelegate;
+@property ComicStorePreviewAndDownloadViewController *previewAndDownloadController;
 @end
 
 @implementation ComicStoreViewController
@@ -32,6 +34,7 @@
 @synthesize txtCentre;
 @synthesize zipCentre;
 @synthesize mAppDelegate;
+@synthesize previewAndDownloadController;
 
 - (void)viewDidLoad
 {

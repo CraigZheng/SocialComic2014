@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CCA951907818700C8CEF4 /* PartialTransparentView.m */; };
+		440CCA9B1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */; };
+		440CCA9C1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70518F2342D00FF49A6 /* CoreGraphics.framework */; };
 		448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
@@ -57,6 +59,9 @@
 /* Begin PBXFileReference section */
 		440CCA941907818700C8CEF4 /* PartialTransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialTransparentView.h; sourceTree = "<group>"; };
 		440CCA951907818700C8CEF4 /* PartialTransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialTransparentView.m; sourceTree = "<group>"; };
+		440CCA981907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicStorePreviewAndDownloadViewController.h; sourceTree = "<group>"; };
+		440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicStorePreviewAndDownloadViewController.m; sourceTree = "<group>"; };
+		440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicStorePreviewAndDownloadViewController.xib; sourceTree = "<group>"; };
 		448CC70018F2342D00FF49A6 /* SocialComic2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialComic2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC70318F2342D00FF49A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		448CC70518F2342D00FF49A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +196,9 @@
 				44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */,
 				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
 				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
+				440CCA981907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.h */,
+				440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */,
+				440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */,
 				440CCA971907819C00C8CEF4 /* PartialTransparentView */,
 				448CC77718F2927A00FF49A6 /* Toast */,
 				448CC77318F28CA200FF49A6 /* DACircularProgress */,
@@ -408,6 +416,7 @@
 				448CC77218F28C2500FF49A6 /* icon_144.png in Resources */,
 				448CC78518F666A900FF49A6 /* NoImageAvailable.jpg in Resources */,
 				448CC70E18F2342D00FF49A6 /* InfoPlist.strings in Resources */,
+				440CCA9C1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +438,7 @@
 				448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */,
 				448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */,
 				44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */,
+				440CCA9B1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
 				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
 				448CC78018F6257900FF49A6 /* ZIPDownloader.m in Sources */,
