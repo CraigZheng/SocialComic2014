@@ -72,4 +72,28 @@
 +(AppDelegate *)sharedAppDelegate{
     return [[UIApplication sharedApplication] delegate];
 }
+
++(void)fadeInView:(UIView*)view {
+    view.alpha = 0;
+    [[[AppDelegate sharedAppDelegate] window] addSubview:view];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.2];
+    view.alpha = 1.0f;
+    [UIView commitAnimations];
+
+}
+
++(void)fadeOutView:(UIView *)view {
+    view.alpha = 1.0f;
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         view.alpha = 0;
+                     }
+                     completion:^(BOOL success){
+                         if (view.superview)
+                             [view removeFromSuperview];
+                     }];
+}
 @end

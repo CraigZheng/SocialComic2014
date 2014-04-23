@@ -16,4 +16,6 @@
 @property NSString *zipFileFolder;
 
 +(AppDelegate*)sharedAppDelegate;
++(void)fadeInView:(UIView*)view;
++(void)fadeOutView:(UIView*)view;
 @end

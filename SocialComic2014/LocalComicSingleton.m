@@ -32,6 +32,15 @@ static LocalComicSingleton *_instance;
     self.localComics = comics;
 }
 
+-(BOOL)containsComic:(Comic *)comic {
+    for (Comic* localComic in self.localComics) {
+        NSString* comicName = localComic.zipFileURL ? localComic.zipFileURL.lastPathComponent : localComic.localZipFile.lastPathComponent;
+        if ([comicName isEqualToString:comic.zipFileURL.lastPathComponent] || [comicName isEqualToString:comic.localZipFile.lastPathComponent])
+            return YES;
+    }
+    return NO;
+}
+
 -(Comic*)constructComicBasedOnZip:(NSString*)zipFile {
     if (zipFile && [zipFile.pathExtension.lowercaseString isEqualToString:@"zip"]) {
         Comic *newComic = [Comic new];
@@ -57,8 +66,16 @@ static LocalComicSingleton *_instance;
     self = [super init];
     if (self) {
         mAppDelegate = [AppDelegate sharedAppDelegate];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     }
     return self;
+}
+
+#pragma mark - notification handlers
+-(void)zipDownloaded:(NSNotification*)notification {
+    if ([notification.userInfo objectForKey:@"Success"]) {
+        [self scanForLocalComics];
+    }
 }
 
 + (id)getInstance {

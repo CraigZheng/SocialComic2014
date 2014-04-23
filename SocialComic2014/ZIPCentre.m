@@ -33,6 +33,13 @@
     }
 }
 
+-(BOOL)containsComic:(Comic *)comic{
+    ZIPDownloader *downloader = [self createDownloaderWithComic:comic];
+    if ([downloadingZip containsObject:downloader] || [downloadQueue containsObject:comic])
+        return YES;
+    return NO;
+}
+
 -(ZIPDownloader*)createDownloaderWithComic:(Comic*)comic {
     ZIPDownloader *downloader = [ZIPDownloader new];
     downloader.delegate = self;
@@ -68,24 +75,21 @@
 }
 
 #pragma mark - ZIPDownloaderDelegate
--(void)ZIPDownloaded:(NSString *)zipURL :(BOOL)success :(NSString *)savePath{
+-(void)ZIPDownloaded:(ZIPDownloader *)downloader :(BOOL)success :(NSString *)savePath{
     NSDictionary *userInfo;
     if (success)
-        userInfo = [NSDictionary dictionaryWithObjects:@[zipURL, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPURL", @"SavePath", @"Success"]];
+        userInfo = [NSDictionary dictionaryWithObjects:@[downloader, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPDownloader", @"SavePath", @"Success"]];
     else
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:success] forKey:@"Success"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];
     //remove the just finished downloader
-    if (zipURL) {
-        ZIPDownloader *downloader = [self createDownloaderWithURL:zipURL];
-        [downloadingZip removeObject:downloader];
-    }
+    [downloadingZip removeObject:downloader];
     [self activateNextDownload];
 }
 
--(void)ZIPDownloadProgressUpdated:(NSString *)zipURL :(CGFloat)progress {
+-(void)ZIPDownloadProgressUpdated:(ZIPDownloader*)downloader :(NSString *)zipURL :(CGFloat)progress {
     if (zipURL || progress) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[zipURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ZIPURL", @"Progress"]];
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[downloader, zipURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ZIPDownloader", @"ZIPURL", @"Progress"]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ZipDownloadProgressUpdate" object:self userInfo:userInfo];
     }
 }

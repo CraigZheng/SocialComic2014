@@ -42,12 +42,19 @@
     // Do any additional setup after loading the view.
     mAppDelegate = [AppDelegate sharedAppDelegate];
     comics = [NSArray new];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldDownloadComic:) name:@"ShouldDownloadComicCommand" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(txtDownloaded:) name:@"TXTDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 44, 0)];
+    //add comic preview controller
+    previewAndDownloadController = [[ComicStorePreviewAndDownloadViewController alloc] initWithNibName:@"ComicStorePreviewAndDownloadViewController" bundle:[NSBundle mainBundle]];
+    //force the preview controller to be loaded into memory
+    previewAndDownloadController.view.alpha = 0;
+    [self.view addSubview:previewAndDownloadController.view];
+    [previewAndDownloadController.view removeFromSuperview];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
     //add header view
     UIImage *bannerImage = [UIImage imageNamed:@"bannerImage"];
@@ -81,7 +88,7 @@
             [imageCentre downloadImageWithURL:comic.coverFileURL];
             [txtCentre downloadTXT:comic.descriptionFileURL];
         }
-        NSLog(@"size %d", comics.count);
+        NSLog(@"size %lu", (unsigned long)comics.count);
         [self.tableView reloadData];
     }
     [[mAppDelegate window] hideToastActivity];
@@ -143,7 +150,9 @@
         return;
     }
     Comic *selectedComic = [comics objectAtIndex:indexPath.row];
-    [self downloadComic:selectedComic];
+    previewAndDownloadController.myComic = selectedComic;
+    [AppDelegate fadeInView:previewAndDownloadController.view];
+    //[self downloadComic:selectedComic];
 }
 
 #pragma mark notification handler - image downloading progress update
@@ -268,6 +277,15 @@
                 circularProgressView.hidden = YES;
             }
         }
+    }
+}
+
+#pragma mark - should download comic command received
+-(void)shouldDownloadComic:(NSNotification*)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    Comic *selectedComic = [userInfo objectForKey:@"SelectedComic"];
+    if (selectedComic) {
+        [self downloadComic:selectedComic];
     }
 }
 @end

@@ -10,7 +10,9 @@
 #import "Comic.h"
 
 @interface ComicStorePreviewAndDownloadViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *downloadButton;
 @property (strong, nonatomic) Comic *myComic;
-@property (strong, nonatomic) IBOutlet UIImageView *comicCoverPreview;
+@property (strong, nonatomic) IBOutlet UIView *coverView;
+@property (strong, nonatomic) IBOutlet UIImageView *comicCoverPreviewImageView;
 - (IBAction)downloadAction:(id)sender;
 @end

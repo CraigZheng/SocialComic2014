@@ -16,7 +16,7 @@
 @property NSMutableOrderedSet *downloadingZip;
 
 -(void)downloadComic:(Comic*)comic;
-
+-(BOOL)containsComic:(Comic*)comic;
 -(void)stopAllDownloading;
 
 +(id)getInstance;

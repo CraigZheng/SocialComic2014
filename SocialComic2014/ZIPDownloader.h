@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Comic.h"
-
+@class ZIPDownloader;
 @protocol ZIPDownloaderProtocol <NSObject>
--(void)ZIPDownloaded:(NSString*)zipURL :(BOOL)success :(NSString*)savePath;
+-(void)ZIPDownloaded:(ZIPDownloader*)downloader :(BOOL)success :(NSString*)savePath;
 @optional
--(void)ZIPDownloadProgressUpdated:(NSString*)zipURL :(CGFloat)progress;
+-(void)ZIPDownloadProgressUpdated:(ZIPDownloader*)downloader :(NSString*)zipURL :(CGFloat)progress;
 @end
 @interface ZIPDownloader : NSObject
 @property NSString *zipURL;

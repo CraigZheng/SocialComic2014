@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComicStorePreviewAndDownloadViewController">
             <connections>
-                <outlet property="comicCoverPreview" destination="vKe-hB-a91" id="7nV-yM-rWS"/>
+                <outlet property="comicCoverPreviewImageView" destination="vKe-hB-a91" id="aPM-Jf-Gf1"/>
+                <outlet property="coverView" destination="CcY-O2-1NH" id="uXB-AB-5e2"/>
+                <outlet property="downloadButton" destination="3Lu-fN-oT5" id="CMG-QS-qMN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,15 +19,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcY-O2-1NH">
-                    <rect key="frame" x="25" y="43" width="270" height="481"/>
+                    <rect key="frame" x="25" y="43" width="270" height="450"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverSample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-hB-a91">
                             <rect key="frame" x="0.0" y="0.0" width="270" height="400"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="400" id="auw-lq-nPx"/>
+                            </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lu-fN-oT5">
-                            <rect key="frame" x="20" y="431" width="230" height="30"/>
+                            <rect key="frame" x="20" y="408" width="230" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="DOWNLOAD">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,22 +42,20 @@
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="vKe-hB-a91" secondAttribute="bottom" constant="81" id="6nY-BH-XAV"/>
-                        <constraint firstAttribute="trailing" secondItem="vKe-hB-a91" secondAttribute="trailing" id="8pw-Nu-KU3"/>
-                        <constraint firstItem="vKe-hB-a91" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" id="BvQ-f0-pKb"/>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="top" secondItem="vKe-hB-a91" secondAttribute="bottom" constant="31" id="LYh-5h-0DE"/>
-                        <constraint firstAttribute="trailing" secondItem="3Lu-fN-oT5" secondAttribute="trailing" constant="20" id="eft-bB-AAu"/>
-                        <constraint firstItem="vKe-hB-a91" firstAttribute="top" secondItem="CcY-O2-1NH" secondAttribute="top" id="hrH-yg-KhZ"/>
-                        <constraint firstAttribute="bottom" secondItem="3Lu-fN-oT5" secondAttribute="bottom" constant="20" id="tgF-Hx-R4S"/>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" constant="20" id="wYL-bE-jiW"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" constant="20" symbolic="YES" id="GzY-Cx-GfF"/>
+                        <constraint firstItem="vKe-hB-a91" firstAttribute="top" secondItem="CcY-O2-1NH" secondAttribute="top" id="I8f-oZ-rdM"/>
+                        <constraint firstAttribute="trailing" secondItem="vKe-hB-a91" secondAttribute="trailing" id="gO6-KZ-3er"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="top" secondItem="vKe-hB-a91" secondAttribute="bottom" constant="8" symbolic="YES" id="jjU-Qy-RTR"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="centerX" secondItem="vKe-hB-a91" secondAttribute="centerX" id="qxY-nk-596"/>
+                        <constraint firstItem="vKe-hB-a91" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" id="rJV-e3-4AV"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="CcY-O2-1NH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7bt-fS-V0q"/>
-                <constraint firstItem="CcY-O2-1NH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="NfP-Ot-BDx"/>
-                <constraint firstItem="CcY-O2-1NH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="RhC-Wv-Jw3"/>
-                <constraint firstAttribute="bottom" secondItem="CcY-O2-1NH" secondAttribute="bottom" constant="44" id="S0U-xb-dmV"/>
+                <constraint firstItem="CcY-O2-1NH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="XBw-Xk-nbl"/>
+                <constraint firstItem="CcY-O2-1NH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m7u-y4-8TH"/>
+                <constraint firstAttribute="bottom" secondItem="CcY-O2-1NH" secondAttribute="bottom" constant="75" id="teM-Qq-ayf"/>
+                <constraint firstItem="CcY-O2-1NH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="wvL-Jz-i2A"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

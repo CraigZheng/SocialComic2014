@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class Comic;
 @interface LocalComicSingleton : NSObject
 @property NSArray* localComics;
 
 +(id)getInstance;
 
 -(void)scanForLocalComics;
+-(BOOL)containsComic:(Comic*)comic;
 @end
