@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CCA951907818700C8CEF4 /* PartialTransparentView.m */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70518F2342D00FF49A6 /* CoreGraphics.framework */; };
 		448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440CCA941907818700C8CEF4 /* PartialTransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialTransparentView.h; sourceTree = "<group>"; };
+		440CCA951907818700C8CEF4 /* PartialTransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialTransparentView.m; sourceTree = "<group>"; };
 		448CC70018F2342D00FF49A6 /* SocialComic2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialComic2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC70318F2342D00FF49A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		448CC70518F2342D00FF49A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440CCA971907819C00C8CEF4 /* PartialTransparentView */ = {
+			isa = PBXGroup;
+			children = (
+				440CCA941907818700C8CEF4 /* PartialTransparentView.h */,
+				440CCA951907818700C8CEF4 /* PartialTransparentView.m */,
+			);
+			name = PartialTransparentView;
+			sourceTree = "<group>";
+		};
 		448CC6F718F2342D00FF49A6 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 				44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */,
 				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
 				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
+				440CCA971907819C00C8CEF4 /* PartialTransparentView */,
 				448CC77718F2927A00FF49A6 /* Toast */,
 				448CC77318F28CA200FF49A6 /* DACircularProgress */,
 				448CC77018F28C1600FF49A6 /* Images */,
@@ -425,6 +438,7 @@
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
 				44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */,
+				440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */,
 				448CC71018F2342D00FF49A6 /* main.m in Sources */,
 				448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */,
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
