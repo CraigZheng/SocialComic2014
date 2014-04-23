@@ -10,6 +10,35 @@
 		440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CCA951907818700C8CEF4 /* PartialTransparentView.m */; };
 		440CCA9B1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */; };
 		440CCA9C1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */; };
+		440CCA9F1907A19200C8CEF4 /* ComicReaderTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */; };
+		440CCABC1907A49100C8CEF4 /* arrowleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA01907A49000C8CEF4 /* arrowleft.png */; };
+		440CCABD1907A49100C8CEF4 /* arrowleft2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA11907A49000C8CEF4 /* arrowleft2x.png */; };
+		440CCABE1907A49100C8CEF4 /* arrowright.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA21907A49000C8CEF4 /* arrowright.png */; };
+		440CCABF1907A49100C8CEF4 /* arrowright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA31907A49000C8CEF4 /* arrowright@2x.png */; };
+		440CCAC01907A49100C8CEF4 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA41907A49000C8CEF4 /* book.png */; };
+		440CCAC11907A49100C8CEF4 /* book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA51907A49000C8CEF4 /* book@2x.png */; };
+		440CCAC21907A49100C8CEF4 /* hold.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA61907A49000C8CEF4 /* hold.png */; };
+		440CCAC31907A49100C8CEF4 /* hold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA71907A49100C8CEF4 /* hold@2x.png */; };
+		440CCAC41907A49100C8CEF4 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA81907A49100C8CEF4 /* house.png */; };
+		440CCAC51907A49100C8CEF4 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAA91907A49100C8CEF4 /* house@2x.png */; };
+		440CCAC61907A49100C8CEF4 /* icon_arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAAA1907A49100C8CEF4 /* icon_arrow_left.png */; };
+		440CCAC71907A49100C8CEF4 /* icon_arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAAB1907A49100C8CEF4 /* icon_arrow_right.png */; };
+		440CCAC81907A49100C8CEF4 /* imageBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAAC1907A49100C8CEF4 /* imageBackground.png */; };
+		440CCAC91907A49100C8CEF4 /* imageViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAAD1907A49100C8CEF4 /* imageViewCell.png */; };
+		440CCACA1907A49100C8CEF4 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAAE1907A49100C8CEF4 /* menu.png */; };
+		440CCACB1907A49100C8CEF4 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAAF1907A49100C8CEF4 /* menu@2x.png */; };
+		440CCACC1907A49100C8CEF4 /* noCoverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB01907A49100C8CEF4 /* noCoverImage.png */; };
+		440CCACD1907A49100C8CEF4 /* noCoverImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB11907A49100C8CEF4 /* noCoverImage@2x.png */; };
+		440CCACE1907A49100C8CEF4 /* outline_damian.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB21907A49100C8CEF4 /* outline_damian.png */; };
+		440CCACF1907A49100C8CEF4 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB31907A49100C8CEF4 /* page.png */; };
+		440CCAD01907A49100C8CEF4 /* question-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB41907A49100C8CEF4 /* question-mark.png */; };
+		440CCAD11907A49100C8CEF4 /* question-mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB51907A49100C8CEF4 /* question-mark@2x.png */; };
+		440CCAD21907A49100C8CEF4 /* redcrossbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB61907A49100C8CEF4 /* redcrossbutton.png */; };
+		440CCAD31907A49100C8CEF4 /* redcrossbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB71907A49100C8CEF4 /* redcrossbutton@2x.png */; };
+		440CCAD41907A49100C8CEF4 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB81907A49100C8CEF4 /* swipe.png */; };
+		440CCAD51907A49100C8CEF4 /* swipe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB91907A49100C8CEF4 /* swipe@2x.png */; };
+		440CCAD61907A49100C8CEF4 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABA1907A49100C8CEF4 /* switch.png */; };
+		440CCAD71907A49100C8CEF4 /* switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABB1907A49100C8CEF4 /* switch@2x.png */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70518F2342D00FF49A6 /* CoreGraphics.framework */; };
 		448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
@@ -62,6 +91,36 @@
 		440CCA981907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicStorePreviewAndDownloadViewController.h; sourceTree = "<group>"; };
 		440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicStorePreviewAndDownloadViewController.m; sourceTree = "<group>"; };
 		440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicStorePreviewAndDownloadViewController.xib; sourceTree = "<group>"; };
+		440CCA9D1907A19200C8CEF4 /* ComicReaderTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicReaderTabBarViewController.h; sourceTree = "<group>"; };
+		440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicReaderTabBarViewController.m; sourceTree = "<group>"; };
+		440CCAA01907A49000C8CEF4 /* arrowleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowleft.png; sourceTree = "<group>"; };
+		440CCAA11907A49000C8CEF4 /* arrowleft2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowleft2x.png; sourceTree = "<group>"; };
+		440CCAA21907A49000C8CEF4 /* arrowright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowright.png; sourceTree = "<group>"; };
+		440CCAA31907A49000C8CEF4 /* arrowright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowright@2x.png"; sourceTree = "<group>"; };
+		440CCAA41907A49000C8CEF4 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		440CCAA51907A49000C8CEF4 /* book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book@2x.png"; sourceTree = "<group>"; };
+		440CCAA61907A49000C8CEF4 /* hold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hold.png; sourceTree = "<group>"; };
+		440CCAA71907A49100C8CEF4 /* hold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hold@2x.png"; sourceTree = "<group>"; };
+		440CCAA81907A49100C8CEF4 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		440CCAA91907A49100C8CEF4 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
+		440CCAAA1907A49100C8CEF4 /* icon_arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_arrow_left.png; sourceTree = "<group>"; };
+		440CCAAB1907A49100C8CEF4 /* icon_arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_arrow_right.png; sourceTree = "<group>"; };
+		440CCAAC1907A49100C8CEF4 /* imageBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBackground.png; sourceTree = "<group>"; };
+		440CCAAD1907A49100C8CEF4 /* imageViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageViewCell.png; sourceTree = "<group>"; };
+		440CCAAE1907A49100C8CEF4 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		440CCAAF1907A49100C8CEF4 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		440CCAB01907A49100C8CEF4 /* noCoverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noCoverImage.png; sourceTree = "<group>"; };
+		440CCAB11907A49100C8CEF4 /* noCoverImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noCoverImage@2x.png"; sourceTree = "<group>"; };
+		440CCAB21907A49100C8CEF4 /* outline_damian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline_damian.png; sourceTree = "<group>"; };
+		440CCAB31907A49100C8CEF4 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
+		440CCAB41907A49100C8CEF4 /* question-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-mark.png"; sourceTree = "<group>"; };
+		440CCAB51907A49100C8CEF4 /* question-mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-mark@2x.png"; sourceTree = "<group>"; };
+		440CCAB61907A49100C8CEF4 /* redcrossbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redcrossbutton.png; sourceTree = "<group>"; };
+		440CCAB71907A49100C8CEF4 /* redcrossbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redcrossbutton@2x.png"; sourceTree = "<group>"; };
+		440CCAB81907A49100C8CEF4 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
+		440CCAB91907A49100C8CEF4 /* swipe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe@2x.png"; sourceTree = "<group>"; };
+		440CCABA1907A49100C8CEF4 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch.png; sourceTree = "<group>"; };
+		440CCABB1907A49100C8CEF4 /* switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch@2x.png"; sourceTree = "<group>"; };
 		448CC70018F2342D00FF49A6 /* SocialComic2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialComic2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC70318F2342D00FF49A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		448CC70518F2342D00FF49A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -152,6 +211,41 @@
 			name = PartialTransparentView;
 			sourceTree = "<group>";
 		};
+		440CCAD81907A49500C8CEF4 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				440CCAA01907A49000C8CEF4 /* arrowleft.png */,
+				440CCAA11907A49000C8CEF4 /* arrowleft2x.png */,
+				440CCAA21907A49000C8CEF4 /* arrowright.png */,
+				440CCAA31907A49000C8CEF4 /* arrowright@2x.png */,
+				440CCAA41907A49000C8CEF4 /* book.png */,
+				440CCAA51907A49000C8CEF4 /* book@2x.png */,
+				440CCAA61907A49000C8CEF4 /* hold.png */,
+				440CCAA71907A49100C8CEF4 /* hold@2x.png */,
+				440CCAA81907A49100C8CEF4 /* house.png */,
+				440CCAA91907A49100C8CEF4 /* house@2x.png */,
+				440CCAAA1907A49100C8CEF4 /* icon_arrow_left.png */,
+				440CCAAB1907A49100C8CEF4 /* icon_arrow_right.png */,
+				440CCAAC1907A49100C8CEF4 /* imageBackground.png */,
+				440CCAAD1907A49100C8CEF4 /* imageViewCell.png */,
+				440CCAAE1907A49100C8CEF4 /* menu.png */,
+				440CCAAF1907A49100C8CEF4 /* menu@2x.png */,
+				440CCAB01907A49100C8CEF4 /* noCoverImage.png */,
+				440CCAB11907A49100C8CEF4 /* noCoverImage@2x.png */,
+				440CCAB21907A49100C8CEF4 /* outline_damian.png */,
+				440CCAB31907A49100C8CEF4 /* page.png */,
+				440CCAB41907A49100C8CEF4 /* question-mark.png */,
+				440CCAB51907A49100C8CEF4 /* question-mark@2x.png */,
+				440CCAB61907A49100C8CEF4 /* redcrossbutton.png */,
+				440CCAB71907A49100C8CEF4 /* redcrossbutton@2x.png */,
+				440CCAB81907A49100C8CEF4 /* swipe.png */,
+				440CCAB91907A49100C8CEF4 /* swipe@2x.png */,
+				440CCABA1907A49100C8CEF4 /* switch.png */,
+				440CCABB1907A49100C8CEF4 /* switch@2x.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		448CC6F718F2342D00FF49A6 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +282,8 @@
 				448CC71218F2342D00FF49A6 /* AppDelegate.h */,
 				448CC71318F2342D00FF49A6 /* AppDelegate.m */,
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
+				440CCA9D1907A19200C8CEF4 /* ComicReaderTabBarViewController.h */,
+				440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */,
 				448CC78118F6657100FF49A6 /* BookCollectionViewController.h */,
 				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
@@ -207,6 +303,7 @@
 				448CC76B18F2886000FF49A6 /* TXT */,
 				448CC75418F24B2700FF49A6 /* Image */,
 				448CC74E18F248BE00FF49A6 /* XML */,
+				440CCAD81907A49500C8CEF4 /* icons */,
 				448CC74B18F23C0E00FF49A6 /* Comic.h */,
 				448CC74C18F23C0E00FF49A6 /* Comic.m */,
 				448CC72118F2342D00FF49A6 /* Images.xcassets */,
@@ -408,15 +505,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440CCABC1907A49100C8CEF4 /* arrowleft.png in Resources */,
+				440CCAC91907A49100C8CEF4 /* imageViewCell.png in Resources */,
+				440CCACB1907A49100C8CEF4 /* menu@2x.png in Resources */,
 				44A27CBD18FB90EA0083760D /* hourglass_silhouette.png in Resources */,
+				440CCAC21907A49100C8CEF4 /* hold.png in Resources */,
+				440CCAC31907A49100C8CEF4 /* hold@2x.png in Resources */,
+				440CCAD41907A49100C8CEF4 /* swipe.png in Resources */,
+				440CCAD21907A49100C8CEF4 /* redcrossbutton.png in Resources */,
 				448CC75318F24A7F00FF49A6 /* coverSample.jpg in Resources */,
+				440CCACF1907A49100C8CEF4 /* page.png in Resources */,
 				44A27CBB18FB89B70083760D /* bannerImage.png in Resources */,
+				440CCABF1907A49100C8CEF4 /* arrowright@2x.png in Resources */,
+				440CCACD1907A49100C8CEF4 /* noCoverImage@2x.png in Resources */,
+				440CCACA1907A49100C8CEF4 /* menu.png in Resources */,
+				440CCAC81907A49100C8CEF4 /* imageBackground.png in Resources */,
+				440CCAD61907A49100C8CEF4 /* switch.png in Resources */,
 				448CC72218F2342D00FF49A6 /* Images.xcassets in Resources */,
+				440CCAC01907A49100C8CEF4 /* book.png in Resources */,
 				448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */,
+				440CCAC41907A49100C8CEF4 /* house.png in Resources */,
+				440CCAC61907A49100C8CEF4 /* icon_arrow_left.png in Resources */,
+				440CCABE1907A49100C8CEF4 /* arrowright.png in Resources */,
+				440CCAC71907A49100C8CEF4 /* icon_arrow_right.png in Resources */,
+				440CCAD51907A49100C8CEF4 /* swipe@2x.png in Resources */,
+				440CCAD01907A49100C8CEF4 /* question-mark.png in Resources */,
+				440CCAD11907A49100C8CEF4 /* question-mark@2x.png in Resources */,
+				440CCABD1907A49100C8CEF4 /* arrowleft2x.png in Resources */,
+				440CCAD71907A49100C8CEF4 /* switch@2x.png in Resources */,
 				448CC77218F28C2500FF49A6 /* icon_144.png in Resources */,
 				448CC78518F666A900FF49A6 /* NoImageAvailable.jpg in Resources */,
+				440CCACE1907A49100C8CEF4 /* outline_damian.png in Resources */,
 				448CC70E18F2342D00FF49A6 /* InfoPlist.strings in Resources */,
+				440CCACC1907A49100C8CEF4 /* noCoverImage.png in Resources */,
 				440CCA9C1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib in Resources */,
+				440CCAC51907A49100C8CEF4 /* house@2x.png in Resources */,
+				440CCAC11907A49100C8CEF4 /* book@2x.png in Resources */,
+				440CCAD31907A49100C8CEF4 /* redcrossbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +571,7 @@
 				448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */,
 				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
+				440CCA9F1907A19200C8CEF4 /* ComicReaderTabBarViewController.m in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
 				44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */,
 				440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */,

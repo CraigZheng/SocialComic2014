@@ -30,7 +30,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lu-fN-oT5">
-                            <rect key="frame" x="20" y="408" width="230" height="30"/>
+                            <rect key="frame" x="0.0" y="408" width="270" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="DOWNLOAD">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,12 +42,13 @@
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" constant="20" symbolic="YES" id="GzY-Cx-GfF"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="leading" secondItem="vKe-hB-a91" secondAttribute="leading" id="9z0-DE-NBl"/>
                         <constraint firstItem="vKe-hB-a91" firstAttribute="top" secondItem="CcY-O2-1NH" secondAttribute="top" id="I8f-oZ-rdM"/>
                         <constraint firstAttribute="trailing" secondItem="vKe-hB-a91" secondAttribute="trailing" id="gO6-KZ-3er"/>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="top" secondItem="vKe-hB-a91" secondAttribute="bottom" constant="8" symbolic="YES" id="jjU-Qy-RTR"/>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="centerX" secondItem="vKe-hB-a91" secondAttribute="centerX" id="qxY-nk-596"/>
+                        <constraint firstAttribute="bottom" secondItem="3Lu-fN-oT5" secondAttribute="bottom" id="mwp-E9-uM4"/>
                         <constraint firstItem="vKe-hB-a91" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" id="rJV-e3-4AV"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="trailing" secondItem="vKe-hB-a91" secondAttribute="trailing" id="tRL-dS-d2H"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="top" secondItem="vKe-hB-a91" secondAttribute="bottom" constant="8" symbolic="YES" id="ueX-b2-NJS"/>
                     </constraints>
                 </view>
             </subviews>

@@ -78,9 +78,10 @@
 
 - (IBAction)downloadAction:(id)sender {
     if (comicReady) {
-        return;
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:1] forKey:@"ShouldOpenTab"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldOpenTabCommand" object:self userInfo:userInfo];
     }
-    if (myComic && myComic.zipFileURL)
+    if (myComic && myComic.zipFileURL && !comicReady)
     {
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:myComic forKey:@"SelectedComic"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldDownloadComicCommand" object:nil userInfo:userInfo];

@@ -67,6 +67,7 @@ static LocalComicSingleton *_instance;
     if (self) {
         mAppDelegate = [AppDelegate sharedAppDelegate];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
+        [self scanForLocalComics];
     }
     return self;
 }
