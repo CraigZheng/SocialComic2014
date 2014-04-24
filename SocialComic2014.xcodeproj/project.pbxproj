@@ -707,13 +707,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Haozheng Zheng (9EBE9MWW9X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7AFC3AC1-81AE-4036-8ADA-93D50DA48F7A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -723,13 +723,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Haozheng Zheng (9EBE9MWW9X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7AFC3AC1-81AE-4036-8ADA-93D50DA48F7A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
