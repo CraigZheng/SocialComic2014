@@ -10,6 +10,7 @@
                 <outlet property="comicCoverPreviewImageView" destination="vKe-hB-a91" id="aPM-Jf-Gf1"/>
                 <outlet property="coverView" destination="CcY-O2-1NH" id="uXB-AB-5e2"/>
                 <outlet property="downloadButton" destination="3Lu-fN-oT5" id="CMG-QS-qMN"/>
+                <outlet property="stopDownloadButton" destination="8yh-54-eJu" id="1MT-VJ-5hH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,44 +20,64 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcY-O2-1NH">
-                    <rect key="frame" x="25" y="43" width="270" height="450"/>
+                    <rect key="frame" x="25" y="25" width="270" height="432"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverSample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-hB-a91">
-                            <rect key="frame" x="0.0" y="0.0" width="270" height="400"/>
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="390"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="400" id="auw-lq-nPx"/>
-                            </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lu-fN-oT5">
-                            <rect key="frame" x="0.0" y="408" width="270" height="42"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lu-fN-oT5">
+                            <rect key="frame" x="0.0" y="390" width="270" height="42"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="v2a-vc-I9k"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" title="DOWNLOAD">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="GFl-q7-qg5"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yh-54-eJu">
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="w7f-nH-TsS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="STOP DOWNLOADING">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="stopDownloadAction:" destination="-1" eventType="touchUpInside" id="Lud-Qi-vPu"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="leading" secondItem="vKe-hB-a91" secondAttribute="leading" id="9z0-DE-NBl"/>
-                        <constraint firstItem="vKe-hB-a91" firstAttribute="top" secondItem="CcY-O2-1NH" secondAttribute="top" id="I8f-oZ-rdM"/>
-                        <constraint firstAttribute="trailing" secondItem="vKe-hB-a91" secondAttribute="trailing" id="gO6-KZ-3er"/>
-                        <constraint firstAttribute="bottom" secondItem="3Lu-fN-oT5" secondAttribute="bottom" id="mwp-E9-uM4"/>
-                        <constraint firstItem="vKe-hB-a91" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" id="rJV-e3-4AV"/>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="trailing" secondItem="vKe-hB-a91" secondAttribute="trailing" id="tRL-dS-d2H"/>
-                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="top" secondItem="vKe-hB-a91" secondAttribute="bottom" constant="8" symbolic="YES" id="ueX-b2-NJS"/>
+                        <constraint firstAttribute="trailing" secondItem="3Lu-fN-oT5" secondAttribute="trailing" id="07W-lN-HOO"/>
+                        <constraint firstItem="vKe-hB-a91" firstAttribute="leading" secondItem="CcY-O2-1NH" secondAttribute="leading" id="DPF-cf-QGw"/>
+                        <constraint firstItem="8yh-54-eJu" firstAttribute="leading" secondItem="vKe-hB-a91" secondAttribute="leading" id="Gyt-te-dXT"/>
+                        <constraint firstAttribute="bottom" secondItem="3Lu-fN-oT5" secondAttribute="bottom" id="QaA-WY-i0O"/>
+                        <constraint firstItem="vKe-hB-a91" firstAttribute="top" secondItem="CcY-O2-1NH" secondAttribute="top" id="U7Z-ut-tia"/>
+                        <constraint firstItem="vKe-hB-a91" firstAttribute="top" secondItem="8yh-54-eJu" secondAttribute="top" id="Vbn-Bv-0UW"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="top" secondItem="vKe-hB-a91" secondAttribute="bottom" id="e5M-qV-ffg"/>
+                        <constraint firstItem="8yh-54-eJu" firstAttribute="leading" secondItem="3Lu-fN-oT5" secondAttribute="leading" id="gKq-Ds-tvA"/>
+                        <constraint firstItem="3Lu-fN-oT5" firstAttribute="trailing" secondItem="8yh-54-eJu" secondAttribute="trailing" id="uGc-UW-8jx"/>
+                        <constraint firstItem="vKe-hB-a91" firstAttribute="trailing" secondItem="8yh-54-eJu" secondAttribute="trailing" id="v9C-K7-oLA"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="CcY-O2-1NH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="XBw-Xk-nbl"/>
-                <constraint firstItem="CcY-O2-1NH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m7u-y4-8TH"/>
-                <constraint firstAttribute="bottom" secondItem="CcY-O2-1NH" secondAttribute="bottom" constant="75" id="teM-Qq-ayf"/>
-                <constraint firstItem="CcY-O2-1NH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="wvL-Jz-i2A"/>
+                <constraint firstAttribute="bottom" secondItem="CcY-O2-1NH" secondAttribute="bottom" constant="111" id="JF5-1z-ymL"/>
+                <constraint firstItem="CcY-O2-1NH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="iUi-DR-xQ5"/>
+                <constraint firstItem="CcY-O2-1NH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nvM-m5-GL4"/>
+                <constraint firstItem="CcY-O2-1NH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="wTv-br-DLu"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

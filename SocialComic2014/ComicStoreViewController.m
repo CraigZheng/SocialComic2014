@@ -90,6 +90,8 @@
         }
         NSLog(@"size %lu", (unsigned long)comics.count);
         [self.tableView reloadData];
+    } else {
+        [[[AppDelegate sharedAppDelegate] window] makeToast:@"Unable to connect to server, please try again" duration:1.5 position:@"bottom" title:@"Connection issue" image:[UIImage imageNamed:@"warning"]];
     }
     [[mAppDelegate window] hideToastActivity];
 }
@@ -125,7 +127,7 @@
         } else {
             [coverImageView setAlpha:0.5];
             circularView.hidden = YES;
-            coverImageView.image = [UIImage imageNamed:@"icon_144"];
+            coverImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
         }
         //description
         if (comic.description.length > 0) {
@@ -191,7 +193,7 @@
 
 -(void)downloadComic:(Comic*)comic {
     [zipCentre downloadComic:comic];
-    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name]];
+    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
 }
 
 #pragma mark - NSNotification handler - image downloaded

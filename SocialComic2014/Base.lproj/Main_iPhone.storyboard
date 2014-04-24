@@ -8,7 +8,7 @@
         <!--Comic Reader Tab Bar View Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" customClass="ComicReaderTabBarViewController" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8YX-ce-x5E" customClass="ComicReaderTabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -204,6 +204,7 @@
                                         <constraint firstItem="3td-Ym-gnF" firstAttribute="top" secondItem="5zu-GT-Owx" secondAttribute="top" constant="11" id="ptw-nX-Dbb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90816326530000002" green="0.90816326530000002" blue="0.90816326530000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -211,7 +212,7 @@
                             <outlet property="delegate" destination="oE1-X1-h3O" id="AMw-8e-WBu"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Store" id="24e-z6-7v2"/>
+                    <tabBarItem key="tabBarItem" title="Store" image="house.png" id="24e-z6-7v2"/>
                     <connections>
                         <segue destination="w9G-Wu-2qK" kind="modal" identifier="go_download_manager_view_controller_identifier" id="2wC-do-bjN"/>
                     </connections>
@@ -275,7 +276,7 @@
                             <outlet property="delegate" destination="RqM-xz-XFE" id="qAM-FQ-Hor"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="My Library" id="KPp-QR-D1U"/>
+                    <tabBarItem key="tabBarItem" title="My Library" image="book.png" id="KPp-QR-D1U"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mob-0W-1nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,6 +285,8 @@
     </scenes>
     <resources>
         <image name="NoImageAvailable.jpg" width="500" height="500"/>
+        <image name="book.png" width="18" height="26"/>
+        <image name="house.png" width="26" height="26"/>
         <image name="icon_144.png" width="144" height="144"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

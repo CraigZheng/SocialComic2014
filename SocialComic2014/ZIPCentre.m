@@ -33,6 +33,18 @@
     }
 }
 
+-(void)stopDownloadingComic:(Comic *)comic{
+    for (ZIPDownloader* downloader in downloadingZip) {
+        if ([downloader.zipURL isEqualToString:comic.zipFileURL])
+        {
+            [downloader stop];
+            [downloadingZip removeObject:downloader];
+            break;
+        }
+    }
+    [downloadQueue removeObject:comic];
+}
+
 -(BOOL)containsComic:(Comic *)comic{
     ZIPDownloader *downloader = [self createDownloaderWithComic:comic];
     if ([downloadingZip containsObject:downloader] || [downloadQueue containsObject:comic])
@@ -60,10 +72,7 @@
         ZIPDownloader *downloader = [self createDownloaderWithComic:comic];
         [downloader start];
         [downloadingZip addObject:downloader];
-    } else {
-        NSLog(@"no more downloads!");
-        [self stopAllDownloading];
-    }
+    } 
 }
 
 -(void)stopAllDownloading {

@@ -11,8 +11,10 @@
 
 @interface ComicStorePreviewAndDownloadViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *downloadButton;
+@property (strong, nonatomic) IBOutlet UIButton *stopDownloadButton;
 @property (strong, nonatomic) Comic *myComic;
 @property (strong, nonatomic) IBOutlet UIView *coverView;
 @property (strong, nonatomic) IBOutlet UIImageView *comicCoverPreviewImageView;
 - (IBAction)downloadAction:(id)sender;
+- (IBAction)stopDownloadAction:(id)sender;
 @end

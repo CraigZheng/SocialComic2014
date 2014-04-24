@@ -37,6 +37,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.tabBarItem.badgeValue = nil;
 }
 
 -(void)scanForComicFiles {
@@ -62,7 +63,7 @@
         {
             coverImageView.image = comic.cover;
         } else {
-            coverImageView.image = [UIImage imageNamed:@"NoImageAvailable"];
+            coverImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
         }
         titleLabel.text = comic.name;
     }

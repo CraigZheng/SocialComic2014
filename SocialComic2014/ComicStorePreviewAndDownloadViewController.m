@@ -24,6 +24,7 @@
 @synthesize comicCoverPreviewImageView;
 @synthesize myComic;
 @synthesize coverView;
+@synthesize stopDownloadButton;
 @synthesize downloadButton;
 @synthesize zipCentre;
 @synthesize localComicSingleton;
@@ -40,10 +41,20 @@
     localComicSingleton = [LocalComicSingleton getInstance];
     //change the view a bit
     coverView.layer.masksToBounds = NO;
-    coverView.layer.cornerRadius = 5;
+    coverView.layer.cornerRadius = 3;
     coverView.layer.shadowOffset = CGSizeMake(1, 2);
     coverView.layer.shadowRadius = 5;
     coverView.layer.shadowOpacity = 0.5;
+    stopDownloadButton.layer.masksToBounds = NO;
+    stopDownloadButton.layer.cornerRadius = 3;
+    stopDownloadButton.layer.shadowOffset = CGSizeMake(2, 2);
+    stopDownloadButton.layer.shadowRadius = 5;
+    stopDownloadButton.layer.shadowOpacity = 0.5;
+    comicCoverPreviewImageView.layer.masksToBounds = NO;
+    comicCoverPreviewImageView.layer.cornerRadius = 3;
+    comicCoverPreviewImageView.layer.shadowOffset = CGSizeMake(2, 2);
+    comicCoverPreviewImageView.layer.shadowRadius = 5;
+    comicCoverPreviewImageView.layer.shadowOpacity = 0.5;
     //listen to downloading notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
@@ -62,31 +73,54 @@
     if (myComic.cover) {
         comicCoverPreviewImageView.image = myComic.cover;
     } else {
-        comicCoverPreviewImageView.image = [UIImage imageNamed:@"NoImageAvailable"];
+        comicCoverPreviewImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
     }
-    if ([zipCentre containsComic:comic]){
-        [downloadButton setTitle:@"DOWNLOADING..." forState:UIControlStateNormal];
-    } else {
-        [downloadButton setTitle:@"DOWNLOAD" forState:UIControlStateNormal];
-    }
+    [self resetViews];
+    [downloadButton setTitle:@"DOWNLOAD" forState:UIControlStateNormal];
     if ([localComicSingleton containsComic:myComic]) {
         [downloadButton setTitle:@"COMIC IS READY" forState:UIControlStateNormal];
         comicReady = YES;
     }
-    [self.view setNeedsDisplay];
+}
+
+-(void)resetViews{
+    stopDownloadButton.hidden = YES;
+    stopDownloadButton.alpha = 0;
+    if ([zipCentre containsComic:myComic] && !comicReady){
+        [downloadButton setTitle:@"DOWNLOADING..." forState:UIControlStateNormal];
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.2];
+        stopDownloadButton.alpha = 1;
+        stopDownloadButton.hidden = NO;
+        [UIView commitAnimations];
+    }
 }
 
 - (IBAction)downloadAction:(id)sender {
     if (comicReady) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:1] forKey:@"ShouldOpenTab"];
+        [self dismissSelf];
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[[NSNumber numberWithInteger:1], @"Taking you to the Library..."] forKeys:@[@"ShouldOpenTab", @"Message"]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldOpenTabCommand" object:self userInfo:userInfo];
+        return;
     }
     if (myComic && myComic.zipFileURL && !comicReady)
     {
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:myComic forKey:@"SelectedComic"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldDownloadComicCommand" object:nil userInfo:userInfo];
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.2];
+        stopDownloadButton.alpha = 1;
+        stopDownloadButton.hidden = NO;
+        [UIView commitAnimations];
+        return;
     }
-    [self dismissSelf];
+    [self performSelector:@selector(resetViews) withObject:nil afterDelay:1];
+}
+
+- (IBAction)stopDownloadAction:(id)sender {
+    [zipCentre stopDownloadingComic:myComic];
+    [self resetViews];
+    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"The download of %@ has been stopped", myComic.name] duration:1.5 position:@"bottom"];
 }
 
 -(void)dismissSelf {
@@ -113,8 +147,10 @@
     progress *= 100;
     ZIPDownloader *downloader = [userInfo objectForKey:@"ZIPDownloader"];
     if ([downloader.comic isEqual:myComic]) {
+        [UIView setAnimationsEnabled:NO];
         NSString *buttonTitle = [NSString stringWithFormat:@"DOWNLOADING...%d%%", (NSInteger)progress];
         [downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
+        [UIView setAnimationsEnabled:YES];
     }
 }
 @end

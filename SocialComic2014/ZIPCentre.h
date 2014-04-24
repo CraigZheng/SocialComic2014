@@ -17,6 +17,7 @@
 
 -(void)downloadComic:(Comic*)comic;
 -(BOOL)containsComic:(Comic*)comic;
+-(void)stopDownloadingComic:(Comic*)comic;
 -(void)stopAllDownloading;
 
 +(id)getInstance;
