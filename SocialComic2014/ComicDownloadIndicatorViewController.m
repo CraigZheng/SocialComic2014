@@ -24,6 +24,13 @@
     // Do any additional setup after loading the view from its nib.
     numberToShow = 0;
     hidden = false;
+    
+    self.view.layer.masksToBounds = NO;
+    self.view.layer.cornerRadius = 20;
+    self.view.layer.shadowOffset = CGSizeMake(1, 1);
+    self.view.layer.shadowRadius = 5;
+    self.view.layer.shadowOpacity = 0.5;
+    self.view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
 }
 
 -(void)startAnimating {
@@ -51,13 +58,13 @@
     self.view.hidden = NO;
     [UIView beginAnimations:@"FadeIn" context:nil];
     [UIView setAnimationDuration:0.2];
-    self.view.alpha = 1.0;
+    self.view.alpha = 0.6;
     [UIView commitAnimations];
     self.hidden = false;
 }
 
 -(void)hide {
-    self.view.alpha = 1.0;
+    self.view.alpha = 0.6;
     self.view.hidden = NO;
     [UIView beginAnimations:@"FadeIn" context:nil];
     [UIView setAnimationDuration:0.2];

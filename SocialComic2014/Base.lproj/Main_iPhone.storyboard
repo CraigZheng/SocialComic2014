@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Download Manager Table View Controller - Download Manager-->
+        <!--Download Manager Table View Controller - DL Manager-->
         <scene sceneID="IxP-Hf-zZR">
             <objects>
-                <tableViewController storyboardIdentifier="downloadManagerViewController" title="Download Manager" id="w9G-Wu-2qK" customClass="DownloadManagerTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="downloadManagerViewController" title="DL Manager" id="w9G-Wu-2qK" customClass="DownloadManagerTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="KYV-zB-FVk">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
