@@ -18,6 +18,9 @@
 #import "DACircularProgressView.h"
 #import "LocalComicSingleton.h"
 #import "ComicStorePreviewAndDownloadViewController.h"
+#import "ComicDownloadIndicatorViewController.h"
+#import "DownloadManagerTableViewController.h"
+#import "FPPopoverController.h"
 
 @interface ComicStoreViewController ()<XMLDownloaderDelegate>
 @property NSArray *comics;
@@ -26,6 +29,9 @@
 @property ZIPCentre *zipCentre;
 @property AppDelegate *mAppDelegate;
 @property ComicStorePreviewAndDownloadViewController *previewAndDownloadController;
+@property ComicDownloadIndicatorViewController *downloadIndicator;
+@property DownloadManagerTableViewController *downloadManagerViewController;
+@property FPPopoverController *popOverController;
 @end
 
 @implementation ComicStoreViewController
@@ -35,6 +41,9 @@
 @synthesize zipCentre;
 @synthesize mAppDelegate;
 @synthesize previewAndDownloadController;
+@synthesize downloadIndicator;
+@synthesize downloadManagerViewController;
+@synthesize popOverController;
 
 - (void)viewDidLoad
 {
@@ -62,14 +71,40 @@
     bannerImageView.image = bannerImage;
     bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.tableView.tableHeaderView = bannerImageView;
+    //downloading indicator
+    downloadIndicator = [[ComicDownloadIndicatorViewController alloc] initWithNibName:@"ComicDownloadIndicatorViewController" bundle:[NSBundle mainBundle]];
+    [downloadIndicator.view setFrame:CGRectMake(self.view.frame.size.width - downloadIndicator.view.frame.size.width - 20, self.tabBarController.tabBar.frame.origin.y - downloadIndicator.view.frame.size.height - 20, downloadIndicator.view.frame.size.width, downloadIndicator.view.frame.size.height)];
+    UITapGestureRecognizer *tapOnDownloadIndicator = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnDownloadingIndicator:)];
+    [downloadIndicator.view addGestureRecognizer:tapOnDownloadIndicator];
+    //download manager
+    downloadManagerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"downloadManagerViewController"];
+    downloadManagerViewController.downloadIndicator = downloadIndicator;
+    popOverController = [[FPPopoverController alloc] initWithViewController:downloadManagerViewController];
+    popOverController.border = NO;
+    popOverController.tint = FPPopoverWhiteTint;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [[mAppDelegate window] addSubview:downloadIndicator.view];
+    if (downloadIndicator.numberToShow > 0) {
+        [downloadIndicator startAnimating];
+        if (downloadIndicator.hidden)
+            [downloadIndicator show];
+    } else {
+        if (!downloadIndicator.hidden)
+            [downloadIndicator hide];
+    }
     if (comics.count == 0)
         [self startDownloadingComicList];
+    
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [downloadIndicator.view removeFromSuperview];
+    
+}
 -(void)startDownloadingComicList{
     [[mAppDelegate window] makeToastActivity];
     imageCentre = [ImageCentre getInstance];
@@ -127,7 +162,7 @@
         } else {
             [coverImageView setAlpha:0.5];
             circularView.hidden = YES;
-            coverImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
+            coverImageView.image = [UIImage imageNamed:@"icon_144"];
         }
         //description
         if (comic.description.length > 0) {
@@ -194,6 +229,8 @@
 -(void)downloadComic:(Comic*)comic {
     [zipCentre downloadComic:comic];
     [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
+    [downloadIndicator addNumber];
+    [downloadIndicator show];
 }
 
 #pragma mark - NSNotification handler - image downloaded
@@ -254,8 +291,8 @@
                                   cancelButtonTitle:nil
                                   otherButtonTitles:@"OK", nil];
         [alertView show];
-
     }
+    [downloadIndicator minusNumber];
 }
 
 -(void)zipDownloadProgressUpdated:(NSNotification*)notification {
@@ -282,6 +319,7 @@
     }
 }
 
+
 #pragma mark - should download comic command received
 -(void)shouldDownloadComic:(NSNotification*)notification {
     NSDictionary *userInfo = notification.userInfo;
@@ -289,5 +327,13 @@
     if (selectedComic) {
         [self downloadComic:selectedComic];
     }
+}
+
+#pragma mark - show pop over view controller, which is the download manager class
+-(void)tapOnDownloadingIndicator:(id)sender {
+    [downloadManagerViewController refreshComics];
+    popOverController.contentSize = CGSizeMake(260, 300);
+    [downloadManagerViewController.view setFrame:CGRectMake(downloadManagerViewController.view.frame.origin.x, downloadManagerViewController.view.frame.origin.y, 260, 300)];
+    [popOverController presentPopoverFromView:downloadIndicator.view];
 }
 @end

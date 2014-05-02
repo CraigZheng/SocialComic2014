@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ComicDownloadIndicatorViewController.h"
 
 @interface DownloadManagerTableViewController : UITableViewController
+@property ComicDownloadIndicatorViewController *downloadIndicator;
 
+-(void)refreshComics;
 @end

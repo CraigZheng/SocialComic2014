@@ -75,7 +75,7 @@
     } else {
         comicCoverPreviewImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
     }
-    [self resetViews];
+    //[self resetViews];
     [downloadButton setTitle:@"DOWNLOAD" forState:UIControlStateNormal];
     if ([localComicSingleton containsComic:myComic]) {
         [downloadButton setTitle:@"COMIC IS READY" forState:UIControlStateNormal];
@@ -107,14 +107,17 @@
     {
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:myComic forKey:@"SelectedComic"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldDownloadComicCommand" object:nil userInfo:userInfo];
+        /*
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.2];
         stopDownloadButton.alpha = 1;
         stopDownloadButton.hidden = NO;
         [UIView commitAnimations];
+         */
+        [self dismissSelf];
         return;
     }
-    [self performSelector:@selector(resetViews) withObject:nil afterDelay:1];
+    //[self performSelector:@selector(resetViews) withObject:nil afterDelay:1];
 }
 
 - (IBAction)stopDownloadAction:(id)sender {

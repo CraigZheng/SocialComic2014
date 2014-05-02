@@ -39,6 +39,11 @@
 		440CCAD51907A49100C8CEF4 /* swipe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB91907A49100C8CEF4 /* swipe@2x.png */; };
 		440CCAD61907A49100C8CEF4 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABA1907A49100C8CEF4 /* switch.png */; };
 		440CCAD71907A49100C8CEF4 /* switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABB1907A49100C8CEF4 /* switch@2x.png */; };
+		44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */; };
+		44484C5D19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */; };
+		44484C65191382FF000FECB1 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C60191382FF000FECB1 /* FPPopoverController.m */; };
+		44484C66191382FF000FECB1 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C62191382FF000FECB1 /* FPPopoverView.m */; };
+		44484C67191382FF000FECB1 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C64191382FF000FECB1 /* FPTouchView.m */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70518F2342D00FF49A6 /* CoreGraphics.framework */; };
 		448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
@@ -121,6 +126,16 @@
 		440CCAB91907A49100C8CEF4 /* swipe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe@2x.png"; sourceTree = "<group>"; };
 		440CCABA1907A49100C8CEF4 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch.png; sourceTree = "<group>"; };
 		440CCABB1907A49100C8CEF4 /* switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch@2x.png"; sourceTree = "<group>"; };
+		44484C5919137D71000FECB1 /* ComicDownloadIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicDownloadIndicatorViewController.h; sourceTree = "<group>"; };
+		44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicDownloadIndicatorViewController.m; sourceTree = "<group>"; };
+		44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicDownloadIndicatorViewController.xib; sourceTree = "<group>"; };
+		44484C5E191382FF000FECB1 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		44484C5F191382FF000FECB1 /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
+		44484C60191382FF000FECB1 /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
+		44484C61191382FF000FECB1 /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
+		44484C62191382FF000FECB1 /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		44484C63191382FF000FECB1 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
+		44484C64191382FF000FECB1 /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 		448CC70018F2342D00FF49A6 /* SocialComic2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialComic2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC70318F2342D00FF49A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		448CC70518F2342D00FF49A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -246,6 +261,20 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		44484C6819138304000FECB1 /* FPPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				44484C5E191382FF000FECB1 /* ARCMacros.h */,
+				44484C5F191382FF000FECB1 /* FPPopoverController.h */,
+				44484C60191382FF000FECB1 /* FPPopoverController.m */,
+				44484C61191382FF000FECB1 /* FPPopoverView.h */,
+				44484C62191382FF000FECB1 /* FPPopoverView.m */,
+				44484C63191382FF000FECB1 /* FPTouchView.h */,
+				44484C64191382FF000FECB1 /* FPTouchView.m */,
+			);
+			name = FPPopoverController;
+			sourceTree = "<group>";
+		};
 		448CC6F718F2342D00FF49A6 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +317,9 @@
 				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
 				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
 				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+				44484C5919137D71000FECB1 /* ComicDownloadIndicatorViewController.h */,
+				44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */,
+				44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */,
 				44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */,
 				44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */,
 				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
@@ -295,6 +327,7 @@
 				440CCA981907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.h */,
 				440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */,
 				440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */,
+				44484C6819138304000FECB1 /* FPPopoverController */,
 				440CCA971907819C00C8CEF4 /* PartialTransparentView */,
 				448CC77718F2927A00FF49A6 /* Toast */,
 				448CC77318F28CA200FF49A6 /* DACircularProgress */,
@@ -527,6 +560,7 @@
 				440CCAC41907A49100C8CEF4 /* house.png in Resources */,
 				440CCAC61907A49100C8CEF4 /* icon_arrow_left.png in Resources */,
 				440CCABE1907A49100C8CEF4 /* arrowright.png in Resources */,
+				44484C5D19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib in Resources */,
 				440CCAC71907A49100C8CEF4 /* icon_arrow_right.png in Resources */,
 				440CCAD51907A49100C8CEF4 /* swipe@2x.png in Resources */,
 				440CCAD01907A49100C8CEF4 /* question-mark.png in Resources */,
@@ -566,6 +600,8 @@
 				440CCA9B1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
 				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
+				44484C67191382FF000FECB1 /* FPTouchView.m in Sources */,
+				44484C66191382FF000FECB1 /* FPPopoverView.m in Sources */,
 				448CC78018F6257900FF49A6 /* ZIPDownloader.m in Sources */,
 				448CC74618F237F600FF49A6 /* XMLProsessor.m in Sources */,
 				448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */,
@@ -573,6 +609,7 @@
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
 				440CCA9F1907A19200C8CEF4 /* ComicReaderTabBarViewController.m in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
+				44484C65191382FF000FECB1 /* FPPopoverController.m in Sources */,
 				44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */,
 				440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */,
 				448CC71018F2342D00FF49A6 /* main.m in Sources */,
@@ -580,6 +617,7 @@
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
 				448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */,
 				448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */,
+				44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */,
 				448CC78318F6657100FF49A6 /* BookCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,6 +43,7 @@
         }
     }
     [downloadQueue removeObject:comic];
+    [self activateNextDownload];
 }
 
 -(BOOL)containsComic:(Comic *)comic{
