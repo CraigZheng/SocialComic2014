@@ -73,6 +73,7 @@
     return [[UIApplication sharedApplication] delegate];
 }
 
+#pragma mark - view animations
 +(void)fadeInView:(UIView*)view {
     view.alpha = 0;
     [[[AppDelegate sharedAppDelegate] window] addSubview:view];
@@ -95,5 +96,29 @@
                          if (view.superview)
                              [view removeFromSuperview];
                      }];
+}
+
++(void)doSingleViewHideAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration
+{
+    CATransition *animation = [CATransition animation];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:animType];
+    
+    [animation setDuration:duration];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [[incomingView layer] addAnimation:animation forKey:kCATransition];
+    incomingView.hidden = YES;
+}
+
++(void)doSingleViewShowAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration
+{
+    CATransition *animation = [CATransition animation];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:animType];
+    
+    [animation setDuration:duration];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [[incomingView layer] addAnimation:animation forKey:kCATransition];
+    incomingView.hidden = NO;
 }
 @end

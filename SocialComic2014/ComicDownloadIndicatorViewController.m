@@ -58,13 +58,13 @@
     self.view.hidden = NO;
     [UIView beginAnimations:@"FadeIn" context:nil];
     [UIView setAnimationDuration:0.2];
-    self.view.alpha = 0.6;
+    self.view.alpha = 1.0;
     [UIView commitAnimations];
     self.hidden = false;
 }
 
 -(void)hide {
-    self.view.alpha = 0.6;
+    self.view.alpha = 1.0;
     self.view.hidden = NO;
     [UIView beginAnimations:@"FadeIn" context:nil];
     [UIView setAnimationDuration:0.2];

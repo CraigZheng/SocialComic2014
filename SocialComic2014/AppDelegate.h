@@ -18,4 +18,6 @@
 +(AppDelegate*)sharedAppDelegate;
 +(void)fadeInView:(UIView*)view;
 +(void)fadeOutView:(UIView*)view;
++(void)doSingleViewHideAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration;
++(void)doSingleViewShowAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration;
 @end

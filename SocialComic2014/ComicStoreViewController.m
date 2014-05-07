@@ -103,7 +103,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [downloadIndicator.view removeFromSuperview];
-    
+    [[AppDelegate sharedAppDelegate].window hideToastActivity];
 }
 -(void)startDownloadingComicList{
     [[mAppDelegate window] makeToastActivity];

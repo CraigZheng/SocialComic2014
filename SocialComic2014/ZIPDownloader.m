@@ -8,6 +8,7 @@
 
 #import "ZIPDownloader.h"
 #import "AppDelegate.h"
+#import "ZipArchive.h"
 
 @interface ZIPDownloader()<NSURLConnectionDataDelegate>
 @property NSURLConnection *urlConnection;
@@ -82,7 +83,12 @@
     if (error) {
         [self.delegate ZIPDownloaded:self :NO :saveToFile];
     }
-    [self.delegate ZIPDownloaded:self :YES :saveToFile];
+    if ([self unzipComicFile:saveToFile :saveToFile]) {
+        [self.delegate ZIPDownloaded:self :YES :saveToFile];
+        NSLog(@"unzip successful");
+    } else {
+        NSLog(@"unzip failed");
+    }
     [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskID];
 }
 
@@ -109,5 +115,12 @@
     return zipURL.hash;
 }
 
-
+-(BOOL)unzipComicFile:(NSString*)zipFile :(NSString*)toPath {
+    ZipArchive* za = [[ZipArchive alloc] init];
+    if( [za UnzipOpenFile:zipFile] && [za UnzipFileTo:toPath overWrite:YES]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 @end
