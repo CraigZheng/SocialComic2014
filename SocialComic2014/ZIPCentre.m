@@ -56,13 +56,13 @@
 -(ZIPDownloader*)createDownloaderWithComic:(Comic*)comic {
     ZIPDownloader *downloader = [ZIPDownloader new];
     downloader.delegate = self;
-    [downloader downloadComic:comic :mAppDelegate.zipFileFolder];
+    [downloader downloadComic:comic :mAppDelegate.zipFileFolder :mAppDelegate.unzipFolder];
     return downloader;
 }
 
 -(ZIPDownloader*)createDownloaderWithURL:(NSString*)zipUrl {
     ZIPDownloader *downloader = [ZIPDownloader new];
-    [downloader downloadTXT:zipUrl :mAppDelegate.zipFileFolder];
+    [downloader downloadTXT:zipUrl :mAppDelegate.zipFileFolder :mAppDelegate.unzipFolder];
     return downloader;
 }
 
@@ -87,8 +87,9 @@
 #pragma mark - ZIPDownloaderDelegate
 -(void)ZIPDownloaded:(ZIPDownloader *)downloader :(BOOL)success :(NSString *)savePath{
     NSDictionary *userInfo;
-    if (success)
+    if (success) {
         userInfo = [NSDictionary dictionaryWithObjects:@[downloader, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPDownloader", @"SavePath", @"Success"]];
+    }
     else
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:success] forKey:@"Success"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];

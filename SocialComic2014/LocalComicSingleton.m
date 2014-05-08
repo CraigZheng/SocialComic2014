@@ -9,17 +9,21 @@
 #import "LocalComicSingleton.h"
 #import "AppDelegate.h"
 #import "Comic.h"
+#import "ZIPDownloader.h"
 
 @interface LocalComicSingleton()
 @property AppDelegate *mAppDelegate;
+@property NSArray *unzippedComics;
 @end
 
 @implementation LocalComicSingleton
 @synthesize mAppDelegate;
+@synthesize unzippedComics;
 
 static LocalComicSingleton *_instance;
 
 -(void)scanForLocalComics{
+    unzippedComics = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:mAppDelegate.unzipFolder error:nil];
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:mAppDelegate.zipFileFolder error:nil];
     NSMutableArray *comics = [NSMutableArray new];
     for (NSString* file in files) {
@@ -48,15 +52,13 @@ static LocalComicSingleton *_instance;
         NSString *fileName = [newComic.localZipFile.lastPathComponent stringByDeletingPathExtension];
         newComic.localDescriptionFile = [[mAppDelegate.descriptionFileFolder stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:@"txt"];
         newComic.localCoverFile = [[mAppDelegate.coverImageFolder stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:@"jpg"];
-        
-        /*
-         if (![[NSFileManager defaultManager] fileExistsAtPath:newComic.localDescriptionFile]) {
-         newComic.localDescriptionFile = nil;
-         }
-         if (![[NSFileManager defaultManager] fileExistsAtPath:newComic.localCoverFile]) {
-         newComic.localCoverFile = nil;
-         }
-         */
+        for (NSString *comicFolder in unzippedComics) {
+            if ([comicFolder isEqualToString:fileName])
+            {
+                newComic.unzipToFolder = [mAppDelegate.unzipFolder stringByAppendingPathComponent:comicFolder];
+                break;
+            }
+        }
         return newComic;
     }
     return nil;
@@ -74,8 +76,11 @@ static LocalComicSingleton *_instance;
 
 #pragma mark - notification handlers
 -(void)zipDownloaded:(NSNotification*)notification {
-    if ([notification.userInfo objectForKey:@"Success"]) {
-        [self scanForLocalComics];
+    if ([[notification.userInfo objectForKey:@"Success"] boolValue]) {
+        ZIPDownloader *downloader = [notification.userInfo objectForKey:@"ZIPDownloader"];
+        if (downloader.comic) {
+            [self scanForLocalComics];
+        }
     }
 }
 

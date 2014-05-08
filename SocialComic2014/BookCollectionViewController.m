@@ -12,6 +12,8 @@
 #import "LocalComicSingleton.h"
 #import "Toast+UIView.h"
 #import "ComicViewingViewController.h"
+#import "DACircularProgress/DACircularProgressView.h"
+#import "Unzipper.h"
 
 @interface BookCollectionViewController ()
 @property NSMutableArray *comics;
@@ -65,6 +67,12 @@
         } else {
             coverImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
         }
+        if (comic.unzipToFolder)
+        {
+            coverImageView.alpha = 1.0;
+        } else {
+            coverImageView.alpha = 0.5;
+        }
         titleLabel.text = comic.name;
     }
     return cell;
@@ -73,15 +81,40 @@
 #pragma mark - UICollectionViewControllerDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     Comic *selectedComic = [comics objectAtIndex:indexPath.row];
+    if (selectedComic.unzipToFolder) {
+        [self presentComicViewingControllerWithComic:selectedComic];
+    } else {
+        if ([self unzip:selectedComic]) {
+            if (selectedComic.unzipToFolder)
+                [self presentComicViewingControllerWithComic:selectedComic];
+        }
+    }
+}
+
+#pragma mark - Unzipping comic
+-(BOOL)unzip:(Comic*)comic {
+    if ([[Unzipper new] unzipComic:comic :mAppDelegate.unzipFolder]) {
+        comic.unzipToFolder = [mAppDelegate.unzipFolder stringByAppendingPathComponent:comic.name];
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark - present comic viewing controller with given comic
+-(void)presentComicViewingControllerWithComic:(Comic*)comic {
     ComicViewingViewController *comicViewingViewController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
+    comicViewingViewController.myComic = comic;
+
     UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
     [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
                       duration:0.2
                        options:UIViewAnimationOptionCurveEaseInOut
-                    animations:^{ [AppDelegate sharedAppDelegate].window.rootViewController = navigationController; }
+                    animations:^{
+                        [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
+                        [navigationController pushViewController:comicViewingViewController animated:YES];
+                    }
                     completion:nil];
 
-    [navigationController pushViewController:comicViewingViewController animated:YES];
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded

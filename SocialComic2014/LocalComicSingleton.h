@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class Comic;
 @interface LocalComicSingleton : NSObject
-@property NSArray* localComics;
+@property NSMutableArray* localComics;
 
 +(id)getInstance;
 

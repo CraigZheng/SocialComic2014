@@ -16,6 +16,7 @@
 @implementation ComicViewingViewController
 @synthesize scrollView;
 @synthesize imageView;
+@synthesize myComic;
 
 - (void)viewDidLoad
 {

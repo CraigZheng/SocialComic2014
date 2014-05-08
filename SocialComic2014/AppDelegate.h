@@ -14,6 +14,7 @@
 @property NSString *coverImageFolder;
 @property NSString *descriptionFileFolder;
 @property NSString *zipFileFolder;
+@property NSString *unzipFolder;
 
 +(AppDelegate*)sharedAppDelegate;
 +(void)fadeInView:(UIView*)view;

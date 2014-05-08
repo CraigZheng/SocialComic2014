@@ -12,6 +12,7 @@
 @synthesize coverImageFolder;
 @synthesize zipFileFolder;
 @synthesize descriptionFileFolder;
+@synthesize unzipFolder;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -53,9 +54,11 @@
     coverImageFolder = [libraryFolder stringByAppendingPathComponent:@"ComicCovers"];
     zipFileFolder = [libraryFolder stringByAppendingPathComponent:@"ZipFiles"];
     descriptionFileFolder = [libraryFolder stringByAppendingPathComponent:@"DescriptionFiles"];
+    unzipFolder = [libraryFolder stringByAppendingPathComponent:@"UnzipComics"];
     [self checkOrCreateFolder:coverImageFolder];
     [self checkOrCreateFolder:zipFileFolder];
     [self checkOrCreateFolder:descriptionFileFolder];
+    [self checkOrCreateFolder:unzipFolder];
 }
 
 -(BOOL)checkOrCreateFolder:(NSString*)folder {

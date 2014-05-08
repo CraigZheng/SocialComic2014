@@ -9,6 +9,7 @@
 #import "ZIPDownloader.h"
 #import "AppDelegate.h"
 #import "ZipArchive.h"
+#import "Unzipper.h"
 
 @interface ZIPDownloader()<NSURLConnectionDataDelegate>
 @property NSURLConnection *urlConnection;
@@ -24,6 +25,7 @@
 @synthesize zipURL;
 @synthesize saveToFile;
 @synthesize saveToFolder;
+@synthesize unzipToFolder;
 @synthesize mAppDelegate;
 @synthesize comic;
 
@@ -35,13 +37,14 @@
     return self;
 }
 
--(void)downloadTXT:(NSString *)zipurl :(NSString *)toFolder{
+-(void)downloadTXT:(NSString *)zipurl :(NSString *)toFolder :(NSString*)folder{
     zipURL = zipurl;
     if (!comic) {
         comic = [Comic new];
         comic.zipFileURL = zipurl;
     }
     saveToFolder = toFolder;
+    unzipToFolder = folder;
     NSURL *url = [NSURL URLWithString:[[@"http://" stringByAppendingString:zipURL] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     urlConnection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:url] delegate:self startImmediately:NO];
     self.backgroundTaskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
@@ -49,9 +52,9 @@
     }];
 }
 
--(void)downloadComic:(Comic *)com :(NSString *)toFolder{
+-(void)downloadComic:(Comic *)com :(NSString *)toFolder :(NSString *)unzipfolder{
     self.comic = com;
-    [self downloadTXT:com.zipFileURL :toFolder];
+    [self downloadTXT:com.zipFileURL :toFolder :unzipfolder];
 }
 
 -(void)start {
@@ -82,13 +85,10 @@
     [receivedData writeToFile:saveToFile options:NSDataWritingAtomic error:&error];
     if (error) {
         [self.delegate ZIPDownloaded:self :NO :saveToFile];
+        return;
     }
-    if ([self unzipComicFile:saveToFile :saveToFile]) {
-        [self.delegate ZIPDownloaded:self :YES :saveToFile];
-        NSLog(@"unzip successful");
-    } else {
-        NSLog(@"unzip failed");
-    }
+    comic.localZipFile = saveToFile;
+    [self.delegate ZIPDownloaded:self :YES :saveToFile];
     [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskID];
 }
 
@@ -115,12 +115,5 @@
     return zipURL.hash;
 }
 
--(BOOL)unzipComicFile:(NSString*)zipFile :(NSString*)toPath {
-    ZipArchive* za = [[ZipArchive alloc] init];
-    if( [za UnzipOpenFile:zipFile] && [za UnzipFileTo:toPath overWrite:YES]) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
+
 @end

@@ -18,12 +18,13 @@
 @property NSString *zipURL;
 @property NSString *saveToFolder;
 @property NSString *saveToFile;
+@property NSString *unzipToFolder;
 @property Comic *comic;
 @property UIBackgroundTaskIdentifier backgroundTaskID;
 @property id<ZIPDownloaderProtocol> delegate;
 
--(void)downloadTXT:(NSString*)zipurl :(NSString*)toFolder;
--(void)downloadComic:(Comic*)comic :(NSString*)toFolder;
+-(void)downloadTXT:(NSString*)zipurl :(NSString*)toFolder :(NSString*)unzipToFolder;
+-(void)downloadComic:(Comic*)comic :(NSString*)toFolder :(NSString*)unzipToFolder;
 -(void)start;
 -(void)stop;
 

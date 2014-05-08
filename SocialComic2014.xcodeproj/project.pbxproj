@@ -52,6 +52,7 @@
 		446A31A2191A18460019FE64 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 446A319B191A18460019FE64 /* zip.c */; };
 		446A31A3191A18460019FE64 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 446A319E191A18460019FE64 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		446A31A5191A188F0019FE64 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 446A31A4191A188F0019FE64 /* libz.dylib */; };
+		446A31AB191B2E220019FE64 /* Unzipper.m in Sources */ = {isa = PBXBuildFile; fileRef = 446A31AA191B2E220019FE64 /* Unzipper.m */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70518F2342D00FF49A6 /* CoreGraphics.framework */; };
 		448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
@@ -159,6 +160,8 @@
 		446A319D191A18460019FE64 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		446A319E191A18460019FE64 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		446A31A4191A188F0019FE64 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		446A31A9191B2E220019FE64 /* Unzipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unzipper.h; sourceTree = "<group>"; };
+		446A31AA191B2E220019FE64 /* Unzipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unzipper.m; sourceTree = "<group>"; };
 		448CC70018F2342D00FF49A6 /* SocialComic2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialComic2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC70318F2342D00FF49A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		448CC70518F2342D00FF49A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -480,6 +483,8 @@
 				448CC76D18F2887200FF49A6 /* ZIPCentre.m */,
 				448CC77E18F6257900FF49A6 /* ZIPDownloader.h */,
 				448CC77F18F6257900FF49A6 /* ZIPDownloader.m */,
+				446A31A9191B2E220019FE64 /* Unzipper.h */,
+				446A31AA191B2E220019FE64 /* Unzipper.m */,
 			);
 			name = ZIP;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 			files = (
 				448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */,
 				448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */,
+				446A31AB191B2E220019FE64 /* Unzipper.m in Sources */,
 				446A31A1191A18460019FE64 /* unzip.c in Sources */,
 				446A31A2191A18460019FE64 /* zip.c in Sources */,
 				44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */,
