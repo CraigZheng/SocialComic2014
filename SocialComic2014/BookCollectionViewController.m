@@ -84,10 +84,19 @@
     if (selectedComic.unzipToFolder) {
         [self presentComicViewingControllerWithComic:selectedComic];
     } else {
-        if ([self unzip:selectedComic]) {
-            if (selectedComic.unzipToFolder)
-                [self presentComicViewingControllerWithComic:selectedComic];
-        }
+        UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
+        DACircularProgressView *circularProgressView = [[DACircularProgressView alloc] initWithFrame:selectedCell.frame];
+        circularProgressView.indeterminate = 1;
+        [selectedCell addSubview:circularProgressView];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            if ([self unzip:selectedComic]) {
+                if (selectedComic.unzipToFolder) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self presentComicViewingControllerWithComic:selectedComic]; 
+                    });
+                }
+            }
+        });
     }
 }
 
