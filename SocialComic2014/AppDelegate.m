@@ -101,7 +101,7 @@
                      }];
 }
 
-+(void)doSingleViewHideAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration
+-(void)doSingleViewHideAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration
 {
     CATransition *animation = [CATransition animation];
     [animation setType:kCATransitionPush];
@@ -113,7 +113,7 @@
     incomingView.hidden = YES;
 }
 
-+(void)doSingleViewShowAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration
+-(void)doSingleViewShowAnimation:(UIView*)incomingView :(NSString*)animType :(CGFloat)duration
 {
     CATransition *animation = [CATransition animation];
     [animation setType:kCATransitionPush];

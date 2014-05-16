@@ -57,8 +57,8 @@
 }
 
 -(void)downloadOfImageProgressUpdated:(CGFloat)progress :(NSString *)imageURL{
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[imageURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ImageURL", @"Progress"]];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ImageDownloadProgressUpdated" object:nil userInfo:userInfo];
+   // NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[imageURL, [NSNumber numberWithFloat:progress]] forKeys:@[@"ImageURL", @"Progress"]];
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"ImageDownloadProgressUpdated" object:nil userInfo:userInfo];
 }
 
 -(void)activateNextDownload {

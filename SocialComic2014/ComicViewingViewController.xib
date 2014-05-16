@@ -7,8 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComicViewingViewController">
             <connections>
+                <outlet property="bottomToolbar" destination="0rz-Z9-Kez" id="ndx-DT-vWD"/>
                 <outlet property="imageView" destination="yTx-hJ-Mn9" id="2nC-ZL-A7W"/>
                 <outlet property="scrollView" destination="xAQ-A2-Xjz" id="khd-9m-MKu"/>
+                <outlet property="topToolbar" destination="FrV-YC-ncg" id="hva-Ki-cMS"/>
+                <outlet property="topToolbarQuitButton" destination="yGH-9T-QbA" id="tk1-Q0-iPt"/>
+                <outlet property="topToolbarTitleButton" destination="ned-xk-xfG" id="YZv-GS-3Sp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,8 +34,31 @@
                         <outlet property="delegate" destination="-1" id="cnz-pa-KIL"/>
                     </connections>
                 </scrollView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0rz-Z9-Kez">
+                    <rect key="frame" x="0.0" y="527" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="1.9929846938770979e-05" green="1.9929846938770979e-05" blue="1.9929846938770979e-05" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                    <items>
+                        <barButtonItem title="1/20" id="qaH-Uz-QNJ"/>
+                    </items>
+                </toolbar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="FrV-YC-ncg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                    <items>
+                        <barButtonItem title="&lt;" id="yGH-9T-QbA">
+                            <connections>
+                                <action selector="topToolbarQuitAction:" destination="-1" id="y6q-dS-tA1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="aN7-Fj-rA1"/>
+                        <barButtonItem title="Title" style="plain" id="ned-xk-xfG"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="c2f-n6-ifx"/>
+                    </items>
+                </toolbar>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

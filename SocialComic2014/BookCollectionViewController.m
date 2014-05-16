@@ -88,6 +88,7 @@
         DACircularProgressView *circularProgressView = [[DACircularProgressView alloc] initWithFrame:selectedCell.frame];
         circularProgressView.indeterminate = 1;
         [selectedCell addSubview:circularProgressView];
+        [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             if ([self unzip:selectedComic]) {
                 if (selectedComic.unzipToFolder) {

@@ -51,11 +51,6 @@
     // Do any additional setup after loading the view.
     mAppDelegate = [AppDelegate sharedAppDelegate];
     comics = [NSArray new];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldDownloadComic:) name:@"ShouldDownloadComicCommand" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(txtDownloaded:) name:@"TXTDownloaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 44, 0)];
     //add comic preview controller
@@ -97,6 +92,11 @@
     }
     if (comics.count == 0)
         [self startDownloadingComicList];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldDownloadComic:) name:@"ShouldDownloadComicCommand" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(txtDownloaded:) name:@"TXTDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
     
 }
 
@@ -104,6 +104,7 @@
     [super viewDidDisappear:animated];
     [downloadIndicator.view removeFromSuperview];
     [[AppDelegate sharedAppDelegate].window hideToastActivity];
+    [[NSNotificationCenter defaultCenter] removeObserver:nil];
 }
 -(void)startDownloadingComicList{
     [[mAppDelegate window] makeToastActivity];
