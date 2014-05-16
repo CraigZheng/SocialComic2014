@@ -14,6 +14,7 @@
 #import "ComicViewingViewController.h"
 #import "DACircularProgress/DACircularProgressView.h"
 #import "Unzipper.h"
+#import "ComicViewATPagingViewController.h"
 
 @interface BookCollectionViewController ()
 @property NSMutableArray *comics;
@@ -112,18 +113,31 @@
 
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
-    ComicViewingViewController *comicViewingViewController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
-    comicViewingViewController.myComic = comic;
-
+    ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
+    comicATPagingViewController.myComic = comic;
     UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
     [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
                       duration:0.2
                        options:UIViewAnimationOptionCurveEaseInOut
                     animations:^{
                         [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
-                        [navigationController pushViewController:comicViewingViewController animated:YES];
+                        [navigationController pushViewController:comicATPagingViewController animated:YES];
+                        
                     }
                     completion:nil];
+    
+//    ComicViewingViewController *comicViewingViewController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
+//    comicViewingViewController.myComic = comic;
+//
+//    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
+//    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
+//                      duration:0.2
+//                       options:UIViewAnimationOptionCurveEaseInOut
+//                    animations:^{
+//                        [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
+//                        [navigationController pushViewController:comicViewingViewController animated:YES];
+//                    }
+//                    completion:nil];
 
 }
 

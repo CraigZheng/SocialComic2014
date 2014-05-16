@@ -10,18 +10,16 @@
 #import "AppDelegate.h"
 
 @interface ComicViewingViewController ()
-@property NSMutableArray* comicPages;
 @end
 
 @implementation ComicViewingViewController
 @synthesize scrollView;
 @synthesize imageView;
-@synthesize myComic;
+@synthesize comicFile;
 @synthesize topToolbar;
 @synthesize bottomToolbar;
 @synthesize topToolbarQuitButton;
 @synthesize topToolbarTitleButton;
-@synthesize comicPages;
 
 - (void)viewDidLoad
 {
@@ -33,13 +31,7 @@
     topToolbar.hidden = YES;
     bottomToolbar.hidden = YES;
     
-    comicPages = [NSMutableArray new];
-    [topToolbarTitleButton setTitle:myComic.name];
-    for (NSString *file in     [[NSFileManager defaultManager] contentsOfDirectoryAtPath:myComic.unzipToFolder error:nil]) {
-        [comicPages addObject:[myComic.unzipToFolder stringByAppendingPathComponent:file]];
-    }
-    imageView.image = [UIImage imageWithContentsOfFile:comicPages.firstObject];
-    
+    imageView.image = [UIImage imageWithContentsOfFile:comicFile];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

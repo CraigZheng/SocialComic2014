@@ -39,6 +39,8 @@
 		440CCAD51907A49100C8CEF4 /* swipe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB91907A49100C8CEF4 /* swipe@2x.png */; };
 		440CCAD61907A49100C8CEF4 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABA1907A49100C8CEF4 /* switch.png */; };
 		440CCAD71907A49100C8CEF4 /* switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABB1907A49100C8CEF4 /* switch@2x.png */; };
+		441BA3EF1925DB00001B963D /* ATPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441BA3EE1925DB00001B963D /* ATPagingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		441BA3F81925DC32001B963D /* ComicViewATPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441BA3F71925DC32001B963D /* ComicViewATPagingViewController.m */; };
 		44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */; };
 		44484C5D19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */; };
 		44484C65191382FF000FECB1 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C60191382FF000FECB1 /* FPPopoverController.m */; };
@@ -135,6 +137,10 @@
 		440CCAB91907A49100C8CEF4 /* swipe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe@2x.png"; sourceTree = "<group>"; };
 		440CCABA1907A49100C8CEF4 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch.png; sourceTree = "<group>"; };
 		440CCABB1907A49100C8CEF4 /* switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch@2x.png"; sourceTree = "<group>"; };
+		441BA3ED1925DB00001B963D /* ATPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPagingView.h; sourceTree = "<group>"; };
+		441BA3EE1925DB00001B963D /* ATPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPagingView.m; sourceTree = "<group>"; };
+		441BA3F61925DC32001B963D /* ComicViewATPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicViewATPagingViewController.h; sourceTree = "<group>"; };
+		441BA3F71925DC32001B963D /* ComicViewATPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicViewATPagingViewController.m; sourceTree = "<group>"; };
 		44484C5919137D71000FECB1 /* ComicDownloadIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicDownloadIndicatorViewController.h; sourceTree = "<group>"; };
 		44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicDownloadIndicatorViewController.m; sourceTree = "<group>"; };
 		44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicDownloadIndicatorViewController.xib; sourceTree = "<group>"; };
@@ -288,6 +294,70 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		441BA3F01925DB05001B963D /* ATPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				441BA3ED1925DB00001B963D /* ATPagingView.h */,
+				441BA3EE1925DB00001B963D /* ATPagingView.m */,
+			);
+			name = ATPagingView;
+			sourceTree = "<group>";
+		};
+		441BA3F11925DBA7001B963D /* ComicViewing */ = {
+			isa = PBXGroup;
+			children = (
+				441BA3F61925DC32001B963D /* ComicViewATPagingViewController.h */,
+				441BA3F71925DC32001B963D /* ComicViewATPagingViewController.m */,
+				446A318D191A00A70019FE64 /* ComicViewingViewController.h */,
+				446A318E191A00A70019FE64 /* ComicViewingViewController.m */,
+				446A318F191A00A70019FE64 /* ComicViewingViewController.xib */,
+			);
+			name = ComicViewing;
+			sourceTree = "<group>";
+		};
+		441BA3F21925DBBD001B963D /* BookCollection */ = {
+			isa = PBXGroup;
+			children = (
+				448CC78118F6657100FF49A6 /* BookCollectionViewController.h */,
+				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
+				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
+				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
+			);
+			name = BookCollection;
+			sourceTree = "<group>";
+		};
+		441BA3F31925DBC8001B963D /* StorePreview */ = {
+			isa = PBXGroup;
+			children = (
+				440CCA981907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.h */,
+				440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */,
+				440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */,
+			);
+			name = StorePreview;
+			sourceTree = "<group>";
+		};
+		441BA3F41925DBD0001B963D /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				44484C5919137D71000FECB1 /* ComicDownloadIndicatorViewController.h */,
+				44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */,
+				44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */,
+				44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */,
+				44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */,
+			);
+			name = DownloadManager;
+			sourceTree = "<group>";
+		};
+		441BA3F51925DBE7001B963D /* ComicStore */ = {
+			isa = PBXGroup;
+			children = (
+				441BA3F41925DBD0001B963D /* DownloadManager */,
+				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
+				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
+			);
+			name = ComicStore;
+			sourceTree = "<group>";
+		};
 		44484C6819138304000FECB1 /* FPPopoverController */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,23 +437,11 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				440CCA9D1907A19200C8CEF4 /* ComicReaderTabBarViewController.h */,
 				440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */,
-				448CC78118F6657100FF49A6 /* BookCollectionViewController.h */,
-				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
-				448CC73E18F237D300FF49A6 /* ComicStoreViewController.h */,
-				448CC73F18F237D300FF49A6 /* ComicStoreViewController.m */,
-				44484C5919137D71000FECB1 /* ComicDownloadIndicatorViewController.h */,
-				44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */,
-				44484C5B19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib */,
-				44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */,
-				44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */,
-				446A318D191A00A70019FE64 /* ComicViewingViewController.h */,
-				446A318E191A00A70019FE64 /* ComicViewingViewController.m */,
-				446A318F191A00A70019FE64 /* ComicViewingViewController.xib */,
-				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
-				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
-				440CCA981907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.h */,
-				440CCA991907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m */,
-				440CCA9A1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.xib */,
+				441BA3F51925DBE7001B963D /* ComicStore */,
+				441BA3F31925DBC8001B963D /* StorePreview */,
+				441BA3F21925DBBD001B963D /* BookCollection */,
+				441BA3F11925DBA7001B963D /* ComicViewing */,
+				441BA3F01925DB05001B963D /* ATPagingView */,
 				446A3192191A18460019FE64 /* ZipArchive */,
 				44484C6819138304000FECB1 /* FPPopoverController */,
 				440CCA971907819C00C8CEF4 /* PartialTransparentView */,
@@ -661,6 +719,7 @@
 				446A31A1191A18460019FE64 /* unzip.c in Sources */,
 				446A31A2191A18460019FE64 /* zip.c in Sources */,
 				44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */,
+				441BA3F81925DC32001B963D /* ComicViewATPagingViewController.m in Sources */,
 				440CCA9B1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m in Sources */,
 				448CC71418F2342D00FF49A6 /* AppDelegate.m in Sources */,
 				448CC74018F237D300FF49A6 /* ComicStoreViewController.m in Sources */,
@@ -686,6 +745,7 @@
 				448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */,
 				446A31A3191A18460019FE64 /* ZipArchive.mm in Sources */,
 				44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */,
+				441BA3EF1925DB00001B963D /* ATPagingView.m in Sources */,
 				448CC78318F6657100FF49A6 /* BookCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

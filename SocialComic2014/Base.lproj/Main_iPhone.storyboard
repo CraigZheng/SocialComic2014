@@ -270,6 +270,25 @@
             </objects>
             <point key="canvasLocation" x="623" y="1185"/>
         </scene>
+        <!--Comic ViewAT Paging View Controller-->
+        <scene sceneID="8Kv-Fd-8tq">
+            <objects>
+                <viewController storyboardIdentifier="comic_view_at_paging_view_controller" id="3Gg-YS-XIy" customClass="ComicViewATPagingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bZI-iO-UGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="dgR-fT-n0j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="od0-TA-i1N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4za-M8-zIK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl5-03-2l8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="1185"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NoImageAvailable.jpg" width="500" height="500"/>
