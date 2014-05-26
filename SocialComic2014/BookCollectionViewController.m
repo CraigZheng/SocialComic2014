@@ -163,8 +163,6 @@
                         completion:nil];
 
     });
-
-    
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded

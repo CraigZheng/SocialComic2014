@@ -180,6 +180,13 @@
     return tableView.rowHeight;
 }
 
+-(void)downloadComic:(Comic*)comic {
+    [zipCentre downloadComic:comic];
+    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
+    [downloadIndicator addNumber];
+    [downloadIndicator show];
+}
+
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //select last row
@@ -226,13 +233,6 @@
     }
 }
 
-
--(void)downloadComic:(Comic*)comic {
-    [zipCentre downloadComic:comic];
-    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
-    [downloadIndicator addNumber];
-    [downloadIndicator show];
-}
 
 #pragma mark - NSNotification handler - image downloaded
 -(void)imageDownloaded:(NSNotification*)notification {
@@ -297,27 +297,27 @@
 }
 
 -(void)zipDownloadProgressUpdated:(NSNotification*)notification {
-    NSDictionary *userInfo = notification.userInfo;
-    CGFloat progress = [[userInfo objectForKey:@"Progress"] floatValue];
-    NSString *updateZipURL = [userInfo objectForKey:@"ZIPURL"];
-    NSArray *visibleIndexes = [self.tableView indexPathsForVisibleRows];
-    for (NSIndexPath *indexPath in visibleIndexes) {
-        if (indexPath.row == comics.count)
-            return;
-        Comic *comic = [comics objectAtIndex:indexPath.row];
-        if ([comic.zipFileURL isEqualToString:updateZipURL]) {
-            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-            DACircularProgressView *circularProgressView = (DACircularProgressView*)[cell viewWithTag:5];
-            if (circularProgressView) {
-                circularProgressView.hidden = NO;
-                circularProgressView.alpha = 0.9f;
-                circularProgressView.progress = progress;
-            }
-            if (progress == 1.0f && circularProgressView) {
-                circularProgressView.hidden = YES;
-            }
-        }
-    }
+//    NSDictionary *userInfo = notification.userInfo;
+//    CGFloat progress = [[userInfo objectForKey:@"Progress"] floatValue];
+//    NSString *updateZipURL = [userInfo objectForKey:@"ZIPURL"];
+//    NSArray *visibleIndexes = [self.tableView indexPathsForVisibleRows];
+//    for (NSIndexPath *indexPath in visibleIndexes) {
+//        if (indexPath.row == comics.count)
+//            return;
+//        Comic *comic = [comics objectAtIndex:indexPath.row];
+//        if ([comic.zipFileURL isEqualToString:updateZipURL]) {
+//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+//            DACircularProgressView *circularProgressView = (DACircularProgressView*)[cell viewWithTag:5];
+//            if (circularProgressView) {
+//                circularProgressView.hidden = NO;
+//                circularProgressView.alpha = 0.9f;
+//                circularProgressView.progress = progress;
+//            }
+//            if (progress == 1.0f && circularProgressView) {
+//                circularProgressView.hidden = YES;
+//            }
+//        }
+//    }
 }
 
 

@@ -40,6 +40,7 @@
     zipCentre = [ZIPCentre getInstance];
     localComicSingleton = [LocalComicSingleton getInstance];
     //change the view a bit
+    [downloadButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
     coverView.layer.masksToBounds = NO;
     coverView.layer.cornerRadius = 3;
     coverView.layer.shadowOffset = CGSizeMake(1, 2);
@@ -75,10 +76,10 @@
     } else {
         comicCoverPreviewImageView.image = [UIImage imageNamed:@"NoImageAvailable.jpg"];
     }
-    //[self resetViews];
-    [downloadButton setTitle:@"DOWNLOAD" forState:UIControlStateNormal];
+    [downloadButton setTitle:nil forState:UIControlStateNormal];
+    [downloadButton setImage:[UIImage imageNamed:@"download.png"] forState:UIControlStateNormal];
     if ([localComicSingleton containsComic:myComic]) {
-        [downloadButton setTitle:@"COMIC IS READY" forState:UIControlStateNormal];
+        [downloadButton setImage:[UIImage imageNamed:@"open_book.png"] forState:UIControlStateNormal];
         comicReady = YES;
     }
 }
@@ -137,8 +138,8 @@
     if ([[notification.userInfo objectForKey:@"Success"] boolValue]) {
         ZIPDownloader *downloader = [notification.userInfo objectForKey:@"ZIPDownloader"];
         if ([downloader.comic isEqual:myComic]) {
-            NSLog(@"comic downloaded");
-            [downloadButton setTitle:@"COMIC IS READY" forState:UIControlStateNormal];
+            [downloadButton setTitle:nil forState:UIControlStateNormal];
+            [downloadButton setImage:[UIImage imageNamed:@"open_book.png"] forState:UIControlStateNormal];
             comicReady = YES;
         }
     }
@@ -151,7 +152,8 @@
     ZIPDownloader *downloader = [userInfo objectForKey:@"ZIPDownloader"];
     if ([downloader.comic isEqual:myComic]) {
         [UIView setAnimationsEnabled:NO];
-        NSString *buttonTitle = [NSString stringWithFormat:@"DOWNLOADING...%d%%", (NSInteger)progress];
+        NSString *buttonTitle = [NSString stringWithFormat:@"%d%%...", (NSInteger)progress];
+        [downloadButton setImage:nil forState:UIControlStateNormal];
         [downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
         [UIView setAnimationsEnabled:YES];
     }
