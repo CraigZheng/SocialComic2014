@@ -20,6 +20,7 @@
 @property NSMutableArray *comics;
 @property AppDelegate *mAppDelegate;
 @property DACircularProgressView *currentProgressView;
+@property UIView *currentProgressBackgroundView;
 @property LocalComicSingleton *comicSingleton;
 @property Unzipper *unzipper;
 @property Comic *selectedComic;
@@ -32,6 +33,7 @@
 @synthesize currentProgressView;
 @synthesize unzipper;
 @synthesize selectedComic;
+@synthesize currentProgressBackgroundView;
 
 - (void)viewDidLoad
 {
@@ -93,19 +95,23 @@
         [self presentComicViewingControllerWithComic:selectedComic];
     } else {
         UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
-        DACircularProgressView *circularProgressView = [[DACircularProgressView alloc] initWithFrame:selectedCell.frame];
+        UIImageView *coverImageView = (UIImageView*)[selectedCell viewWithTag:1];
+        CGFloat width = coverImageView.frame.size.width;
+        DACircularProgressView *circularProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake((width - width / 2) / 2, (width - width / 2) / 2, width / 2, width / 2)];
         circularProgressView.trackTintColor = [UIColor clearColor];
         circularProgressView.progressTintColor = [UIColor blueColor];
-        circularProgressView.roundedCorners = YES;
-        circularProgressView.thicknessRatio = 0.1f;
+        circularProgressView.thicknessRatio = 0.03f;
         circularProgressView.hidden = NO;
-        circularProgressView.progress = 50;
+        circularProgressView.progress = 0;
         currentProgressView = circularProgressView;
+        currentProgressBackgroundView = [[UIView alloc] initWithFrame:selectedCell.bounds];
+        currentProgressBackgroundView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
         
+        [selectedCell addSubview:currentProgressBackgroundView];
         [selectedCell addSubview:circularProgressView];
         [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//            [self unzip:selectedComic];
+            [self unzip:selectedComic];
         });
     }
 }
@@ -122,11 +128,15 @@
 #pragma mark - UnzipperDelegate
 -(void)unzipUpdated:(int)progress :(int)filrProcessed :(unsigned long)numberOfFiles {
     if (currentProgressView) {
-        currentProgressView.progress = (CGFloat)progress / 100;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            currentProgressView.progress = (CGFloat)progress / 100.0;
+        });
     }
     if (numberOfFiles == filrProcessed) {
         if (currentProgressView)
         {
+            currentProgressBackgroundView.hidden = YES;
+            [currentProgressBackgroundView removeFromSuperview];
             currentProgressView.hidden = YES;
             [currentProgressView removeFromSuperview];
         }
