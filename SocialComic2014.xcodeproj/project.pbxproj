@@ -39,6 +39,8 @@
 		440CCAD51907A49100C8CEF4 /* swipe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCAB91907A49100C8CEF4 /* swipe@2x.png */; };
 		440CCAD61907A49100C8CEF4 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABA1907A49100C8CEF4 /* switch.png */; };
 		440CCAD71907A49100C8CEF4 /* switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 440CCABB1907A49100C8CEF4 /* switch@2x.png */; };
+		44134B6919330BA600681176 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 44134B6819330BA600681176 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44134B8C19330E1300681176 /* libZipArchive-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44134B8B19330E1300681176 /* libZipArchive-ios.a */; };
 		441BA3EF1925DB00001B963D /* ATPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441BA3EE1925DB00001B963D /* ATPagingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		441BA3F81925DC32001B963D /* ComicViewATPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441BA3F71925DC32001B963D /* ComicViewATPagingViewController.m */; };
 		44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */; };
@@ -48,11 +50,6 @@
 		44484C67191382FF000FECB1 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C64191382FF000FECB1 /* FPTouchView.m */; };
 		446A3190191A00A70019FE64 /* ComicViewingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446A318E191A00A70019FE64 /* ComicViewingViewController.m */; };
 		446A3191191A00A70019FE64 /* ComicViewingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446A318F191A00A70019FE64 /* ComicViewingViewController.xib */; };
-		446A319F191A18460019FE64 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 446A3195191A18460019FE64 /* ioapi.c */; };
-		446A31A0191A18460019FE64 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 446A3197191A18460019FE64 /* mztools.c */; };
-		446A31A1191A18460019FE64 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 446A3199191A18460019FE64 /* unzip.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		446A31A2191A18460019FE64 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 446A319B191A18460019FE64 /* zip.c */; };
-		446A31A3191A18460019FE64 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 446A319E191A18460019FE64 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		446A31A5191A188F0019FE64 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 446A31A4191A188F0019FE64 /* libz.dylib */; };
 		446A31AB191B2E220019FE64 /* Unzipper.m in Sources */ = {isa = PBXBuildFile; fileRef = 446A31AA191B2E220019FE64 /* Unzipper.m */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
@@ -137,6 +134,10 @@
 		440CCAB91907A49100C8CEF4 /* swipe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe@2x.png"; sourceTree = "<group>"; };
 		440CCABA1907A49100C8CEF4 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch.png; sourceTree = "<group>"; };
 		440CCABB1907A49100C8CEF4 /* switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch@2x.png"; sourceTree = "<group>"; };
+		44134B6719330BA600681176 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		44134B6819330BA600681176 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		44134B8B19330E1300681176 /* libZipArchive-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZipArchive-ios.a"; sourceTree = "<group>"; };
+		44134B8D19330E2000681176 /* ZipArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		441BA3ED1925DB00001B963D /* ATPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPagingView.h; sourceTree = "<group>"; };
 		441BA3EE1925DB00001B963D /* ATPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPagingView.m; sourceTree = "<group>"; };
 		441BA3F61925DC32001B963D /* ComicViewATPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicViewATPagingViewController.h; sourceTree = "<group>"; };
@@ -154,17 +155,6 @@
 		446A318D191A00A70019FE64 /* ComicViewingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicViewingViewController.h; sourceTree = "<group>"; };
 		446A318E191A00A70019FE64 /* ComicViewingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicViewingViewController.m; sourceTree = "<group>"; };
 		446A318F191A00A70019FE64 /* ComicViewingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicViewingViewController.xib; sourceTree = "<group>"; };
-		446A3194191A18460019FE64 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		446A3195191A18460019FE64 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		446A3196191A18460019FE64 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		446A3197191A18460019FE64 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
-		446A3198191A18460019FE64 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		446A3199191A18460019FE64 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		446A319A191A18460019FE64 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		446A319B191A18460019FE64 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		446A319C191A18460019FE64 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		446A319D191A18460019FE64 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
-		446A319E191A18460019FE64 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		446A31A4191A188F0019FE64 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		446A31A9191B2E220019FE64 /* Unzipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unzipper.h; sourceTree = "<group>"; };
 		446A31AA191B2E220019FE64 /* Unzipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unzipper.m; sourceTree = "<group>"; };
@@ -230,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44134B8C19330E1300681176 /* libZipArchive-ios.a in Frameworks */,
 				446A31A5191A188F0019FE64 /* libz.dylib in Frameworks */,
 				448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */,
 				448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */,
@@ -292,6 +283,24 @@
 				440CCABB1907A49100C8CEF4 /* switch@2x.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		44134B6A19330BA900681176 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				44134B6719330BA600681176 /* Reachability.h */,
+				44134B6819330BA600681176 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		44134B8E19330E2400681176 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				44134B8B19330E1300681176 /* libZipArchive-ios.a */,
+				44134B8D19330E2000681176 /* ZipArchive.h */,
+			);
+			name = ZipArchive;
 			sourceTree = "<group>";
 		};
 		441BA3F01925DB05001B963D /* ATPagingView */ = {
@@ -372,32 +381,6 @@
 			name = FPPopoverController;
 			sourceTree = "<group>";
 		};
-		446A3192191A18460019FE64 /* ZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				446A3193191A18460019FE64 /* minizip */,
-				446A319D191A18460019FE64 /* ZipArchive.h */,
-				446A319E191A18460019FE64 /* ZipArchive.mm */,
-			);
-			path = ZipArchive;
-			sourceTree = "<group>";
-		};
-		446A3193191A18460019FE64 /* minizip */ = {
-			isa = PBXGroup;
-			children = (
-				446A3194191A18460019FE64 /* crypt.h */,
-				446A3195191A18460019FE64 /* ioapi.c */,
-				446A3196191A18460019FE64 /* ioapi.h */,
-				446A3197191A18460019FE64 /* mztools.c */,
-				446A3198191A18460019FE64 /* mztools.h */,
-				446A3199191A18460019FE64 /* unzip.c */,
-				446A319A191A18460019FE64 /* unzip.h */,
-				446A319B191A18460019FE64 /* zip.c */,
-				446A319C191A18460019FE64 /* zip.h */,
-			);
-			path = minizip;
-			sourceTree = "<group>";
-		};
 		448CC6F718F2342D00FF49A6 = {
 			isa = PBXGroup;
 			children = (
@@ -437,12 +420,13 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				440CCA9D1907A19200C8CEF4 /* ComicReaderTabBarViewController.h */,
 				440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */,
+				44134B6A19330BA900681176 /* Reachability */,
 				441BA3F51925DBE7001B963D /* ComicStore */,
 				441BA3F31925DBC8001B963D /* StorePreview */,
 				441BA3F21925DBBD001B963D /* BookCollection */,
 				441BA3F11925DBA7001B963D /* ComicViewing */,
+				44134B8E19330E2400681176 /* ZipArchive */,
 				441BA3F01925DB05001B963D /* ATPagingView */,
-				446A3192191A18460019FE64 /* ZipArchive */,
 				44484C6819138304000FECB1 /* FPPopoverController */,
 				440CCA971907819C00C8CEF4 /* PartialTransparentView */,
 				448CC77718F2927A00FF49A6 /* Toast */,
@@ -624,9 +608,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Craig;
 				TargetAttributes = {
-					448CC6FF18F2342D00FF49A6 = {
-						DevelopmentTeam = 9EBE9MWW9X;
-					};
 					448CC72618F2342D00FF49A6 = {
 						TestTargetID = 448CC6FF18F2342D00FF49A6;
 					};
@@ -716,8 +697,6 @@
 				448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */,
 				448CC77618F28CA200FF49A6 /* DACircularProgressView.m in Sources */,
 				446A31AB191B2E220019FE64 /* Unzipper.m in Sources */,
-				446A31A1191A18460019FE64 /* unzip.c in Sources */,
-				446A31A2191A18460019FE64 /* zip.c in Sources */,
 				44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */,
 				441BA3F81925DC32001B963D /* ComicViewATPagingViewController.m in Sources */,
 				440CCA9B1907823D00C8CEF4 /* ComicStorePreviewAndDownloadViewController.m in Sources */,
@@ -732,18 +711,16 @@
 				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,
 				440CCA9F1907A19200C8CEF4 /* ComicReaderTabBarViewController.m in Sources */,
-				446A319F191A18460019FE64 /* ioapi.c in Sources */,
 				448CC74918F23BA000FF49A6 /* SMXMLDocument.m in Sources */,
 				44484C65191382FF000FECB1 /* FPPopoverController.m in Sources */,
-				446A31A0191A18460019FE64 /* mztools.c in Sources */,
 				44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */,
+				44134B6919330BA600681176 /* Reachability.m in Sources */,
 				440CCA961907818700C8CEF4 /* PartialTransparentView.m in Sources */,
 				448CC71018F2342D00FF49A6 /* main.m in Sources */,
 				448CC77A18F2927A00FF49A6 /* Toast+UIView.m in Sources */,
 				448CC75118F248DE00FF49A6 /* ImageCentre.m in Sources */,
 				448CC74D18F23C0E00FF49A6 /* Comic.m in Sources */,
 				448CC77D18F61AF900FF49A6 /* TXTDownloader.m in Sources */,
-				446A31A3191A18460019FE64 /* ZipArchive.mm in Sources */,
 				44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */,
 				441BA3EF1925DB00001B963D /* ATPagingView.m in Sources */,
 				448CC78318F6657100FF49A6 /* BookCollectionViewController.m in Sources */,
@@ -873,13 +850,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Haozheng Zheng (4A2A95RH7T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Haozheng Zheng (9T9WK237ZQ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialComic2014",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7AFC3AC1-81AE-4036-8ADA-93D50DA48F7A";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -889,13 +870,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Haozheng Zheng (9EBE9MWW9X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialComic2014",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7AFC3AC1-81AE-4036-8ADA-93D50DA48F7A";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

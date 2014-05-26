@@ -104,7 +104,7 @@
     [super viewDidDisappear:animated];
     [downloadIndicator.view removeFromSuperview];
     [[AppDelegate sharedAppDelegate].window hideToastActivity];
-    [[NSNotificationCenter defaultCenter] removeObserver:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)startDownloadingComicList{
     [[mAppDelegate window] makeToastActivity];

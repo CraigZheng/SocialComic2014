@@ -16,22 +16,29 @@
 #import "Unzipper.h"
 #import "ComicViewATPagingViewController.h"
 
-@interface BookCollectionViewController ()
+@interface BookCollectionViewController ()<UnzipperDelegate>
 @property NSMutableArray *comics;
 @property AppDelegate *mAppDelegate;
+@property DACircularProgressView *currentProgressView;
 @property LocalComicSingleton *comicSingleton;
+@property Unzipper *unzipper;
+@property Comic *selectedComic;
 @end
 
 @implementation BookCollectionViewController
 @synthesize mAppDelegate;
 @synthesize comics;
 @synthesize comicSingleton;
+@synthesize currentProgressView;
+@synthesize unzipper;
+@synthesize selectedComic;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     mAppDelegate = [AppDelegate sharedAppDelegate];
+    unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [self scanForComicFiles];
@@ -81,64 +88,73 @@
 
 #pragma mark - UICollectionViewControllerDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    Comic *selectedComic = [comics objectAtIndex:indexPath.row];
+    selectedComic = [comics objectAtIndex:indexPath.row];
     if (selectedComic.unzipToFolder) {
         [self presentComicViewingControllerWithComic:selectedComic];
     } else {
         UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
         DACircularProgressView *circularProgressView = [[DACircularProgressView alloc] initWithFrame:selectedCell.frame];
-        circularProgressView.indeterminate = 1;
+        circularProgressView.trackTintColor = [UIColor clearColor];
+        circularProgressView.progressTintColor = [UIColor blueColor];
+        circularProgressView.roundedCorners = YES;
+        circularProgressView.thicknessRatio = 0.1f;
+        circularProgressView.hidden = NO;
+        circularProgressView.progress = 50;
+        currentProgressView = circularProgressView;
+        
         [selectedCell addSubview:circularProgressView];
         [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-            if ([self unzip:selectedComic]) {
-                if (selectedComic.unzipToFolder) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self presentComicViewingControllerWithComic:selectedComic]; 
-                    });
-                }
-            }
+//            [self unzip:selectedComic];
         });
     }
 }
 
 #pragma mark - Unzipping comic
 -(BOOL)unzip:(Comic*)comic {
-    if ([[Unzipper new] unzipComic:comic :mAppDelegate.unzipFolder]) {
-        comic.unzipToFolder = [mAppDelegate.unzipFolder stringByAppendingPathComponent:comic.name];
+    if ([unzipper unzipComic:comic :mAppDelegate.unzipFolder]) {
+        comic.unzipToFolder = [mAppDelegate.unzipFolder stringByAppendingPathComponent:comic.localZipFile.lastPathComponent.stringByDeletingPathExtension];
         return YES;
     }
     return NO;
 }
 
+#pragma mark - UnzipperDelegate
+-(void)unzipUpdated:(int)progress :(int)filrProcessed :(unsigned long)numberOfFiles {
+    if (currentProgressView) {
+        currentProgressView.progress = (CGFloat)progress / 100;
+    }
+    if (numberOfFiles == filrProcessed) {
+        if (currentProgressView)
+        {
+            currentProgressView.hidden = YES;
+            [currentProgressView removeFromSuperview];
+        }
+        if (selectedComic) {
+            [self presentComicViewingControllerWithComic:selectedComic];
+        }
+    }
+}
+
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
-    ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
-    comicATPagingViewController.myComic = comic;
-    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
-    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-                      duration:0.2
-                       options:UIViewAnimationOptionCurveEaseInOut
-                    animations:^{
-                        [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
-                        [navigationController pushViewController:comicATPagingViewController animated:YES];
-                        
-                    }
-                    completion:nil];
-    
-//    ComicViewingViewController *comicViewingViewController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
-//    comicViewingViewController.myComic = comic;
-//
-//    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
-//    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-//                      duration:0.2
-//                       options:UIViewAnimationOptionCurveEaseInOut
-//                    animations:^{
-//                        [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
-//                        [navigationController pushViewController:comicViewingViewController animated:YES];
-//                    }
-//                    completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
+        comicATPagingViewController.myComic = comic;
+        UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
+        [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
+                          duration:0.2
+                           options:UIViewAnimationOptionCurveEaseInOut
+                        animations:^{
+                            [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
+                            [navigationController pushViewController:comicATPagingViewController animated:YES];
+                            
+                        }
+                        completion:nil];
 
+    });
+
+    
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded
