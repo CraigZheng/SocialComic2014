@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialComic2014/BookCollectionViewController.m"
-            timestampString = "422859923.261761"
+            timestampString = "422864599.341553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "-zipDownloadProgressUpdated:"
             landmarkType = "5">
          </BreakpointContent>

@@ -10,32 +10,34 @@
 #import "AppDelegate.h"
 
 @interface ComicViewingViewController ()
+
 @end
 
 @implementation ComicViewingViewController
 @synthesize scrollView;
 @synthesize imageView;
 @synthesize comicFile;
-@synthesize topToolbar;
-@synthesize bottomToolbar;
-@synthesize topToolbarQuitButton;
-@synthesize topToolbarTitleButton;
+//@synthesize topToolbar;
+//@synthesize bottomToolbar;
+//@synthesize topToolbarQuitButton;
+//@synthesize topToolbarTitleButton;
 @synthesize myComic;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+//    
+//    topToolbar.hidden = YES;
+//    bottomToolbar.hidden = YES;
     
-    topToolbar.hidden = YES;
-    bottomToolbar.hidden = YES;
-    
-    if (myComic.unzipToFolder) {
-        NSArray *comicFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:myComic.unzipToFolder error:nil];
-        comicFile = [myComic.unzipToFolder stringByAppendingPathComponent:comicFiles.firstObject];
-        imageView.image = [UIImage imageWithContentsOfFile:comicFile];
-    }
-    
+//    if (myComic.unzipToFolder && !comicFile) {
+//        NSArray *comicFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:myComic.unzipToFolder error:nil];
+//        comicFile = [myComic.unzipToFolder stringByAppendingPathComponent:comicFiles.firstObject];
+//        imageView.image = [UIImage imageWithContentsOfFile:comicFile];
+//    }
+    imageView.image = [UIImage imageWithContentsOfFile:comicFile];
+//    [topToolbarTitleButton setTitle:myComic.name];
     [self setupImageViewForPortrait];
     [self setupToolbars];
 
@@ -48,8 +50,8 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.3];
-    [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.3];
+//    [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.3];
+//    [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.3];
 
 }
 
@@ -110,8 +112,8 @@
 }
 
 -(void)setupToolbars {
-    topToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, topToolbar.frame.size.height);
-    bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, topToolbar.frame.size.height);
+//    topToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, topToolbar.frame.size.height);
+//    bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, topToolbar.frame.size.height);
 }
 
 -(void)logViewFrames{

@@ -181,7 +181,7 @@
 
 -(void)downloadComic:(Comic*)comic {
     [zipCentre downloadComic:comic];
-    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
+//    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
 //    [downloadIndicator addNumber];
 //    [downloadIndicator show];
 }

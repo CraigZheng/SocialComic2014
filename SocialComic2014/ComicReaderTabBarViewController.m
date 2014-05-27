@@ -42,6 +42,7 @@
                                                                 thinDownloadIndicatorViewController.view.frame.size.width,
                                                                 thinDownloadIndicatorViewController.view.frame.size.height);
     [self.view addSubview:thinDownloadIndicatorViewController.view];
+    [thinDownloadIndicatorViewController.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(OpenMyLibraryTab)]];
     [thinDownloadIndicatorViewController hide];
 }
 
@@ -96,4 +97,10 @@
     }
 }
 
+-(void)OpenStoreTab {
+    self.selectedIndex = 0;
+}
+-(void)OpenMyLibraryTab {
+    self.selectedIndex = 1;
+}
 @end

@@ -100,7 +100,7 @@
 - (IBAction)downloadAction:(id)sender {
     if (comicReady) {
         [self dismissSelf];
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[[NSNumber numberWithInteger:1], @"Taking you to the Library..."] forKeys:@[@"ShouldOpenTab", @"Message"]];
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[[NSNumber numberWithInteger:1]] forKeys:@[@"ShouldOpenTab",]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldOpenTabCommand" object:self userInfo:userInfo];
         return;
     }

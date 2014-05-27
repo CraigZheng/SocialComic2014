@@ -12,9 +12,10 @@
 #import "LocalComicSingleton.h"
 #import "Toast+UIView.h"
 #import "ComicViewingViewController.h"
+#import "ComicPagingScrollViewController.h"
 #import "DACircularProgress/DACircularProgressView.h"
 #import "Unzipper.h"
-#import "ComicViewATPagingViewController.h"
+//#import "ComicViewATPagingViewController.h"
 #import "ZIPDownloader.h"
 #import "ZIPCentre.h"
 
@@ -138,7 +139,7 @@
 
 //        [selectedCell addSubview:currentProgressBackgroundView];
 //        [selectedCell addSubview:circularProgressView];
-        [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
+//        [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             [self unzip:selectedComic];
         });
@@ -182,7 +183,8 @@
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
     dispatch_async(dispatch_get_main_queue(), ^{
 //        ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
-        ComicViewingViewController *comicViewingController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
+//        ComicViewingViewController *comicViewingController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
+        ComicPagingScrollViewController *comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
         comicViewingController.myComic = comic;
         UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
         [UIView transitionWithView:[AppDelegate sharedAppDelegate].window

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ComicReaderTabBarViewController : UITabBarController
-
+-(void)OpenMyLibraryTab;
+-(void)OpenStoreTab;
 @end

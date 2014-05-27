@@ -6,9 +6,8 @@ dependencies: \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/LocalComicSingleton.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/Toast/Toast+UIView.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.h \
+  /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicPagingScrollViewController.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/DACircularProgress/DACircularProgressView.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/Unzipper.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewATPagingViewController.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/ATPagingView.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/ZIPDownloader.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/ZIPCentre.h
