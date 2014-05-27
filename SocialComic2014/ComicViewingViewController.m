@@ -26,8 +26,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setupImageViewForPortrait];
-    [self setupToolbars];
     
     topToolbar.hidden = YES;
     bottomToolbar.hidden = YES;
@@ -36,8 +34,11 @@
         NSArray *comicFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:myComic.unzipToFolder error:nil];
         comicFile = [myComic.unzipToFolder stringByAppendingPathComponent:comicFiles.firstObject];
         imageView.image = [UIImage imageWithContentsOfFile:comicFile];
-
     }
+    
+    [self setupImageViewForPortrait];
+    [self setupToolbars];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -57,20 +58,17 @@
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self setupToolbars];
     if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
         //[self performSelector:@selector(setupImageViewForLandscape) withObject:nil afterDelay:0.5];
         [self setupImageViewForLandscape];
     } else {
         [self setupImageViewForPortrait];
     }
-
     //imageview is hidden before, show imageview
     [UIView beginAnimations:@"ShowImageView" context:nil];
     [UIView setAnimationDuration:0.1];
     imageView.alpha = 1.0;
     [UIView commitAnimations];
-    
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
@@ -103,8 +101,8 @@
 
 -(void)setupImageViewForLandscape {
     [scrollView setZoomScale:1];
-    scrollView.frame = self.view.frame;
     CGRect frame = CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, imageView.image.size.width, imageView.image.size.height);
+    
     imageView.frame = frame;
     
     scrollView.contentSize = imageView.frame.size;
