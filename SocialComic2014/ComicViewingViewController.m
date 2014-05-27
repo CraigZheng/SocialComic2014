@@ -94,13 +94,9 @@
     NSLog(@"minimumscale %f", scrollView.minimumZoomScale);
 }
 
--(void)setupToolbars {
-    topToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, topToolbar.frame.size.height);
-    bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, topToolbar.frame.size.height);
-}
-
 -(void)setupImageViewForLandscape {
     [scrollView setZoomScale:1];
+    
     CGRect frame = CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, imageView.image.size.width, imageView.image.size.height);
     
     imageView.frame = frame;
@@ -111,6 +107,11 @@
     [scrollView setZoomScale:scrollView.minimumZoomScale];
     [self logViewFrames];
     NSLog(@"minimumscale %f", scrollView.minimumZoomScale);
+}
+
+-(void)setupToolbars {
+    topToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, topToolbar.frame.size.height);
+    bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, topToolbar.frame.size.height);
 }
 
 -(void)logViewFrames{
