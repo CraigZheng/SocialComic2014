@@ -9,12 +9,15 @@
 #import "ComicReaderTabBarViewController.h"
 #import "AppDelegate.h"
 #import "Toast+UIView.h"
+#import "ThinDownloadIndicatorViewController.h"
+#import "ZIPCentre.h"
 
 @interface ComicReaderTabBarViewController ()
-
+@property ThinDownloadIndicatorViewController *thinDownloadIndicatorViewController;
 @end
 
 @implementation ComicReaderTabBarViewController
+@synthesize thinDownloadIndicatorViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +34,15 @@
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldOpenTab:) name:@"ShouldOpenTabCommand" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadStarted:) name:@"ZipDownloadStarted" object:nil];
+    thinDownloadIndicatorViewController = [[ThinDownloadIndicatorViewController alloc] initWithNibName:@"ThinDownloadIndicatorViewController" bundle:[NSBundle mainBundle]];
+    thinDownloadIndicatorViewController.view.frame = CGRectMake(
+                                                                self.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2,
+                                                                self.tabBar.frame.origin.y - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2,
+                                                                thinDownloadIndicatorViewController.view.frame.size.width,
+                                                                thinDownloadIndicatorViewController.view.frame.size.height);
+    [self.view addSubview:thinDownloadIndicatorViewController.view];
+    [thinDownloadIndicatorViewController hide];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +73,17 @@
         } else {
             selectedItem.badgeValue = [NSString stringWithFormat:@"%ld", (long)1];
         }
+    }
+    if ([[ZIPCentre getInstance] downloadingZip].count == 0 && [[ZIPCentre getInstance] downloadQueue].count == 0) {
+        [thinDownloadIndicatorViewController hide];
+        [thinDownloadIndicatorViewController stopAnimation];
+    }
+}
+
+-(void)zipDownloadStarted:(NSNotification*)notification {
+    if (thinDownloadIndicatorViewController.view.hidden) {
+        [thinDownloadIndicatorViewController show];
+        [thinDownloadIndicatorViewController beginAnimation];
     }
 }
 

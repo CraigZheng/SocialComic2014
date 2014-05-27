@@ -28,6 +28,10 @@
         }
         [downloader start];
         [downloadingZip addObject:downloader];
+        //notify other listner that a download has been started
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[downloader, comic.zipFileURL] forKeys:@[@"ZIPDownloader", @"ZIPURL"]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ZipDownloadStarted" object:self userInfo:userInfo];
+
     } else {
         [downloadQueue addObject:comic];
     }
@@ -86,6 +90,9 @@
 
 #pragma mark - ZIPDownloaderDelegate
 -(void)ZIPDownloaded:(ZIPDownloader *)downloader :(BOOL)success :(NSString *)savePath{
+    //remove the just finished downloader
+    [downloadingZip removeObject:downloader];
+    //notify listener that a download is finished
     NSDictionary *userInfo;
     if (success) {
         userInfo = [NSDictionary dictionaryWithObjects:@[downloader, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPDownloader", @"SavePath", @"Success"]];
@@ -93,8 +100,7 @@
     else
         userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:success] forKey:@"Success"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];
-    //remove the just finished downloader
-    [downloadingZip removeObject:downloader];
+
     [self activateNextDownload];
 }
 

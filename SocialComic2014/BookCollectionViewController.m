@@ -15,6 +15,8 @@
 #import "DACircularProgress/DACircularProgressView.h"
 #import "Unzipper.h"
 #import "ComicViewATPagingViewController.h"
+#import "ZIPDownloader.h"
+#import "ZIPCentre.h"
 
 @interface BookCollectionViewController ()<UnzipperDelegate>
 @property NSMutableArray *comics;
@@ -24,6 +26,8 @@
 @property LocalComicSingleton *comicSingleton;
 @property Unzipper *unzipper;
 @property Comic *selectedComic;
+@property NSTimeInterval updateInterval;
+@property NSDate *lastUpdateTime;
 @end
 
 @implementation BookCollectionViewController
@@ -33,6 +37,8 @@
 @synthesize currentProgressView;
 @synthesize unzipper;
 @synthesize selectedComic;
+@synthesize updateInterval;
+@synthesize lastUpdateTime;
 @synthesize currentProgressBackgroundView;
 
 - (void)viewDidLoad
@@ -42,20 +48,33 @@
     mAppDelegate = [AppDelegate sharedAppDelegate];
     unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
-    [self scanForComicFiles];
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.tabBarItem.badgeValue = nil;
+    [self scanForComicFiles];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)scanForComicFiles {
     comics = [NSMutableArray new];
     comicSingleton = [LocalComicSingleton getInstance];
     [comics addObjectsFromArray:comicSingleton.localComics];
+    for (ZIPDownloader *downloader in [[ZIPCentre getInstance] downloadingZip]) {
+        [comics addObject:downloader.comic];
+    }
+    //sort alphabatically
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    [comics sortUsingDescriptors:@[sortDescriptor]];
+
     [self.collectionView reloadData];
 }
 
@@ -70,6 +89,10 @@
         Comic *comic = [comics objectAtIndex:indexPath.row];
         UIImageView *coverImageView = (UIImageView*)[cell viewWithTag:1];
         UILabel *titleLabel = (UILabel*)[cell viewWithTag:2];
+        DACircularProgressView *circularProgressView = (DACircularProgressView*)[cell viewWithTag:3];
+        circularProgressView.hidden = YES;
+        UIView *backgroundView = [cell viewWithTag:4];
+        backgroundView.hidden = YES;
         //cover
         if (comic.cover)
         {
@@ -93,26 +116,34 @@
     selectedComic = [comics objectAtIndex:indexPath.row];
     if (selectedComic.unzipToFolder) {
         [self presentComicViewingControllerWithComic:selectedComic];
-    } else {
+    } else if (selectedComic.localZipFile){
         UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
-        UIImageView *coverImageView = (UIImageView*)[selectedCell viewWithTag:1];
-        CGFloat width = coverImageView.frame.size.width;
-        DACircularProgressView *circularProgressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake((width - width / 2) / 2, (width - width / 2) / 2, width / 2, width / 2)];
+
+        DACircularProgressView *circularProgressView = (DACircularProgressView*)[selectedCell viewWithTag:3];
         circularProgressView.trackTintColor = [UIColor clearColor];
         circularProgressView.progressTintColor = [UIColor blueColor];
-        circularProgressView.thicknessRatio = 0.03f;
+        circularProgressView.thicknessRatio = 0.05f;
         circularProgressView.hidden = NO;
         circularProgressView.progress = 0;
         currentProgressView = circularProgressView;
-        currentProgressBackgroundView = [[UIView alloc] initWithFrame:selectedCell.bounds];
+        currentProgressBackgroundView = [selectedCell viewWithTag:4];
         currentProgressBackgroundView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
-        
-        [selectedCell addSubview:currentProgressBackgroundView];
-        [selectedCell addSubview:circularProgressView];
+        currentProgressBackgroundView.hidden = NO;
+        currentProgressBackgroundView.layer.masksToBounds = NO;
+        currentProgressBackgroundView.layer.cornerRadius = 5;
+        currentProgressBackgroundView.layer.shadowOffset = CGSizeMake(1, 1);
+        currentProgressBackgroundView.layer.shadowRadius = 5;
+        currentProgressBackgroundView.layer.shadowOpacity = 0.5;
+        currentProgressBackgroundView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+
+//        [selectedCell addSubview:currentProgressBackgroundView];
+//        [selectedCell addSubview:circularProgressView];
         [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             [self unzip:selectedComic];
         });
+    } else {
+        NSLog(@"TODO: inform user that this comic is currently being downloaded");
     }
 }
 
@@ -141,6 +172,7 @@
             [currentProgressView removeFromSuperview];
         }
         if (selectedComic) {
+            selectedComic.unzipToFolder = [mAppDelegate.unzipFolder stringByAppendingPathComponent:selectedComic.localZipFile.lastPathComponent.stringByDeletingPathExtension];
             [self presentComicViewingControllerWithComic:selectedComic];
         }
     }
@@ -171,4 +203,46 @@
         [self scanForComicFiles];
     }
 }
+
+-(void)zipDownloadProgressUpdated:(NSNotification*)notification {
+    if (lastUpdateTime && [[NSDate new] timeIntervalSinceDate:lastUpdateTime] < updateInterval) {
+        return;
+    }
+    NSDictionary *userInfo = notification.userInfo;
+    ZIPDownloader *downloader = [notification.userInfo objectForKey:@"ZIPDownloader"];
+    CGFloat progress = [[userInfo objectForKey:@"Progress"] floatValue];
+//    progress *= 100;
+    Comic *downloadingComic = downloader.comic;
+    for (NSIndexPath *indexPath in self.collectionView.indexPathsForVisibleItems) {
+        Comic *visibleComic = [comics objectAtIndex:indexPath.row];
+        UICollectionViewCell *visibleCell = [self.collectionView cellForItemAtIndexPath:indexPath];
+        DACircularProgressView *circularProgressView = (DACircularProgressView*)[visibleCell viewWithTag:3];
+        UIView *progressBackgroundView = circularProgressView;
+//        circularProgressView.hidden = YES;
+//        progressBackgroundView.hidden = YES;
+
+        if ([visibleComic isEqual:downloadingComic]) {
+            NSLog(@"downloading comic is same as %@, progress %f", [visibleComic description], progress);
+            //update progress
+            circularProgressView.trackTintColor = [UIColor clearColor];
+            circularProgressView.progressTintColor = [UIColor blueColor];
+            circularProgressView.thicknessRatio = 0.05f;
+            circularProgressView.hidden = NO;
+            circularProgressView.progress = progress;
+            progressBackgroundView = [visibleCell viewWithTag:4];
+            progressBackgroundView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+            progressBackgroundView.layer.masksToBounds = NO;
+            progressBackgroundView.layer.cornerRadius = 5;
+            progressBackgroundView.layer.shadowOffset = CGSizeMake(1, 1);
+            progressBackgroundView.layer.shadowRadius = 5;
+            progressBackgroundView.layer.shadowOpacity = 0.5;
+            progressBackgroundView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+
+            progressBackgroundView.hidden = NO;
+            break;
+        }
+    }
+    lastUpdateTime = [NSDate new];
+}
+
 @end
