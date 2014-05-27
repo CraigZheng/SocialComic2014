@@ -13,7 +13,7 @@
 @property NSMutableArray *comicFiles;
 @property NSInteger currentPage;
 @property NSMutableArray *viewControllers;
-
+@property NSTimer *autoDismissToolbarsTimer;
 @end
 
 @implementation ComicPagingScrollViewController
@@ -24,6 +24,7 @@
 @synthesize viewControllers;
 @synthesize topToolbar;
 @synthesize bottomToolbar;
+@synthesize autoDismissToolbarsTimer;
 
 - (void)viewDidLoad
 {
@@ -56,8 +57,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.3];
-    [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.3];
+    [self showToolbars: YES];
 }
 
 - (void)loadScrollViewWithPage:(NSUInteger)page
@@ -126,6 +126,29 @@
     bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, topToolbar.frame.size.height);
 }
 
+-(void)showToolbars:(BOOL)animated {
+    if (animated) {
+        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.3];
+        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.3];
+    } else {
+        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.01];
+        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.01];
+    }
+    if (autoDismissToolbarsTimer.isValid)
+        [autoDismissToolbarsTimer invalidate];
+    autoDismissToolbarsTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(hideToolbars:) userInfo:nil repeats:NO];
+}
+
+-(void)hideToolbars:(BOOL)animated {
+    if (animated) {
+        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:topToolbar :kCATransitionFromTop :0.3];
+        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:bottomToolbar :kCATransitionFromBottom :0.3];
+    } else {
+        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:topToolbar :kCATransitionFromTop :0.01];
+        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:bottomToolbar :kCATransitionFromBottom :0.01];
+    }
+}
+
 - (IBAction)quitAction:(id)sender {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
     UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
@@ -146,5 +169,24 @@
         currentPage ++;
         [self gotoPage:currentPage];
     }
+}
+
+- (IBAction)tapOnViewAction:(id)sender {
+    if (topToolbar.hidden) {
+        [self showToolbars:YES];
+    } else {
+        [self hideToolbars:YES];
+    }
+}
+
+#pragma mark - rotation
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self hideToolbars:NO];
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self setupToolbars];
+    [self gotoPage:currentPage];
+    [self showToolbars:YES];
 }
 @end

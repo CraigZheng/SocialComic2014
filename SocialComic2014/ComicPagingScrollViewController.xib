@@ -23,8 +23,10 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qS-zM-7xi">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <gestureRecognizers/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="clE-MN-X8k"/>
+                        <outletCollection property="gestureRecognizers" destination="EpO-e4-ZrA" appends="YES" id="XRI-vF-oEA"/>
                     </connections>
                 </scrollView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZH-Bq-N1y">
@@ -65,5 +67,10 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="EpO-e4-ZrA">
+            <connections>
+                <action selector="tapOnViewAction:" destination="-1" id="39S-2H-ue6"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
