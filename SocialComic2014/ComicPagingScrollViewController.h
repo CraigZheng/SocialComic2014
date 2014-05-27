@@ -20,6 +20,8 @@
 
 
 - (IBAction)quitAction:(id)sender;
+- (IBAction)previousAction:(id)sender;
+- (IBAction)nextAction:(id)sender;
 
 
 @end

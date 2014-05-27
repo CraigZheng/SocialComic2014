@@ -29,8 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    topToolbar.hidden = YES;
-//    bottomToolbar.hidden = YES;
+    topToolbar.hidden = YES;
+    bottomToolbar.hidden = YES;
     self.view.frame = [UIScreen mainScreen].bounds;
 
     comicFiles = [NSMutableArray new];
@@ -127,5 +127,24 @@
 }
 
 - (IBAction)quitAction:(id)sender {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
+    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
+    comicViewingTabBarController.selectedIndex = 1; //show library view controller
+    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
+
+}
+
+- (IBAction)previousAction:(id)sender {
+    if (currentPage > 0) {
+        currentPage --;
+        [self gotoPage:currentPage];
+    }
+}
+
+- (IBAction)nextAction:(id)sender {
+    if (currentPage < comicFiles.count) {
+        currentPage ++;
+        [self gotoPage:currentPage];
+    }
 }
 @end
