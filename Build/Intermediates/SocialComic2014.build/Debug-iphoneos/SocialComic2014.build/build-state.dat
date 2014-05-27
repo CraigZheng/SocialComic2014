@@ -47,8 +47,8 @@ cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneo
 cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/swipe.png SocialComic2014/swipe.png
 cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/redcrossbutton.png SocialComic2014/redcrossbutton.png
 cCpResource SocialComic2014/coverSample.jpg Build/Products/Debug-iphoneos/SocialComic2014.app/coverSample.jpg
-cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/page.png SocialComic2014/page.png
 cCompileXIB /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib
+cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/page.png SocialComic2014/page.png
 cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/bannerImage.png SocialComic2014/bannerImage.png
 cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/arrowright@2x.png SocialComic2014/arrowright@2x.png
 cCopyPNGFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/noCoverImage@2x.png SocialComic2014/noCoverImage@2x.png
@@ -394,8 +394,8 @@ t1401167100
 s49528
 
 N/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o
-t1401168991
-s79744
+t1401169285
+s80080
 
 N/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/DACircularProgressView.o
 t1401090267
@@ -523,8 +523,8 @@ t1401169076
 s49528
 
 N/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o
-t1401169076
-s79680
+t1401169467
+s80016
 
 N/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/DACircularProgressView.o
 t1401156712
@@ -628,11 +628,11 @@ t1401090270
 s585
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app
-t1401169141
+t1401169467
 s1870
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM
-t1401169118
+t1401169285
 s102
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/Base.lproj/Main_iPhone.storyboardc
@@ -648,7 +648,7 @@ t1401090270
 s136
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/ComicViewingViewController.nib
-t1401169141
+t1401169229
 s136
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/Info.plist
@@ -668,8 +668,8 @@ t1401090267
 s150
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014
-t1401169118
-s471248
+t1401169467
+s458612
 
 N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/ThinDownloadIndicatorViewController.nib
 t1401159441
@@ -935,14 +935,14 @@ t1401167099
 s790
 
 N/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m
-c00000000538423ED000000000000152C
-t1401168877
-s5420
+c000000005384263B000000000000157D
+t1401169467
+s5501
 
 N/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib
-c00000000538424F50000000000001357
-t1401169141
-s4951
+c000000005384254C00000000000012ED
+t1401169228
+s4845
 
 N/Users/craig/Developer/SocialComic2014/SocialComic2014/Constants.h
 c000000005382D310000000000000016E
@@ -1464,17 +1464,16 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies1364ec755c34b941^4163ee755c34b941^---0#1#1#--18"Check dependencies36"9E8F3C6A-6040-4149-9320-220F157E3F3B-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb22f75bb5d34b941^ca5099bb5d34b941^---0#1#1#--18"Check dependencies36"74A8B6AB-4F24-4206-B3B6-79D68811DB6B-
 
 CCodeSign /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app
-s422861941.991444
-e422861942.278177
+s422862267.805126
+e422862268.429030
 r1
 xCodeSign
 x/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app
-o/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app: replacing existing signature
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CodeSign Build/Products/Debug-iphoneos/SocialComic2014.app58"CodeSign Build/Products/Debug-iphoneos/SocialComic2014.appcedefd755c34b941^1c264e765c34b941^-119"/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app: replacing existing signature-0#0#1#-19%DVTDocumentLocation2@96"file:///Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/0000000000000000^1054"CodeSign Build/Products/Debug-iphoneos/SocialComic2014.app    cd /Users/craig/Developer/SocialComic2014    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: Haozheng Zheng (9T9WK237ZQ)" and provisioning profile "iOS Team Provisioning Profile: *" (CACAA48D-CFFE-4D12-8734-141C2EE1A8CA)    /usr/bin/codesign --force --sign 2F40763EE935C3CF6722B5F1ED940122CD770B7D --resource-rules=/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/ResourceRules.plist --entitlements /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014.xcent /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app36"A6F499CB-4590-49CF-99A3-927548A02731-
-b08C1131E-953C-4BA3-A0FB-25EE264748D4
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CodeSign Build/Products/Debug-iphoneos/SocialComic2014.app58"CodeSign Build/Products/Debug-iphoneos/SocialComic2014.appb03acebb5d34b941^f1d66dbc5d34b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/0000000000000000^1054"CodeSign Build/Products/Debug-iphoneos/SocialComic2014.app    cd /Users/craig/Developer/SocialComic2014    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: Haozheng Zheng (9T9WK237ZQ)" and provisioning profile "iOS Team Provisioning Profile: *" (CACAA48D-CFFE-4D12-8734-141C2EE1A8CA)    /usr/bin/codesign --force --sign 2F40763EE935C3CF6722B5F1ED940122CD770B7D --resource-rules=/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/ResourceRules.plist --entitlements /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014.xcent /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app36"3DC1D9FE-0B63-453F-A74C-4B46E895E63E-
+b4C77E2E1-27A2-45C2-BC60-4FD95A6F0D19
 
 CCompileAssetCatalog /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app /Users/craig/Developer/SocialComic2014/SocialComic2014/Images.xcassets
 s422783069.250319
@@ -1684,8 +1683,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile
 b1D2F426C-4DE0-4D3A-B05C-58CC0B9393B4
 
 CCompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s422861791.635175
-e422861791.725630
+s422862085.513919
+e422862085.591351
 r1
 xCompileC
 xBuild/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o
@@ -1698,8 +1697,8 @@ d/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewControll
 d/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.h
 d/Users/craig/Developer/SocialComic2014/SocialComic2014/Comic.h
 d/Users/craig/Developer/SocialComic2014/SocialComic2014/AppDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m251"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler5ebda2df5b34b941^ebc4b9df5b34b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m0000000000000000^3792"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/craig/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources/armv7 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/SocialComic2014-Prefix-bklmesvhnhkzpggpmcnxpaxwxaju/SocialComic2014-Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.dia -c /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o36"EC1CC9BD-4AE6-40DE-B4AD-5D550C53D89C-
-b16221AEC-20BC-4526-AE51-83D57D57996B
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m251"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compilerb5a483055d34b941^6b6497055d34b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m0000000000000000^3792"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/craig/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources/armv7 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/SocialComic2014-Prefix-bklmesvhnhkzpggpmcnxpaxwxaju/SocialComic2014-Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.dia -c /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/ComicViewingViewController.o36"DA5E9E76-F851-4E14-8B2C-1A4BA80F17ED-
+b7CF079F7-0FCE-4673-8137-8F5B27D88734
 
 CCompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/DACircularProgressView.o /Users/craig/Developer/SocialComic2014/SocialComic2014/DACircularProgress/DACircularProgressView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s422783067.632531
@@ -2259,8 +2258,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile
 b85B865E7-BC84-4225-A3F9-EB295F08F4AA
 
 CCompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s422861876.427508
-e422861876.532431
+s422862267.603080
+e422862267.685250
 r1
 xCompileC
 xBuild/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o
@@ -2273,8 +2272,8 @@ d/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewControll
 d/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.h
 d/Users/craig/Developer/SocialComic2014/SocialComic2014/Comic.h
 d/Users/craig/Developer/SocialComic2014/SocialComic2014/AppDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m253"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compilerf99e6d345c34b941^cb4d88345c34b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m0000000000000000^3799"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/craig/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources/armv7s -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/SocialComic2014-Prefix-cgzryivodcjlfddfyluasqdjofqy/SocialComic2014-Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.dia -c /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o36"3AEE7DAA-77CC-4CDF-BEE7-F44BEBA0A114-
-b85B865E7-BC84-4225-A3F9-EB295F08F4AA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m253"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler46799abb5d34b941^1e6eafbb5d34b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m0000000000000000^3799"CompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o SocialComic2014/ComicViewingViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/craig/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/SocialComic2014-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources/armv7s -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/SocialComic2014-Prefix-cgzryivodcjlfddfyluasqdjofqy/SocialComic2014-Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.dia -c /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/ComicViewingViewController.o36"8477C568-BAF5-4FF9-9FBD-88888B826B3C-
+b4C77E2E1-27A2-45C2-BC60-4FD95A6F0D19
 
 CCompileC Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/DACircularProgressView.o /Users/craig/Developer/SocialComic2014/SocialComic2014/DACircularProgress/DACircularProgressView.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s422849511.663897
@@ -2733,13 +2732,13 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compil
 b37CEFBC1-7CC0-43A8-894C-00EEBC23CC68
 
 CCompileXIB /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib
-s422861941.931265
-e422861941.989369
+s422862029.212851
+e422862029.296688
 r1
 xCompileXIB
 x/Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compiling /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib57"CompileXIB SocialComic2014/ComicViewingViewController.xibc477ee755c34b941^f375fd755c34b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib0000000000000000^758"CompileXIB SocialComic2014/ComicViewingViewController.xib    cd /Users/craig/Developer/SocialComic2014    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/ComicViewingViewController.nib /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib36"E52B00C2-1D58-47C8-A5CF-78848102222E-
-b08C1131E-953C-4BA3-A0FB-25EE264748D4
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compiling /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib57"CompileXIB SocialComic2014/ComicViewingViewController.xib1a8b36cd5c34b941^f9f54bcd5c34b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib0000000000000000^758"CompileXIB SocialComic2014/ComicViewingViewController.xib    cd /Users/craig/Developer/SocialComic2014    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/ComicViewingViewController.nib /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicViewingViewController.xib36"29ED17ED-F640-4B99-8E53-5CB6DFE60F7B-
+b7B5D8794-EA32-42E5-AEA9-57E1AE29DBD0
 
 CCompileXIB /Users/craig/Developer/SocialComic2014/SocialComic2014/ThinDownloadIndicatorViewController.xib
 s422852240.265042
@@ -3121,18 +3120,18 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy Bu
 b37CEFBC1-7CC0-43A8-894C-00EEBC23CC68
 
 CGenerateDSYMFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014
-s422861918.008280
-e422861918.062444
+s422862267.748135
+e422862267.802721
 r1
 xGenerateDSYMFile
 x/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM
 x/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Generate /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM137"GenerateDSYMFile Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014a930025e5c34b941^72fd0f5e5c34b941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM/0000000000000000^674"GenerateDSYMFile Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014    cd /Users/craig/Developer/SocialComic2014    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM36"6A3F1F9B-2D09-4407-8940-334427515A9C-
-b2AFCD99F-92FB-417B-A992-BEAF0AB5589E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Generate /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM137"GenerateDSYMFile Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic20146893bfbb5d34b941^a703e1bb5d34b941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM/0000000000000000^674"GenerateDSYMFile Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014    cd /Users/craig/Developer/SocialComic2014    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app.dSYM36"23E3D231-DDE4-4777-8AC6-2CDDF6318597-
+b4C77E2E1-27A2-45C2-BC60-4FD95A6F0D19
 
 CLd /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7
-s422861791.727931
-e422861791.777609
+s422862085.594811
+e422862085.640079
 r1
 xLd
 x/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014
@@ -3216,12 +3215,12 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Develope
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libsystem_stats.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Link /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201481"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv78c69badf5b34b941^3c12c7df5b34b941^---0#0#1#--1428"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7    cd /Users/craig/Developer/SocialComic2014    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -L/Users/craig/Developer/SocialComic2014/SocialComic2014 -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -filelist /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/SocialComic2014.LinkFileList -dead_strip -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=6.0 -lz -lZipArchive-ios -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/SocialComic2014_dependency_info.dat -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201436"80FD1200-E539-4A9C-A9C5-F0CEFA3403F1-
-b16221AEC-20BC-4526-AE51-83D57D57996B
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Link /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201481"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7545598055d34b941^87dda3055d34b941^---0#0#1#--1428"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7    cd /Users/craig/Developer/SocialComic2014    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -L/Users/craig/Developer/SocialComic2014/SocialComic2014 -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -filelist /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/SocialComic2014.LinkFileList -dead_strip -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=6.0 -lz -lZipArchive-ios -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7/SocialComic2014_dependency_info.dat -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201436"30F78FB8-B52A-496D-B7D1-064384345296-
+b7CF079F7-0FCE-4673-8137-8F5B27D88734
 
 CLd /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7s
-s422861876.574284
-e422861876.742929
+s422862267.687710
+e422862267.742184
 r1
 xLd
 x/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014
@@ -3276,7 +3275,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Develope
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libcache.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libcommonCrypto.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libcompiler_rt.dylib
@@ -3305,8 +3303,9 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Develope
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libsystem_stats.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Link /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201482"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7sfd1493345c34b941^f931be345c34b941^---0#0#1#--1432"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7s    cd /Users/craig/Developer/SocialComic2014    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -L/Users/craig/Developer/SocialComic2014/SocialComic2014 -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -filelist /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/SocialComic2014.LinkFileList -dead_strip -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=6.0 -lz -lZipArchive-ios -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/SocialComic2014_dependency_info.dat -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201436"637380C8-ACA0-4776-8B84-9EE7BB0A7220-
-b85B865E7-BC84-4225-A3F9-EB295F08F4AA
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Link /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201482"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7s7e1db0bb5d34b941^6d00bebb5d34b941^---0#0#1#--1432"Ld Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic2014 normal armv7s    cd /Users/craig/Developer/SocialComic2014    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -L/Users/craig/Developer/SocialComic2014/SocialComic2014 -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos -filelist /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/SocialComic2014.LinkFileList -dead_strip -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=6.0 -lz -lZipArchive-ios -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/craig/Developer/SocialComic2014/Build/Intermediates/SocialComic2014.build/Debug-iphoneos/SocialComic2014.build/Objects-normal/armv7s/SocialComic2014_dependency_info.dat -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/SocialComic201436"151366D7-CA49-4A40-AFA0-82361BF3C60F-
+b4C77E2E1-27A2-45C2-BC60-4FD95A6F0D19
 
 CProcessInfoPlistFile /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/SocialComic2014.app/Info.plist /Users/craig/Developer/SocialComic2014/SocialComic2014/SocialComic2014-Info.plist
 s422783071.714338

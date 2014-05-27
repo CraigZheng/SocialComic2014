@@ -91,7 +91,7 @@
     scrollView.minimumZoomScale = self.view.frame.size.height / imageView.image.size.height;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
     [self logViewFrames];
-    NSLog(@"minimumscale %f", scrollView.minimumZoomScale);
+    NSLog(@"minimumscale %f / current scale %f", scrollView.minimumZoomScale, scrollView.zoomScale);
 }
 
 -(void)setupImageViewForLandscape {
@@ -103,10 +103,10 @@
     
     scrollView.contentSize = imageView.frame.size;
     scrollView.maximumZoomScale = 1;
-    scrollView.minimumZoomScale = self.view.frame.size.height / imageView.image.size.width;
+    scrollView.minimumZoomScale = self.view.frame.size.width / imageView.image.size.width;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
     [self logViewFrames];
-    NSLog(@"minimumscale %f", scrollView.minimumZoomScale);
+    NSLog(@"minimumscale %f / current scale %f", scrollView.minimumZoomScale, scrollView.zoomScale);
 }
 
 -(void)setupToolbars {
