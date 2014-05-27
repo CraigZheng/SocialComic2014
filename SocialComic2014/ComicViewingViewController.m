@@ -20,6 +20,7 @@
 @synthesize bottomToolbar;
 @synthesize topToolbarQuitButton;
 @synthesize topToolbarTitleButton;
+@synthesize myComic;
 
 - (void)viewDidLoad
 {
@@ -31,7 +32,12 @@
     topToolbar.hidden = YES;
     bottomToolbar.hidden = YES;
     
-    imageView.image = [UIImage imageWithContentsOfFile:comicFile];
+    if (myComic.unzipToFolder) {
+        NSArray *comicFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:myComic.unzipToFolder error:nil];
+        comicFile = [myComic.unzipToFolder stringByAppendingPathComponent:comicFiles.firstObject];
+        imageView.image = [UIImage imageWithContentsOfFile:comicFile];
+
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -128,11 +134,13 @@
 -(void)quitComicViewingMode {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
     UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
-    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-                      duration:0.2
-                       options:UIViewAnimationOptionCurveEaseInOut
-                    animations:^{ [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController; }
-                    completion:nil];
+    comicViewingTabBarController.selectedIndex = 1; //show library view controller
+    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
+//    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
+//                      duration:0.2
+//                       options:UIViewAnimationOptionCurveEaseInOut
+//                    animations:^{ [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController; }
+//                    completion:nil];
 
 }
 

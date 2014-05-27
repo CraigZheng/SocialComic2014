@@ -17,5 +17,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *topToolbarQuitButton;
 - (IBAction)topToolbarQuitAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *topToolbarTitleButton;
+@property Comic *myComic;
 @property NSString *comicFile;
 @end

@@ -181,15 +181,16 @@
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
     dispatch_async(dispatch_get_main_queue(), ^{
-        ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
-        comicATPagingViewController.myComic = comic;
+//        ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
+        ComicViewingViewController *comicViewingController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
+        comicViewingController.myComic = comic;
         UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
         [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
                           duration:0.2
                            options:UIViewAnimationOptionCurveEaseInOut
                         animations:^{
                             [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
-                            [navigationController pushViewController:comicATPagingViewController animated:YES];
+                            [navigationController pushViewController:comicViewingController animated:YES];
                             
                         }
                         completion:nil];
