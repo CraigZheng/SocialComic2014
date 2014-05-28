@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="5056"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThinDownloadIndicatorViewController">
             <connections>
                 <outlet property="backgroundView" destination="I2Z-jw-gwF" id="bK4-cX-Z7T"/>
                 <outlet property="circularProgressView" destination="4vn-WF-QRO" id="d9i-Mw-fCg"/>
+                <outlet property="imageView" destination="rfV-d8-a0F" id="s87-Uk-Kdr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,17 +22,25 @@
                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-WF-QRO" customClass="DACircularProgressView">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-WF-QRO" customClass="DACircularProgressView">
                             <rect key="frame" x="5" y="5" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circular_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-d8-a0F">
+                            <rect key="frame" x="5" y="5" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="top" secondItem="I2Z-jw-gwF" secondAttribute="top" constant="5" id="Bow-ma-pWc"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="leading" secondItem="4vn-WF-QRO" secondAttribute="leading" id="ED9-0a-rfM"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="top" secondItem="4vn-WF-QRO" secondAttribute="top" id="PvY-3W-l0s"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="leading" secondItem="I2Z-jw-gwF" secondAttribute="leading" constant="5" id="S59-I8-iso"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="centerY" secondItem="I2Z-jw-gwF" secondAttribute="centerY" id="bR2-Dr-Z0t"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="trailing" secondItem="4vn-WF-QRO" secondAttribute="trailing" id="egc-Gf-XQJ"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="bottom" secondItem="4vn-WF-QRO" secondAttribute="bottom" id="s6Z-Oa-HXq"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="centerX" secondItem="I2Z-jw-gwF" secondAttribute="centerX" id="wqr-Wb-mld"/>
                     </constraints>
                 </view>
@@ -45,4 +54,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="circular_arrow.png" width="204" height="204"/>
+    </resources>
 </document>

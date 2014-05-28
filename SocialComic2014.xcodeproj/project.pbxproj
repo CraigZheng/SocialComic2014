@@ -46,6 +46,7 @@
 		4412FA0D1934398B00681438 /* libZipArchive-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4412FA0C1934398B00681438 /* libZipArchive-ios.a */; };
 		4412FA11193461DC00681438 /* ComicPagingScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4412FA0F193461DC00681438 /* ComicPagingScrollViewController.m */; };
 		4412FA12193461DC00681438 /* ComicPagingScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4412FA10193461DC00681438 /* ComicPagingScrollViewController.xib */; };
+		4412FA18193598C400681438 /* circular_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4412FA17193598C400681438 /* circular_arrow.png */; };
 		44134B6919330BA600681176 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 44134B6819330BA600681176 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		441BA3EF1925DB00001B963D /* ATPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441BA3EE1925DB00001B963D /* ATPagingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		44484C5C19137D71000FECB1 /* ComicDownloadIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44484C5A19137D71000FECB1 /* ComicDownloadIndicatorViewController.m */; };
@@ -148,6 +149,7 @@
 		4412FA0E193461DC00681438 /* ComicPagingScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicPagingScrollViewController.h; sourceTree = "<group>"; };
 		4412FA0F193461DC00681438 /* ComicPagingScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicPagingScrollViewController.m; sourceTree = "<group>"; };
 		4412FA10193461DC00681438 /* ComicPagingScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicPagingScrollViewController.xib; sourceTree = "<group>"; };
+		4412FA17193598C400681438 /* circular_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circular_arrow.png; sourceTree = "<group>"; };
 		44134B6719330BA600681176 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		44134B6819330BA600681176 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		44134B8D19330E2000681176 /* ZipArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 		448CC77018F28C1600FF49A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4412FA17193598C400681438 /* circular_arrow.png */,
 				4412FA051933261400681438 /* open_book.png */,
 				4412FA011933227B00681438 /* download.png */,
 				44A27CBA18FB89B70083760D /* bannerImage.png */,
@@ -674,6 +677,7 @@
 				4412FA12193461DC00681438 /* ComicPagingScrollViewController.xib in Resources */,
 				440CCAD61907A49100C8CEF4 /* switch.png in Resources */,
 				448CC72218F2342D00FF49A6 /* Images.xcassets in Resources */,
+				4412FA18193598C400681438 /* circular_arrow.png in Resources */,
 				440CCAC01907A49100C8CEF4 /* book.png in Resources */,
 				4412FA021933227B00681438 /* download.png in Resources */,
 				448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */,
@@ -882,7 +886,7 @@
 					"$(PROJECT_DIR)/SocialComic2014",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CD3DFB8D-A58B-4FDA-80BB-FD7F20E5D6AA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -891,8 +895,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Haozheng Zheng (9EBE9MWW9X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Haozheng Zheng (9EBE9MWW9X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
@@ -902,7 +906,7 @@
 					"$(PROJECT_DIR)/SocialComic2014",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CD3DFB8D-A58B-4FDA-80BB-FD7F20E5D6AA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

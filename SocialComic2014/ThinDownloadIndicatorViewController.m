@@ -21,7 +21,9 @@
 @synthesize color1;
 @synthesize color2;
 @synthesize progress;
+@synthesize shouldSpin;
 @synthesize updateTimer;
+@synthesize imageView;
 
 - (void)viewDidLoad
 {
@@ -51,14 +53,30 @@
 }
 
 -(void)beginAnimation {
-    [self updateProgressView];
+    shouldSpin = YES;
+    [self rotateImageView];
+    
+//    [self updateProgressView];
     updateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateProgressView) userInfo:nil repeats:YES];
     
 }
 
 -(void)stopAnimation {
+    shouldSpin = NO;
     if (updateTimer.isValid)
         [updateTimer invalidate];
+}
+
+- (void)rotateImageView
+{
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [self.imageView setTransform:CGAffineTransformRotate(self.imageView.transform, M_PI_2)];
+    }completion:^(BOOL finished){
+        if (finished) {
+            if (shouldSpin)
+                [self rotateImageView];
+        }
+    }];
 }
 
 -(void)updateProgressView {

@@ -1,0 +1,1 @@
+/Users/craig/Developer/SocialComic2014/Build/Intermediates/ArchiveIntermediates/SocialComic2014/InstallationBuildProductsLocation/Applications/SocialComic2014.app

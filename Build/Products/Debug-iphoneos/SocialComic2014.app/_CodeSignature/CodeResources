@@ -118,11 +118,11 @@
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/objects.nib</key>
 		<data>
-		3ePrxn7RUa9hrkJYOWV5fnbOKsA=
+		b/GyP84k2MMhdKiP/TH/ZbLe68I=
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/runtime.nib</key>
 		<data>
-		2qBjaLcGJtdLFb5wsS4+4mUSCJA=
+		f1PdASDtIlaX2ev5Sz9A5ywi6S0=
 		</data>
 		<key>arrowleft.png</key>
 		<data>
@@ -152,6 +152,10 @@
 		<data>
 		t08DjrOAfDygbbmjlKkcm59zPk8=
 		</data>
+		<key>circular_arrow.png</key>
+		<data>
+		+skQbRgN5RsG7X8qVtJwsAKNftg=
+		</data>
 		<key>coverSample.jpg</key>
 		<data>
 		JultU7ky2y4yD8kujRXe1vcnOlY=
@@ -162,7 +166,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Z7WTXuCHY+Zd3Ho4BZeHpvM1Tts=
+		59hVUaR+RjF5K32ytEq26Da44ao=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
@@ -401,11 +405,11 @@
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/objects.nib</key>
 		<data>
-		3ePrxn7RUa9hrkJYOWV5fnbOKsA=
+		b/GyP84k2MMhdKiP/TH/ZbLe68I=
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/runtime.nib</key>
 		<data>
-		2qBjaLcGJtdLFb5wsS4+4mUSCJA=
+		f1PdASDtIlaX2ev5Sz9A5ywi6S0=
 		</data>
 		<key>arrowleft.png</key>
 		<data>
@@ -435,6 +439,10 @@
 		<data>
 		t08DjrOAfDygbbmjlKkcm59zPk8=
 		</data>
+		<key>circular_arrow.png</key>
+		<data>
+		+skQbRgN5RsG7X8qVtJwsAKNftg=
+		</data>
 		<key>coverSample.jpg</key>
 		<data>
 		JultU7ky2y4yD8kujRXe1vcnOlY=
@@ -445,7 +453,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Z7WTXuCHY+Zd3Ho4BZeHpvM1Tts=
+		59hVUaR+RjF5K32ytEq26Da44ao=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
