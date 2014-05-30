@@ -31,6 +31,7 @@
 @property ComicStorePreviewAndDownloadViewController *previewAndDownloadController;
 //@property ComicDownloadIndicatorViewController *downloadIndicator;
 @property DownloadManagerTableViewController *downloadManagerViewController;
+@property XMLDownloader *comicListDownloader;
 @property FPPopoverController *popOverController;
 @end
 
@@ -44,6 +45,7 @@
 //@synthesize downloadIndicator;
 @synthesize downloadManagerViewController;
 @synthesize popOverController;
+@synthesize comicListDownloader;
 
 - (void)viewDidLoad
 {
@@ -110,11 +112,14 @@
     imageCentre = [ImageCentre getInstance];
     zipCentre = [ZIPCentre getInstance];
     txtCentre = [TXTCentre new];
-    XMLDownloader *xmlDownloader = [XMLDownloader new];
-    xmlDownloader.delegate = self;
-    [xmlDownloader downloadXML];
+    if (comicListDownloader)
+        [comicListDownloader cancel];
+    comicListDownloader = [XMLDownloader new];
+    comicListDownloader.delegate = self;
+    [comicListDownloader downloadXML];
 }
 
+#pragma mark - XMLDownloaderDelegate
 -(void)downloadOfXMLCompleted:(BOOL)success :(NSData *)xmlData{
     if (success){
         comics = [[XMLProsessor new] parseXML:xmlData];

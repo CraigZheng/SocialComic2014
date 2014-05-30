@@ -20,4 +20,5 @@
 @property id<XMLDownloaderDelegate> delegate;
 
 -(void)downloadXML;
+-(void)cancel;
 @end
