@@ -203,7 +203,7 @@
 #pragma mark - NSNotification handler - comic zip file downloaded
 -(void)zipDownloaded:(NSNotification*)notification {
     if ([[notification.userInfo objectForKey:@"Success"] boolValue]) {
-        [self scanForComicFiles];
+        [self performSelector:@selector(scanForComicFiles) withObject:nil afterDelay:0.2];
     }
 }
 

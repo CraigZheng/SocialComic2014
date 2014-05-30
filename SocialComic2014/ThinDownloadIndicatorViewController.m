@@ -69,7 +69,7 @@
 
 - (void)rotateImageView
 {
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.6 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         [self.imageView setTransform:CGAffineTransformRotate(self.imageView.transform, M_PI_2)];
     }completion:^(BOOL finished){
         if (finished) {
