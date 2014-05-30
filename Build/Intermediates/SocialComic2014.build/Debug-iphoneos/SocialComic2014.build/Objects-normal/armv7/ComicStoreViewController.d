@@ -13,9 +13,4 @@ dependencies: \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/DACircularProgress/DACircularProgressView.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/LocalComicSingleton.h \
   /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicStorePreviewAndDownloadViewController.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicDownloadIndicatorViewController.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/DownloadManagerTableViewController.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/FPPopoverController.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/ARCMacros.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/FPPopoverView.h \
-  /Users/craig/Developer/SocialComic2014/SocialComic2014/FPTouchView.h
+  /Users/craig/Developer/SocialComic2014/SocialComic2014/ComicDownloadIndicatorViewController.h

@@ -19,8 +19,6 @@
 #import "LocalComicSingleton.h"
 #import "ComicStorePreviewAndDownloadViewController.h"
 #import "ComicDownloadIndicatorViewController.h"
-#import "DownloadManagerTableViewController.h"
-#import "FPPopoverController.h"
 
 @interface ComicStoreViewController ()<XMLDownloaderDelegate>
 @property NSArray *comics;
@@ -29,10 +27,7 @@
 @property ZIPCentre *zipCentre;
 @property AppDelegate *mAppDelegate;
 @property ComicStorePreviewAndDownloadViewController *previewAndDownloadController;
-//@property ComicDownloadIndicatorViewController *downloadIndicator;
-@property DownloadManagerTableViewController *downloadManagerViewController;
 @property XMLDownloader *comicListDownloader;
-@property FPPopoverController *popOverController;
 @end
 
 @implementation ComicStoreViewController
@@ -42,9 +37,6 @@
 @synthesize zipCentre;
 @synthesize mAppDelegate;
 @synthesize previewAndDownloadController;
-//@synthesize downloadIndicator;
-@synthesize downloadManagerViewController;
-@synthesize popOverController;
 @synthesize comicListDownloader;
 
 - (void)viewDidLoad
@@ -61,37 +53,16 @@
     previewAndDownloadController.view.alpha = 0;
     [self.view addSubview:previewAndDownloadController.view];
     [previewAndDownloadController.view removeFromSuperview];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloadProgressUpdated:) name:@"ImageDownloadProgressUpdated" object:nil];
     //add header view
     UIImage *bannerImage = [UIImage imageNamed:@"bannerImage"];
     UIImageView *bannerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 640, 116)];
     bannerImageView.image = bannerImage;
     bannerImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.tableView.tableHeaderView = bannerImageView;
-    //downloading indicator
-//    downloadIndicator = [[ComicDownloadIndicatorViewController alloc] initWithNibName:@"ComicDownloadIndicatorViewController" bundle:[NSBundle mainBundle]];
-//    [downloadIndicator.view setFrame:CGRectMake(self.view.frame.size.width - downloadIndicator.view.frame.size.width - 20, self.tabBarController.tabBar.frame.origin.y - downloadIndicator.view.frame.size.height - 20, downloadIndicator.view.frame.size.width, downloadIndicator.view.frame.size.height)];
-//    UITapGestureRecognizer *tapOnDownloadIndicator = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnDownloadingIndicator:)];
-//    [downloadIndicator.view addGestureRecognizer:tapOnDownloadIndicator];
-    //download manager
-//    downloadManagerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"downloadManagerViewController"];
-//    downloadManagerViewController.downloadIndicator = downloadIndicator;
-//    popOverController = [[FPPopoverController alloc] initWithViewController:downloadManagerViewController];
-//    popOverController.border = NO;
-//    popOverController.tint = FPPopoverWhiteTint;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-//    [[mAppDelegate window] addSubview:downloadIndicator.view];
-//    if (downloadIndicator.numberToShow > 0) {
-//        [downloadIndicator startAnimating];
-//        if (downloadIndicator.hidden)
-//            [downloadIndicator show];
-//    } else {
-//        if (!downloadIndicator.hidden)
-//            [downloadIndicator hide];
-//    }
     if (comics.count == 0)
         [self startDownloadingComicList];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldDownloadComic:) name:@"ShouldDownloadComicCommand" object:nil];
@@ -151,10 +122,8 @@
         UIImageView *coverImageView = (UIImageView*)[cell viewWithTag:1];
         UILabel *titleLabel = (UILabel*)[cell viewWithTag:2];
         UITextView *descriptionTextView = (UITextView*)[cell viewWithTag:3];
-        //UIButton *downloadButton = (UIButton*)[cell viewWithTag:4];
         DACircularProgressView *circularView = (DACircularProgressView*)[cell viewWithTag:5];
         
-        //[downloadButton addTarget:self action:@selector(downloadComic:) forControlEvents:UIControlEventTouchUpInside];
         //assign properties of comic to this cell
         //name
         Comic *comic = [comics objectAtIndex:indexPath.row];
@@ -186,9 +155,6 @@
 
 -(void)downloadComic:(Comic*)comic {
     [zipCentre downloadComic:comic];
-//    [[[AppDelegate sharedAppDelegate] window] makeToast:[NSString stringWithFormat:@"%@ is now being downloaded", comic.name] duration:1.5 position:@"bottom"];
-//    [downloadIndicator addNumber];
-//    [downloadIndicator show];
 }
 
 #pragma mark - UITableViewDelegate
@@ -334,11 +300,4 @@
     }
 }
 
-#pragma mark - show pop over view controller, which is the download manager class
--(void)tapOnDownloadingIndicator:(id)sender {
-    [downloadManagerViewController refreshComics];
-    popOverController.contentSize = CGSizeMake(260, 300);
-    [downloadManagerViewController.view setFrame:CGRectMake(downloadManagerViewController.view.frame.origin.x, downloadManagerViewController.view.frame.origin.y, 260, 300)];
-//    [popOverController presentPopoverFromView:downloadIndicator.view];
-}
 @end
