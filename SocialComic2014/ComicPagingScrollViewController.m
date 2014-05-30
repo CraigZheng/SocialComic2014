@@ -22,17 +22,18 @@
 @synthesize comicFiles;
 @synthesize currentPage;
 @synthesize viewControllers;
-@synthesize topToolbar;
 @synthesize bottomToolbar;
 @synthesize autoDismissToolbarsTimer;
+@synthesize navigationBar;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    topToolbar.hidden = YES;
+    navigationBar.hidden = YES;
     bottomToolbar.hidden = YES;
     self.view.frame = [UIScreen mainScreen].bounds;
+    self.title = myComic.name;
 
     comicFiles = [NSMutableArray new];
     viewControllers = [NSMutableArray new];
@@ -49,7 +50,6 @@
             [viewControllers addObject:[NSNull null]];
         }
     }
-
     scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.frame) * comicFiles.count, CGRectGetHeight(scrollView.frame));
     [self loadScrollViewWithPage:0];
     [self loadScrollViewWithPage:1];
@@ -118,22 +118,27 @@
     bounds.origin.x = CGRectGetWidth(bounds) * page;
     bounds.origin.y = 0;
     [self.scrollView scrollRectToVisible:bounds animated:animated];
+    [self updateAutoDismissTimer];
 }
 
 
 -(void)setupToolbars {
-    topToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, topToolbar.frame.size.height);
-    bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, topToolbar.frame.size.height);
+
+    bottomToolbar.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.size.height - bottomToolbar.frame.size.height, scrollView.frame.size.width, bottomToolbar.frame.size.height);
 }
 
 -(void)showToolbars:(BOOL)animated {
     if (animated) {
-        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.3];
+        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:navigationBar :kCATransitionFromBottom :0.3];
         [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.3];
     } else {
-        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:topToolbar :kCATransitionFromBottom :0.01];
+        [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:navigationBar :kCATransitionFromBottom :0.01];
         [[AppDelegate sharedAppDelegate] doSingleViewShowAnimation:bottomToolbar :kCATransitionFromTop :0.01];
     }
+    [self updateAutoDismissTimer];
+}
+
+-(void)updateAutoDismissTimer {
     if (autoDismissToolbarsTimer.isValid)
         [autoDismissToolbarsTimer invalidate];
     autoDismissToolbarsTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(hideToolbars:) userInfo:nil repeats:NO];
@@ -141,10 +146,10 @@
 
 -(void)hideToolbars:(BOOL)animated {
     if (animated) {
-        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:topToolbar :kCATransitionFromTop :0.3];
+        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:navigationBar :kCATransitionFromTop :0.3];
         [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:bottomToolbar :kCATransitionFromBottom :0.3];
     } else {
-        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:topToolbar :kCATransitionFromTop :0.01];
+        [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:navigationBar :kCATransitionFromTop :0.01];
         [[AppDelegate sharedAppDelegate] doSingleViewHideAnimation:bottomToolbar :kCATransitionFromBottom :0.01];
     }
 }
@@ -172,7 +177,7 @@
 }
 
 - (IBAction)tapOnViewAction:(id)sender {
-    if (topToolbar.hidden) {
+    if (navigationBar.hidden) {
         [self showToolbars:YES];
     } else {
         [self hideToolbars:YES];
@@ -185,7 +190,6 @@
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self setupToolbars];
     [self gotoPage:currentPage];
     [self showToolbars:YES];
 }

@@ -27,7 +27,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circular_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-d8-a0F">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-d8-a0F">
                             <rect key="frame" x="5" y="5" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -35,13 +35,13 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="top" secondItem="I2Z-jw-gwF" secondAttribute="top" constant="5" id="Bow-ma-pWc"/>
-                        <constraint firstItem="rfV-d8-a0F" firstAttribute="leading" secondItem="4vn-WF-QRO" secondAttribute="leading" id="ED9-0a-rfM"/>
-                        <constraint firstItem="rfV-d8-a0F" firstAttribute="top" secondItem="4vn-WF-QRO" secondAttribute="top" id="PvY-3W-l0s"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="bottom" secondItem="4vn-WF-QRO" secondAttribute="bottom" id="Hie-Yy-B0i"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="top" secondItem="4vn-WF-QRO" secondAttribute="top" id="JaM-tS-SlJ"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="leading" secondItem="I2Z-jw-gwF" secondAttribute="leading" constant="5" id="S59-I8-iso"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="centerY" secondItem="I2Z-jw-gwF" secondAttribute="centerY" id="bR2-Dr-Z0t"/>
-                        <constraint firstItem="rfV-d8-a0F" firstAttribute="trailing" secondItem="4vn-WF-QRO" secondAttribute="trailing" id="egc-Gf-XQJ"/>
-                        <constraint firstItem="rfV-d8-a0F" firstAttribute="bottom" secondItem="4vn-WF-QRO" secondAttribute="bottom" id="s6Z-Oa-HXq"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="trailing" secondItem="4vn-WF-QRO" secondAttribute="trailing" id="huw-bz-3IZ"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="centerX" secondItem="I2Z-jw-gwF" secondAttribute="centerX" id="wqr-Wb-mld"/>
+                        <constraint firstItem="rfV-d8-a0F" firstAttribute="leading" secondItem="4vn-WF-QRO" secondAttribute="leading" id="zqP-HJ-xW7"/>
                     </constraints>
                 </view>
             </subviews>
@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="circular_arrow.png" width="204" height="204"/>
+        <image name="arrow icon.png" width="332" height="333"/>
     </resources>
 </document>

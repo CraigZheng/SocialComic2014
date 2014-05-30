@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9D80DA5C-01CA-4C8D-8FDA-2ADC6C63EC43</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SocialComic2014</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>696A39D7-1BA6-4967-A448-040D981B074A</key>
+		<string>https://github.com/CraigZheng/SocialComic2014.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SocialComic2014.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>696A39D7-1BA6-4967-A448-040D981B074A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CraigZheng/SocialComic2014.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>696A39D7-1BA6-4967-A448-040D981B074A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>696A39D7-1BA6-4967-A448-040D981B074A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SocialComic2014</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -90,6 +90,7 @@
 		448CC78518F666A900FF49A6 /* NoImageAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */; };
 		44A27CBB18FB89B70083760D /* bannerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A27CBA18FB89B70083760D /* bannerImage.png */; };
 		44A27CBD18FB90EA0083760D /* hourglass_silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A27CBC18FB90EA0083760D /* hourglass_silhouette.png */; };
+		44BE2594193801D300601943 /* arrow icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BE2593193801D300601943 /* arrow icon.png */; };
 		44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */; };
 		44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -222,6 +223,7 @@
 		448CC78418F666A900FF49A6 /* NoImageAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NoImageAvailable.jpg; sourceTree = "<group>"; };
 		44A27CBA18FB89B70083760D /* bannerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerImage.png; sourceTree = "<group>"; };
 		44A27CBC18FB90EA0083760D /* hourglass_silhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass_silhouette.png; sourceTree = "<group>"; };
+		44BE2593193801D300601943 /* arrow icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow icon.png"; sourceTree = "<group>"; };
 		44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalComicSingleton.h; sourceTree = "<group>"; };
 		44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalComicSingleton.m; sourceTree = "<group>"; };
 		44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerTableViewController.h; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		440CCAD81907A49500C8CEF4 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				44BE2593193801D300601943 /* arrow icon.png */,
 				440CCAA01907A49000C8CEF4 /* arrowleft.png */,
 				440CCAA11907A49000C8CEF4 /* arrowleft2x.png */,
 				440CCAA21907A49000C8CEF4 /* arrowright.png */,
@@ -437,11 +440,11 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				440CCA9D1907A19200C8CEF4 /* ComicReaderTabBarViewController.h */,
 				440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */,
-				44134B6A19330BA900681176 /* Reachability */,
 				441BA3F51925DBE7001B963D /* ComicStore */,
 				441BA3F31925DBC8001B963D /* StorePreview */,
 				441BA3F21925DBBD001B963D /* BookCollection */,
 				441BA3F11925DBA7001B963D /* ComicViewing */,
+				44134B6A19330BA900681176 /* Reachability */,
 				44134B8E19330E2400681176 /* ZipArchive */,
 				441BA3F01925DB05001B963D /* ATPagingView */,
 				44484C6819138304000FECB1 /* FPPopoverController */,
@@ -683,6 +686,7 @@
 				448CC71718F2342D00FF49A6 /* Main_iPhone.storyboard in Resources */,
 				440CCAC41907A49100C8CEF4 /* house.png in Resources */,
 				440CCAC61907A49100C8CEF4 /* icon_arrow_left.png in Resources */,
+				44BE2594193801D300601943 /* arrow icon.png in Resources */,
 				440CCABE1907A49100C8CEF4 /* arrowright.png in Resources */,
 				4412FA0B19342C8500681438 /* ThinDownloadIndicatorViewController.xib in Resources */,
 				44484C5D19137D71000FECB1 /* ComicDownloadIndicatorViewController.xib in Resources */,
@@ -875,8 +879,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Haozheng Zheng (9T9WK237ZQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Haozheng Zheng (4A2A95RH7T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Haozheng Zheng (4A2A95RH7T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialComic2014/SocialComic2014-Prefix.pch";
 				INFOPLIST_FILE = "SocialComic2014/SocialComic2014-Info.plist";
@@ -886,7 +890,7 @@
 					"$(PROJECT_DIR)/SocialComic2014",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CD3DFB8D-A58B-4FDA-80BB-FD7F20E5D6AA";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -906,7 +910,7 @@
 					"$(PROJECT_DIR)/SocialComic2014",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CD3DFB8D-A58B-4FDA-80BB-FD7F20E5D6AA";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
