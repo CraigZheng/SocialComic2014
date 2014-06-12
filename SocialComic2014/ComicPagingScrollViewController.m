@@ -182,11 +182,19 @@
 #pragma mark - rotation
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [self hideToolbars:NO];
+    for (UIViewController *controller in viewControllers) {
+        if ((NSNull*)controller != [NSNull null])
+            [controller willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    }
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     [self setupToolbars];
     [self gotoPage:currentPage];
     [self showToolbars:YES];
+    for (UIViewController* controller in viewControllers) {
+        if ((NSNull*)controller != [NSNull null])
+            [controller didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    }
 }
 @end

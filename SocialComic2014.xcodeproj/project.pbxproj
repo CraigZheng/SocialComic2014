@@ -91,6 +91,7 @@
 		44A27CBD18FB90EA0083760D /* hourglass_silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A27CBC18FB90EA0083760D /* hourglass_silhouette.png */; };
 		44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */; };
 		44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */; };
+		5A27E13B193B11F900D0094F /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5A27E13A193B11F900D0094F /* test.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +225,7 @@
 		44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalComicSingleton.m; sourceTree = "<group>"; };
 		44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerTableViewController.h; sourceTree = "<group>"; };
 		44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManagerTableViewController.m; sourceTree = "<group>"; };
+		5A27E13A193B11F900D0094F /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				448CC73418F2342D00FF49A6 /* SocialComic2014Tests.m */,
+				5A27E13A193B11F900D0094F /* test.xml */,
 				448CC72F18F2342D00FF49A6 /* Supporting Files */,
 			);
 			path = SocialComic2014Tests;
@@ -705,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				448CC73318F2342D00FF49A6 /* InfoPlist.strings in Resources */,
+				5A27E13B193B11F900D0094F /* test.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
