@@ -4,10 +4,8 @@
 <dict>
 	<key>application-identifier</key>
 	<string>9EBE9MWW9X.com.inceptionstrategies.</string>
-	<key>com.apple.developer.team-identifier</key>
-	<string>9EBE9MWW9X</string>
 	<key>get-task-allow</key>
-	<true/>
+	<false/>
 	<key>keychain-access-groups</key>
 	<array>
 		<string>9EBE9MWW9X.com.inceptionstrategies.</string>
