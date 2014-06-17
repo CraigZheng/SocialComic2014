@@ -19,15 +19,6 @@
 @implementation ComicReaderTabBarViewController
 @synthesize thinDownloadIndicatorViewController;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,13 +26,17 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldOpenTab:) name:@"ShouldOpenTabCommand" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadStarted:) name:@"ZipDownloadStarted" object:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     thinDownloadIndicatorViewController = [[ThinDownloadIndicatorViewController alloc] initWithNibName:@"ThinDownloadIndicatorViewController" bundle:[NSBundle mainBundle]];
-    thinDownloadIndicatorViewController.view.frame = CGRectMake(
-                                                                self.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2,
-                                                                self.tabBar.frame.origin.y - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2,
-                                                                thinDownloadIndicatorViewController.view.frame.size.width,
-                                                                thinDownloadIndicatorViewController.view.frame.size.height);
-    [self.view addSubview:thinDownloadIndicatorViewController.view];
+    [self didRotateFromInterfaceOrientation:self.interfaceOrientation];
+//    thinDownloadIndicatorViewController.view.frame = CGRectMake(
+//                                                                [UIScreen mainScreen].bounds.size.width - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2,
+//                                                                self.tabBar.frame.origin.y - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2,
+//                                                                thinDownloadIndicatorViewController.view.frame.size.width,
+//                                                                thinDownloadIndicatorViewController.view.frame.size.height);
     [thinDownloadIndicatorViewController.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(OpenMyLibraryTab)]];
     [thinDownloadIndicatorViewController hide];
 }
@@ -53,10 +48,21 @@
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
     CGRect indicatorFrame = thinDownloadIndicatorViewController.view.frame;
-    indicatorFrame.origin.x = self.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2;
-    indicatorFrame.origin.y = self.tabBar.frame.origin.y - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+        screenWidth = [UIScreen mainScreen].bounds.size.height;
+        screenHeight = [UIScreen mainScreen].bounds.size.width;
+    }
+    indicatorFrame.origin.x = screenWidth - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2;
+    indicatorFrame.origin.y = screenHeight - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2;
+    indicatorFrame.size.width = 50;
+    indicatorFrame.size.height = 50;
+    
     thinDownloadIndicatorViewController.view.frame = indicatorFrame;
     if (thinDownloadIndicatorViewController.isSpinning) {
+        if (!thinDownloadIndicatorViewController.view.superview)
+            [self.view addSubview:thinDownloadIndicatorViewController.view];
         [thinDownloadIndicatorViewController show];
     }
 }
@@ -81,6 +87,8 @@
 
 -(void)zipDownloadStarted:(NSNotification*)notification {
     if (thinDownloadIndicatorViewController.view.hidden) {
+        if (!thinDownloadIndicatorViewController.view.superview)
+            [self.view addSubview:thinDownloadIndicatorViewController.view];
         [thinDownloadIndicatorViewController show];
         [thinDownloadIndicatorViewController beginAnimation];
     }
