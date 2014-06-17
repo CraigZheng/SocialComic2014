@@ -46,22 +46,20 @@
     [thinDownloadIndicatorViewController hide];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Rotation events
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [thinDownloadIndicatorViewController hide];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    CGRect indicatorFrame = thinDownloadIndicatorViewController.view.frame;
+    indicatorFrame.origin.x = self.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2;
+    indicatorFrame.origin.y = self.tabBar.frame.origin.y - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2;
+    thinDownloadIndicatorViewController.view.frame = indicatorFrame;
+    if (thinDownloadIndicatorViewController.isSpinning) {
+        [thinDownloadIndicatorViewController show];
+    }
 }
-*/
 
 #pragma mark - notification handler
 

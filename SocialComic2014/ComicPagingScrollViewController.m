@@ -25,6 +25,7 @@
 @synthesize bottomToolbar;
 @synthesize autoDismissToolbarsTimer;
 @synthesize navigationBar;
+@synthesize pageNumberButton;
 
 - (void)viewDidLoad
 {
@@ -34,7 +35,8 @@
     bottomToolbar.hidden = YES;
     self.view.frame = [UIScreen mainScreen].bounds;
     self.title = myComic.name;
-
+    navigationBar.topItem.title = myComic.name;
+    
     comicFiles = [NSMutableArray new];
     viewControllers = [NSMutableArray new];
     if (!myComic){
@@ -64,7 +66,7 @@
 {
     if (page >= self.comicFiles.count)
         return;
-    
+    [pageNumberButton setTitle:[NSString stringWithFormat:@"%ld/%d", (long)page + 1, self.comicFiles.count]];
     // replace the placeholder if necessary
     ComicViewingViewController *controller = [self.viewControllers objectAtIndex:page];
     if ((NSNull *)controller == [NSNull null])
@@ -165,15 +167,17 @@
 - (IBAction)previousAction:(id)sender {
     if (currentPage > 0) {
         currentPage --;
-        [self gotoPage:currentPage];
+        [self gotoPage:YES];
     }
+    [self updateAutoDismissTimer];
 }
 
 - (IBAction)nextAction:(id)sender {
     if (currentPage < comicFiles.count) {
         currentPage ++;
-        [self gotoPage:currentPage];
+        [self gotoPage:YES];
     }
+    [self updateAutoDismissTimer];
 }
 
 - (IBAction)tapOnViewAction:(id)sender {
@@ -184,13 +188,16 @@
     }
 }
 
+- (IBAction)JumpToAction:(id)sender {
+}
+
 #pragma mark - rotation
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [self hideToolbars:NO];
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self gotoPage:currentPage];
+    [self gotoPage:NO];
     [self showToolbars:YES];
 }
 @end

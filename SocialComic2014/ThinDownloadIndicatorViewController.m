@@ -21,7 +21,7 @@
 @synthesize color1;
 @synthesize color2;
 @synthesize progress;
-@synthesize shouldSpin;
+@synthesize isSpinning;
 @synthesize updateTimer;
 @synthesize imageView;
 
@@ -53,7 +53,7 @@
 }
 
 -(void)beginAnimation {
-    shouldSpin = YES;
+    isSpinning = YES;
     [self rotateImageView];
     
 //    [self updateProgressView];
@@ -62,7 +62,7 @@
 }
 
 -(void)stopAnimation {
-    shouldSpin = NO;
+    isSpinning = NO;
     if (updateTimer.isValid)
         [updateTimer invalidate];
 }
@@ -73,7 +73,7 @@
         [self.imageView setTransform:CGAffineTransformRotate(self.imageView.transform, M_PI_2)];
     }completion:^(BOOL finished){
         if (finished) {
-            if (shouldSpin)
+            if (isSpinning)
                 [self rotateImageView];
         }
     }];

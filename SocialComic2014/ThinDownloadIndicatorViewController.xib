@@ -34,7 +34,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8Je-JK-eL9"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="top" secondItem="I2Z-jw-gwF" secondAttribute="top" constant="5" id="Bow-ma-pWc"/>
+                        <constraint firstAttribute="width" constant="50" id="Gck-1D-nCl"/>
                         <constraint firstItem="rfV-d8-a0F" firstAttribute="bottom" secondItem="4vn-WF-QRO" secondAttribute="bottom" id="Hie-Yy-B0i"/>
                         <constraint firstItem="rfV-d8-a0F" firstAttribute="top" secondItem="4vn-WF-QRO" secondAttribute="top" id="JaM-tS-SlJ"/>
                         <constraint firstItem="4vn-WF-QRO" firstAttribute="leading" secondItem="I2Z-jw-gwF" secondAttribute="leading" constant="5" id="S59-I8-iso"/>

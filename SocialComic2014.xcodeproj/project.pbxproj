@@ -57,6 +57,7 @@
 		446A3191191A00A70019FE64 /* ComicViewingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446A318F191A00A70019FE64 /* ComicViewingViewController.xib */; };
 		446A31A5191A188F0019FE64 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 446A31A4191A188F0019FE64 /* libz.dylib */; };
 		446A31AB191B2E220019FE64 /* Unzipper.m in Sources */ = {isa = PBXBuildFile; fileRef = 446A31AA191B2E220019FE64 /* Unzipper.m */; };
+		44783A8519501A6E0067C454 /* libZipArchive-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44783A7E19501A170067C454 /* libZipArchive-ios.a */; };
 		448CC70418F2342D00FF49A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70318F2342D00FF49A6 /* Foundation.framework */; };
 		448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70518F2342D00FF49A6 /* CoreGraphics.framework */; };
 		448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CC70718F2342D00FF49A6 /* UIKit.framework */; };
@@ -90,12 +91,39 @@
 		44A27CBB18FB89B70083760D /* bannerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A27CBA18FB89B70083760D /* bannerImage.png */; };
 		44A27CBD18FB90EA0083760D /* hourglass_silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A27CBC18FB90EA0083760D /* hourglass_silhouette.png */; };
 		44BE2594193801D300601943 /* arrow icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BE2593193801D300601943 /* arrow icon.png */; };
-		44BE2E7D19386C0200601943 /* libZipArchive-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE2E7C19386C0200601943 /* libZipArchive-ios.a */; };
 		44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */; };
 		44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		44783A7D19501A170067C454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44783A7519501A170067C454 /* ZipArchive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "ZipArchive ios";
+		};
+		44783A7F19501A170067C454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44783A7519501A170067C454 /* ZipArchive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C908A96F160AC26D000395DB;
+			remoteInfo = "ZipArchive mac";
+		};
+		44783A8119501A170067C454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44783A7519501A170067C454 /* ZipArchive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C95AB35817E1C37700120861;
+			remoteInfo = "ZipArchive ios Tests";
+		};
+		44783A8319501A170067C454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44783A7519501A170067C454 /* ZipArchive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C95AB37417E1C47D00120861;
+			remoteInfo = "ZipArchive mac Tests";
+		};
 		448CC72C18F2342D00FF49A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 448CC6F818F2342D00FF49A6 /* Project object */;
@@ -170,6 +198,7 @@
 		446A31A4191A188F0019FE64 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		446A31A9191B2E220019FE64 /* Unzipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unzipper.h; sourceTree = "<group>"; };
 		446A31AA191B2E220019FE64 /* Unzipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unzipper.m; sourceTree = "<group>"; };
+		44783A7519501A170067C454 /* ZipArchive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZipArchive.xcodeproj; path = "ZipArchive-master/ZipArchive/ZipArchive.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		448CC70018F2342D00FF49A6 /* SocialComic2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialComic2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CC70318F2342D00FF49A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		448CC70518F2342D00FF49A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -222,8 +251,6 @@
 		44A27CBA18FB89B70083760D /* bannerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerImage.png; sourceTree = "<group>"; };
 		44A27CBC18FB90EA0083760D /* hourglass_silhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass_silhouette.png; sourceTree = "<group>"; };
 		44BE2593193801D300601943 /* arrow icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow icon.png"; sourceTree = "<group>"; };
-		44BE2E7C19386C0200601943 /* libZipArchive-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libZipArchive-ios.a"; sourceTree = "<group>"; };
-		44BE2E7E19386C1E00601943 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalComicSingleton.h; sourceTree = "<group>"; };
 		44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalComicSingleton.m; sourceTree = "<group>"; };
 		44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerTableViewController.h; sourceTree = "<group>"; };
@@ -235,7 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44BE2E7D19386C0200601943 /* libZipArchive-ios.a in Frameworks */,
+				44783A8519501A6E0067C454 /* libZipArchive-ios.a in Frameworks */,
 				446A31A5191A188F0019FE64 /* libz.dylib in Frameworks */,
 				448CC70618F2342D00FF49A6 /* CoreGraphics.framework in Frameworks */,
 				448CC70818F2342D00FF49A6 /* UIKit.framework in Frameworks */,
@@ -392,6 +419,17 @@
 			name = FPPopoverController;
 			sourceTree = "<group>";
 		};
+		44783A7619501A170067C454 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44783A7E19501A170067C454 /* libZipArchive-ios.a */,
+				44783A8019501A170067C454 /* libZipArchive-mac.a */,
+				44783A8219501A170067C454 /* ZipArchive ios Tests.xctest */,
+				44783A8419501A170067C454 /* ZipArchive mac Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		448CC6F718F2342D00FF49A6 = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +464,7 @@
 		448CC70918F2342D00FF49A6 /* SocialComic2014 */ = {
 			isa = PBXGroup;
 			children = (
+				44783A7519501A170067C454 /* ZipArchive.xcodeproj */,
 				448CC71218F2342D00FF49A6 /* AppDelegate.h */,
 				448CC71318F2342D00FF49A6 /* AppDelegate.m */,
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
@@ -436,7 +475,6 @@
 				441BA3F21925DBBD001B963D /* BookCollection */,
 				441BA3F11925DBA7001B963D /* ComicViewing */,
 				44134B6A19330BA900681176 /* Reachability */,
-				44BE2E7F19386C2200601943 /* ZipArchive */,
 				441BA3F01925DB05001B963D /* ATPagingView */,
 				44484C6819138304000FECB1 /* FPPopoverController */,
 				440CCA971907819C00C8CEF4 /* PartialTransparentView */,
@@ -575,15 +613,6 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
-		44BE2E7F19386C2200601943 /* ZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				44BE2E7C19386C0200601943 /* libZipArchive-ios.a */,
-				44BE2E7E19386C1E00601943 /* ZipArchive.h */,
-			);
-			name = ZipArchive;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -647,6 +676,12 @@
 			mainGroup = 448CC6F718F2342D00FF49A6;
 			productRefGroup = 448CC70118F2342D00FF49A6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 44783A7619501A170067C454 /* Products */;
+					ProjectRef = 44783A7519501A170067C454 /* ZipArchive.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				448CC6FF18F2342D00FF49A6 /* SocialComic2014 */,
@@ -654,6 +689,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		44783A7E19501A170067C454 /* libZipArchive-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libZipArchive-ios.a";
+			remoteRef = 44783A7D19501A170067C454 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44783A8019501A170067C454 /* libZipArchive-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libZipArchive-mac.a";
+			remoteRef = 44783A7F19501A170067C454 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44783A8219501A170067C454 /* ZipArchive ios Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ZipArchive ios Tests.xctest";
+			remoteRef = 44783A8119501A170067C454 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44783A8419501A170067C454 /* ZipArchive mac Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ZipArchive mac Tests.xctest";
+			remoteRef = 44783A8319501A170067C454 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		448CC6FE18F2342D00FF49A6 /* Resources */ = {
@@ -891,7 +957,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/** $(SRCROOT)/ZipArchive-master";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -912,7 +978,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/** $(SRCROOT)/ZipArchive-master";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
