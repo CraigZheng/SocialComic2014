@@ -293,7 +293,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb6f854ece357b941^d04755ece357b941^---0#1#1#--18"Check dependencies36"415E14C3-EB19-47B8-A4A7-62EA7CE2316C-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies5d507f131261b941^6aa67f131261b941^---0#1#1#--18"Check dependencies36"D7E5A81E-C761-4E28-A52F-C82EB23367A1-
 
 CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphoneos/ZipArchive\ ios.build/Objects-normal/arm64/ZipArchive.o /Users/craig/Downloads/ZipArchive-master/ZipArchive.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s423127484.014263

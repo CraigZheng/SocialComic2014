@@ -134,15 +134,11 @@
 }
 
 -(void)quitComicViewingMode {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
-    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
-    comicViewingTabBarController.selectedIndex = 1; //show library view controller
-    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
-//    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-//                      duration:0.2
-//                       options:UIViewAnimationOptionCurveEaseInOut
-//                    animations:^{ [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController; }
-//                    completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
+//    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
+//    comicViewingTabBarController.selectedIndex = 1; //show library view controller
+//    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
 
 }
 
@@ -152,20 +148,15 @@
 
 #pragma mark - scrollview delegate
 -(void)scrollViewDidScroll:(UIScrollView *)_scrollView {
-    CGPoint contentOffSet = _scrollView.contentOffset;
-    if (contentOffSet.x <= 0 || contentOffSet.x + _scrollView.frame.size.width >= _scrollView.contentSize.width) {
-        NSLog(@"scrollview to the left or right");
-//        if (contentOffSet.x == 0) {
-//            [[NSNotificationCenter defaultCenter] postNotificationName:PREVIOUS_PAGE_COMMAND object:nil];
-//        } else {
-//            [[NSNotificationCenter defaultCenter] postNotificationName:NEXT_PAGE_COMMAND object:nil];
-//        }
-        shouldPassMoveEventToParent = YES;
-        _scrollView.userInteractionEnabled = NO;
-    } else {
-        shouldPassMoveEventToParent = NO;
-        shouldPassMoveEventToParent = YES;
-    }
+//    CGPoint contentOffSet = _scrollView.contentOffset;
+//    if (contentOffSet.x <= 0 || contentOffSet.x + _scrollView.frame.size.width >= _scrollView.contentSize.width) {
+//        NSLog(@"scrollview to the left or right");
+//        shouldPassMoveEventToParent = YES;
+//        _scrollView.userInteractionEnabled = NO;
+//    } else {
+//        shouldPassMoveEventToParent = NO;
+//        shouldPassMoveEventToParent = YES;
+//    }
 }
 
 #pragma mark - touch events
@@ -179,4 +170,9 @@
 
 }
 
+- (IBAction)tapOnComicPage:(id)sender {
+    if (parentPagingScrollView) {
+        [parentPagingScrollView tapOnViewAction:sender];
+    }
+}
 @end

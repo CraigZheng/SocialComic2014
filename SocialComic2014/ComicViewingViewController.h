@@ -24,4 +24,5 @@
 //@property (strong, nonatomic) IBOutlet UIBarButtonItem *topToolbarTitleButton;
 @property Comic *myComic;
 @property NSString *comicFile;
+- (IBAction)tapOnComicPage:(id)sender;
 @end
