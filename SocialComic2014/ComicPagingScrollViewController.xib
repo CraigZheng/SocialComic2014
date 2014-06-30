@@ -81,7 +81,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <tapGestureRecognizer id="EpO-e4-ZrA">
+        <tapGestureRecognizer enabled="NO" id="EpO-e4-ZrA">
             <connections>
                 <action selector="tapOnViewAction:" destination="-1" id="39S-2H-ue6"/>
             </connections>

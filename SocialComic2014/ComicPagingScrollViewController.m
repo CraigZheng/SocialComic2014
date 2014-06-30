@@ -9,7 +9,7 @@
 #import "ComicPagingScrollViewController.h"
 #import "ComicViewingViewController.h"
 
-@interface ComicPagingScrollViewController ()
+@interface ComicPagingScrollViewController ()<UIScrollViewDelegate>
 @property NSMutableArray *comicFiles;
 @property NSInteger currentPage;
 @property NSMutableArray *viewControllers;
@@ -60,6 +60,13 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self showToolbars: YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nextAction:) name:NEXT_PAGE_COMMAND object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(previousAction:) name:PREVIOUS_PAGE_COMMAND object:nil];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)loadScrollViewWithPage:(NSUInteger)page
@@ -74,6 +81,7 @@
 //        controller = [[ComicViewingViewController alloc] initWithPageNumber:page];
         controller = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
         controller.comicFile = [comicFiles objectAtIndex:page];
+        controller.parentPagingScrollView = self;
         [self.viewControllers replaceObjectAtIndex:page withObject:controller];
     }
     
@@ -97,12 +105,16 @@
     CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
     NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     currentPage = page;
-    
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
     [self loadScrollViewWithPage:page + 1];
     
+    for (ComicViewingViewController *viewingViewController in self.viewControllers) {
+        if ((NSNull*)viewingViewController != [NSNull null])
+            viewingViewController.scrollView.userInteractionEnabled = YES;
+    }
+
     // a possible optimization would be to unload the views+controllers which are no longer visible
 }
 

@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface ComicViewingViewController ()
-
+@property BOOL shouldPassMoveEventToParent;
 @end
 
 @implementation ComicViewingViewController
@@ -22,6 +22,8 @@
 //@synthesize topToolbarQuitButton;
 //@synthesize topToolbarTitleButton;
 @synthesize myComic;
+@synthesize parentPagingScrollView;
+@synthesize shouldPassMoveEventToParent;
 
 - (void)viewDidLoad
 {
@@ -40,7 +42,6 @@
 //    [topToolbarTitleButton setTitle:myComic.name];
     [self setupImageViewForPortrait];
     [self setupToolbars];
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -148,4 +149,34 @@
 - (IBAction)topToolbarQuitAction:(id)sender {
     [self quitComicViewingMode];
 }
+
+#pragma mark - scrollview delegate
+-(void)scrollViewDidScroll:(UIScrollView *)_scrollView {
+    CGPoint contentOffSet = _scrollView.contentOffset;
+    if (contentOffSet.x <= 0 || contentOffSet.x + _scrollView.frame.size.width >= _scrollView.contentSize.width) {
+        NSLog(@"scrollview to the left or right");
+//        if (contentOffSet.x == 0) {
+//            [[NSNotificationCenter defaultCenter] postNotificationName:PREVIOUS_PAGE_COMMAND object:nil];
+//        } else {
+//            [[NSNotificationCenter defaultCenter] postNotificationName:NEXT_PAGE_COMMAND object:nil];
+//        }
+        shouldPassMoveEventToParent = YES;
+        _scrollView.userInteractionEnabled = NO;
+    } else {
+        shouldPassMoveEventToParent = NO;
+        shouldPassMoveEventToParent = YES;
+    }
+}
+
+#pragma mark - touch events
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"czz touch began");
+
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"czz touch moved");
+
+}
+
 @end
