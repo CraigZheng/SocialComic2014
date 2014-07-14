@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIView *backgroundView;
 @property (strong, nonatomic) IBOutlet DACircularProgressView *circularProgressView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-@property BOOL shouldSpin;
+@property BOOL isSpinning;
 
 -(void)beginAnimation;
 -(void)stopAnimation;

@@ -22,6 +22,7 @@
 - (IBAction)previousAction:(id)sender;
 - (IBAction)nextAction:(id)sender;
 - (IBAction)tapOnViewAction:(id)sender;
+- (IBAction)JumpToAction:(id)sender;
 
 
 @end

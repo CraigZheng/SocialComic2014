@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface ComicViewingViewController ()
-
+@property BOOL shouldPassMoveEventToParent;
 @end
 
 @implementation ComicViewingViewController
@@ -22,6 +22,8 @@
 //@synthesize topToolbarQuitButton;
 //@synthesize topToolbarTitleButton;
 @synthesize myComic;
+@synthesize parentPagingScrollView;
+@synthesize shouldPassMoveEventToParent;
 
 - (void)viewDidLoad
 {
@@ -40,7 +42,6 @@
 //    [topToolbarTitleButton setTitle:myComic.name];
     [self setupImageViewForPortrait];
     [self setupToolbars];
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -133,19 +134,45 @@
 }
 
 -(void)quitComicViewingMode {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
-    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
-    comicViewingTabBarController.selectedIndex = 1; //show library view controller
-    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
-//    [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-//                      duration:0.2
-//                       options:UIViewAnimationOptionCurveEaseInOut
-//                    animations:^{ [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController; }
-//                    completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
+//    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
+//    comicViewingTabBarController.selectedIndex = 1; //show library view controller
+//    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
 
 }
 
 - (IBAction)topToolbarQuitAction:(id)sender {
     [self quitComicViewingMode];
+}
+
+#pragma mark - scrollview delegate
+-(void)scrollViewDidScroll:(UIScrollView *)_scrollView {
+//    CGPoint contentOffSet = _scrollView.contentOffset;
+//    if (contentOffSet.x <= 0 || contentOffSet.x + _scrollView.frame.size.width >= _scrollView.contentSize.width) {
+//        NSLog(@"scrollview to the left or right");
+//        shouldPassMoveEventToParent = YES;
+//        _scrollView.userInteractionEnabled = NO;
+//    } else {
+//        shouldPassMoveEventToParent = NO;
+//        shouldPassMoveEventToParent = YES;
+//    }
+}
+
+#pragma mark - touch events
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"czz touch began");
+
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"czz touch moved");
+
+}
+
+- (IBAction)tapOnComicPage:(id)sender {
+    if (parentPagingScrollView) {
+        [parentPagingScrollView tapOnViewAction:sender];
+    }
 }
 @end

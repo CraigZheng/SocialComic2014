@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qS-zM-7xi">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qS-zM-7xi">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <gestureRecognizers/>
@@ -54,7 +54,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Doc-8s-5WF"/>
-                        <barButtonItem title="1/20" id="3Vv-42-0pK"/>
+                        <barButtonItem title="1/20" id="3Vv-42-0pK">
+                            <connections>
+                                <action selector="JumpToAction:" destination="-1" id="YAw-b2-ZL6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="NiN-Ol-ssg"/>
                         <barButtonItem title=">" id="VAr-ho-D0C">
                             <connections>
@@ -77,7 +81,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <tapGestureRecognizer id="EpO-e4-ZrA">
+        <tapGestureRecognizer enabled="NO" id="EpO-e4-ZrA">
             <connections>
                 <action selector="tapOnViewAction:" destination="-1" id="39S-2H-ue6"/>
             </connections>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ho8-cO-8WC">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -9,6 +9,7 @@
         <scene sceneID="Vex-rW-GRa">
             <objects>
                 <tabBarController storyboardIdentifier="comic_reader_tab_bar_controller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8YX-ce-x5E" customClass="ComicReaderTabBarViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xBq-KW-ply"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -271,6 +272,22 @@
             <point key="canvasLocation" x="623" y="498"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="L8S-f2-xEm">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Ho8-cO-8WC" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycx-Xj-D0R">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8YX-ce-x5E" kind="relationship" relationship="rootViewController" id="70p-sA-Wu2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idO-VD-7Qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="180"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="tXR-Qb-nFO">
             <objects>
                 <navigationController storyboardIdentifier="comic_viewing_navigation_controller" definesPresentationContext="YES" hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="ynD-xO-qyH" sceneMemberID="viewController">
@@ -280,7 +297,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grL-94-yd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="1185"/>
+            <point key="canvasLocation" x="633" y="1213"/>
         </scene>
         <!--Comic ViewAT Paging View Controller-->
         <scene sceneID="8Kv-Fd-8tq">

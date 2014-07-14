@@ -29,6 +29,7 @@
 @property Comic *selectedComic;
 @property NSTimeInterval updateInterval;
 @property NSDate *lastUpdateTime;
+@property ComicPagingScrollViewController *comicViewingController;
 @end
 
 @implementation BookCollectionViewController
@@ -41,6 +42,7 @@
 @synthesize updateInterval;
 @synthesize lastUpdateTime;
 @synthesize currentProgressBackgroundView;
+@synthesize comicViewingController;
 
 - (void)viewDidLoad
 {
@@ -49,6 +51,7 @@
     mAppDelegate = [AppDelegate sharedAppDelegate];
     unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
+    comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -184,18 +187,19 @@
     dispatch_async(dispatch_get_main_queue(), ^{
 //        ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
 //        ComicViewingViewController *comicViewingController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
-        ComicPagingScrollViewController *comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
         comicViewingController.myComic = comic;
-        UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
-        [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-                          duration:0.2
-                           options:UIViewAnimationOptionCurveEaseInOut
-                        animations:^{
-                            [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
-                            [navigationController pushViewController:comicViewingController animated:YES];
-                            
-                        }
-                        completion:nil];
+        [self.navigationController pushViewController:comicViewingController animated:YES];
+        
+//        UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
+//        [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
+//                          duration:0.2
+//                           options:UIViewAnimationOptionCurveEaseInOut
+//                        animations:^{
+//                            [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
+//                            [navigationController pushViewController:comicViewingController animated:YES];
+//                            
+//                        }
+//                        completion:nil];
 
     });
 }

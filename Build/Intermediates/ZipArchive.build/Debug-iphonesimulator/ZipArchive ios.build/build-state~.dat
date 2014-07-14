@@ -1,0 +1,262 @@
+TZipArchive ios
+v6
+r1
+cCheck dependencies
+cProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c00000000534766B70000000000000198
+t1397188279
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000531FA5FD00000000000003B4
+t1394583037
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531FA601000000000000019E
+t1394583041
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531FA603000000000088D8C0
+t1394583043
+s8968384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib
+c00000000531FA616000000000002B700
+t1394583062
+s177920
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch
+t1402991072
+s3231656
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch
+t1402991072
+s116796
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/ZipArchive-ios.LinkFileList
+c00000000539FF1E000000000000002E4
+t1402991072
+s740
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/ZipArchive.o
+t1402991073
+s43680
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/ioapi.o
+t1402991072
+s13472
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/mztools.o
+t1402991072
+s11260
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/unzip.o
+t1402991073
+s48444
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/zip.o
+t1402991073
+s54068
+
+N/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a
+t2
+s0
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+c000000005309C0CA000000000000407E
+t1393148106
+s16510
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+c000000005309C0CA00000000000000BC
+t1393148106
+s188
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+c000000005309C0CA0000000000001DDD
+t1393148106
+s7645
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+c000000005309C0CA0000000000001EB3
+t1393148106
+s7859
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+c000000005309C0CA00000000000116CC
+t1393148106
+s71372
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+c000000005309C0CA0000000000010085
+t1393148106
+s65669
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies0de0f55f2950b941^f7b003602950b941^---0#1#1#--18"Check dependencies36"2BEEB9C7-F5E1-49C3-8A95-3534EB53B42F-
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.896722
+e424683873.008041
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/ZipArchive.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m299"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler85b1e5602950b941^910f02612950b941^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m0000000000000000^3713"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive.o36"E9C028DE-571F-4CFF-B65C-F0B44669D732-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.895246
+e424683872.990515
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/ioapi.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c287"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal i386 c com.apple.compilers.llvm.clang.1_0.compilerfe44e5602950b941^5b94fd602950b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c0000000000000000^3442"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ioapi.o36"37F2DDAE-AA7C-4FCD-812C-11693AF9BCF5-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.895481
+e424683872.984015
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/mztools.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c291"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal i386 c com.apple.compilers.llvm.clang.1_0.compilerc555e5602950b941^b8e9fb602950b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c0000000000000000^3454"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/mztools.o36"A2B161DD-0CDA-40B5-9BB0-00BA7AF6970C-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.895748
+e424683873.040143
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/unzip.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/crypt.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c287"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler9d66e5602950b941^e9480a612950b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c0000000000000000^3442"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/unzip.o36"826982A3-C027-41AD-8D02-B8D44C810A7E-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.896067
+e424683873.048271
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive ios.build/Objects-normal/i386/zip.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/crypt.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c283"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler7287e5602950b941^c85d0c612950b941^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c0000000000000000^3430"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/zip.o36"CDA0D5B3-63F7-4F38-AE86-B65040E787F8-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CLibtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a normal i386
+s424683873.049067
+e424683873.075141
+r1
+xLibtool
+x/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a
+xnormal
+xi386
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+owarning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library
+owarning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Libtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a normal i386115"Libtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a normal i38611a60c612950b941^bc3e13612950b941^-759"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC warning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static librarywarning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library2(21%IDEActivityLogMessage2@290"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library-424683873#159#300#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Librarian Warning--2@290"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library-424683873#459#300#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Librarian Warning--0#0#1#--1197"Libtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a normal i386    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export IPHONEOS_DEPLOYMENT_TARGET=4.3    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator -filelist /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/Objects-normal/i386/ZipArchive-ios.LinkFileList -ObjC -framework Foundation /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/libZipArchive-ios.a36"EDBAD8CF-9847-458D-9FD0-5A669FBA13A8-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.015229
+e424683872.894529
+r1
+xProcessPCH
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch
+xZipArchive_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile ZipArchive_Prefix.pch251"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler72f903602950b941^1d00e5602950b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch0000000000000000^3526"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.dia -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.d -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-djidqxutltigmwbfbdofkdgytgxq/ZipArchive_Prefix.pch.pch36"A201D161-2E22-44AD-B8B0-63831CBDD184-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s424683872.014987
+e424683872.029593
+r1
+xProcessPCH
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch
+xZipArchive_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile ZipArchive_Prefix.pch241"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compilera3ea03602950b941^de9307602950b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch0000000000000000^3269"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -mios-simulator-version-min=4.3 -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/ZipArchive-ios-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources/i386 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug-iphonesimulator/ZipArchive\ ios.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.dia -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.d -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-duwmjiotvdlvqoacjuesmtzjratb/ZipArchive_Prefix.pch.pch36"6DE7B0FF-E5E4-4F07-B303-1E7F81E071BD-
+b28DC3272-1C3E-43CA-AB62-6D37688FCFBB
+
+CProcessPCH /Users/craig/Library/Developer/Xcode/DerivedData/SocialComic2014-akzpqtcxytzqlecmdhioiaaesmqx/Index/PrecompiledHeaders/ZipArchive_Prefix-arqghuisjbpogbaoyjisofxzltzj_ast/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/craig/Library/Developer/Xcode/DerivedData/SocialComic2014-akzpqtcxytzqlecmdhioiaaesmqx/Index/PrecompiledHeaders/ZipArchive_Prefix-enbhclyveksucofdtgkiqanfekbd_ast/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+

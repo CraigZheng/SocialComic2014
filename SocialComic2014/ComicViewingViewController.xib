@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="01N-1a-08L">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" canCancelContentTouches="NO" id="01N-1a-08L">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -28,13 +28,23 @@
                     </subviews>
                     <connections>
                         <outlet property="delegate" destination="-1" id="whN-fV-ZAW"/>
+                        <outletCollection property="gestureRecognizers" destination="qLX-2m-Fn2" appends="YES" id="7Zu-Ky-RhE"/>
                     </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="qLX-2m-Fn2" appends="YES" id="fpQ-4D-GFX"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="qLX-2m-Fn2">
+            <connections>
+                <action selector="tapOnComicPage:" destination="-1" id="x8W-eb-EVA"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="coverSample.jpg" width="1369" height="1920"/>

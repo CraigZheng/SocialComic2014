@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>9EBE9MWW9X.com.inceptionstrategies.SocialComic2014</string>
+	<string>9EBE9MWW9X.com.inceptionstrategies.</string>
 	<key>get-task-allow</key>
 	<false/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>9EBE9MWW9X.com.inceptionstrategies.SocialComic2014</string>
+		<string>9EBE9MWW9X.com.inceptionstrategies.</string>
 	</array>
 </dict>
 </plist>

@@ -6,67 +6,75 @@
 	<dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/3Gg-YS-XIy-view-od0-TA-i1N.nib/objects.nib</key>
 		<data>
-		r2UdJlg/UIXourkJaETRsPVkR5Y=
+		52pRfoPZbcD74xN25POIr8+8m7Q=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/3Gg-YS-XIy-view-od0-TA-i1N.nib/runtime.nib</key>
 		<data>
-		h7vnNkC60GYv1Mquo+lHMjR9IOw=
+		Y8HCSDosArE2Ec3NXQdeT7d4tyI=
+		</data>
+		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-Ho8-cO-8WC.nib/objects.nib</key>
+		<data>
+		s+kQ+CRST0Iz0CjM97UAtQ0nwdg=
+		</data>
+		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-Ho8-cO-8WC.nib/runtime.nib</key>
+		<data>
+		AU4wdvArC2zqDs8n716R6d3rTj0=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_reader_tab_bar_controller.nib/objects.nib</key>
 		<data>
-		mnmsFP68OnFWflgELkpQyXO5r3o=
+		x9WirH05z/ngpn+J2yKqpY9r+hA=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_reader_tab_bar_controller.nib/runtime.nib</key>
 		<data>
-		f0b+iWPOTtPkfadzTXVaMXUpmKY=
+		b6Y++l5f6Yiaz9dcol/83ZW972o=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_view_at_paging_view_controller.nib/objects.nib</key>
 		<data>
-		Cv6SgOxHEoiubU/Sj9oIypqBNKQ=
+		QqDv5g2G8oa8ybvsKWukzySkvwY=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_view_at_paging_view_controller.nib/runtime.nib</key>
 		<data>
-		tse5ldZJE7BbUFES6RJsRhyanQw=
+		OZKl7zzmBi3cmyUmrj0nnK//M4M=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_viewing_navigation_controller.nib/objects.nib</key>
 		<data>
-		BVL6X7A4vMdVafA1GXYemdYSNDE=
+		DKINhL7sF0ESAuzlOiAfnwdfoeY=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_viewing_navigation_controller.nib/runtime.nib</key>
 		<data>
-		nfxZ6nKDOjXHjKCJuI0G6N49yi4=
+		o1lU/V9d3c06FYq4j/0GbkKwFGA=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/downloadManagerViewController.nib/objects.nib</key>
 		<data>
-		NthOfGMorRJDNygdXULM8E4Dt+0=
+		NlEGVc7sBDUt8vk1GbuF0pQtaro=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/downloadManagerViewController.nib/runtime.nib</key>
 		<data>
-		knHOP1lNs/bVOzWB70YvS9teaxw=
+		T5nW6e7kY+FV/sgNQw3zFk0aea0=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ib0-qr-1Oz-view-8GB-dQ-cwa.nib/objects.nib</key>
 		<data>
-		6c19duO5PzxLtQlWuRfieG1BsAI=
+		0LwTgtFFz3u8d7ym4eCW51PZK6g=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ib0-qr-1Oz-view-8GB-dQ-cwa.nib/runtime.nib</key>
 		<data>
-		p1kilCRP8V0Ee5d5CBogNRy4Jjw=
+		GiY3fWL+C8MCeUMko9CkTtYiEY8=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ibw-fc-gny-view-Ebx-9p-cLP.nib/objects.nib</key>
 		<data>
-		J7IaMmao1MS3Sy8MYDM/i+6Ho4E=
+		OIe1FDdfn/TipR39BJ/5mSu7gk0=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ibw-fc-gny-view-Ebx-9p-cLP.nib/runtime.nib</key>
 		<data>
-		TKwfrFolSUIgQZwoeWCsbk3bWBI=
+		pwHLLDx11aV1iO6z1xb8DK+nzQg=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/w9G-Wu-2qK-view-KYV-zB-FVk.nib/objects.nib</key>
 		<data>
-		BldB87/5kbCKyufzi3Vmji/TXBU=
+		enpUsVAxa+79dcrJ+W+rRTMLA7c=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/w9G-Wu-2qK-view-KYV-zB-FVk.nib/runtime.nib</key>
 		<data>
-		8EcC68QuETMnVUgwYaU/wJzb5cI=
+		dcxEzjyh3qGyluo8DWeXTgGxBQw=
 		</data>
 		<key>ComicDownloadIndicatorViewController.nib/objects.nib</key>
 		<data>
@@ -78,11 +86,11 @@
 		</data>
 		<key>ComicPagingScrollViewController.nib/objects.nib</key>
 		<data>
-		L3AjnClOmOz0BSNXxGsNW/ks3Kg=
+		HJjn4o+kDEd6lQc/DLeqlyBGH10=
 		</data>
 		<key>ComicPagingScrollViewController.nib/runtime.nib</key>
 		<data>
-		kudYiKZNliDIez1U0O7xh3CP+7Y=
+		F/xGSLkWFjXcb2j3r0GS0AgiVbA=
 		</data>
 		<key>ComicStorePreviewAndDownloadViewController.nib/objects.nib</key>
 		<data>
@@ -94,11 +102,11 @@
 		</data>
 		<key>ComicViewingViewController.nib/objects.nib</key>
 		<data>
-		YvfHcJkUY5MzO2MXWZOp3LQrwjs=
+		V73bf80EIL4+8nMe5eUL98/RPLE=
 		</data>
 		<key>ComicViewingViewController.nib/runtime.nib</key>
 		<data>
-		TeoXjNQrKWR8R7EtpiIvOPPNHXY=
+		eGkMflkh2LDFF7+GXhXu3yX4Y7I=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -118,11 +126,11 @@
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/objects.nib</key>
 		<data>
-		rfAyU+P1DBmQsocfT72XmZxmPJs=
+		/gMd/krJi5lWGukBq+oNBZd4k+g=
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/runtime.nib</key>
 		<data>
-		+lS9C4Yef760DZ4M3elO9MVf1V0=
+		Qya6fJ33Igp19xPtcszQ5QRPi1k=
 		</data>
 		<key>arrow icon.png</key>
 		<data>
@@ -170,7 +178,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Ksre/mM15FF9MG9wFASRRpmdsSA=
+		FdQUvNRpfjk9TxLqAgfuOg/VVts=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
@@ -297,67 +305,75 @@
 	<dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/3Gg-YS-XIy-view-od0-TA-i1N.nib/objects.nib</key>
 		<data>
-		r2UdJlg/UIXourkJaETRsPVkR5Y=
+		52pRfoPZbcD74xN25POIr8+8m7Q=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/3Gg-YS-XIy-view-od0-TA-i1N.nib/runtime.nib</key>
 		<data>
-		h7vnNkC60GYv1Mquo+lHMjR9IOw=
+		Y8HCSDosArE2Ec3NXQdeT7d4tyI=
+		</data>
+		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-Ho8-cO-8WC.nib/objects.nib</key>
+		<data>
+		s+kQ+CRST0Iz0CjM97UAtQ0nwdg=
+		</data>
+		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-Ho8-cO-8WC.nib/runtime.nib</key>
+		<data>
+		AU4wdvArC2zqDs8n716R6d3rTj0=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_reader_tab_bar_controller.nib/objects.nib</key>
 		<data>
-		mnmsFP68OnFWflgELkpQyXO5r3o=
+		x9WirH05z/ngpn+J2yKqpY9r+hA=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_reader_tab_bar_controller.nib/runtime.nib</key>
 		<data>
-		f0b+iWPOTtPkfadzTXVaMXUpmKY=
+		b6Y++l5f6Yiaz9dcol/83ZW972o=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_view_at_paging_view_controller.nib/objects.nib</key>
 		<data>
-		Cv6SgOxHEoiubU/Sj9oIypqBNKQ=
+		QqDv5g2G8oa8ybvsKWukzySkvwY=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_view_at_paging_view_controller.nib/runtime.nib</key>
 		<data>
-		tse5ldZJE7BbUFES6RJsRhyanQw=
+		OZKl7zzmBi3cmyUmrj0nnK//M4M=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_viewing_navigation_controller.nib/objects.nib</key>
 		<data>
-		BVL6X7A4vMdVafA1GXYemdYSNDE=
+		DKINhL7sF0ESAuzlOiAfnwdfoeY=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/comic_viewing_navigation_controller.nib/runtime.nib</key>
 		<data>
-		nfxZ6nKDOjXHjKCJuI0G6N49yi4=
+		o1lU/V9d3c06FYq4j/0GbkKwFGA=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/downloadManagerViewController.nib/objects.nib</key>
 		<data>
-		NthOfGMorRJDNygdXULM8E4Dt+0=
+		NlEGVc7sBDUt8vk1GbuF0pQtaro=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/downloadManagerViewController.nib/runtime.nib</key>
 		<data>
-		knHOP1lNs/bVOzWB70YvS9teaxw=
+		T5nW6e7kY+FV/sgNQw3zFk0aea0=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ib0-qr-1Oz-view-8GB-dQ-cwa.nib/objects.nib</key>
 		<data>
-		6c19duO5PzxLtQlWuRfieG1BsAI=
+		0LwTgtFFz3u8d7ym4eCW51PZK6g=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ib0-qr-1Oz-view-8GB-dQ-cwa.nib/runtime.nib</key>
 		<data>
-		p1kilCRP8V0Ee5d5CBogNRy4Jjw=
+		GiY3fWL+C8MCeUMko9CkTtYiEY8=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ibw-fc-gny-view-Ebx-9p-cLP.nib/objects.nib</key>
 		<data>
-		J7IaMmao1MS3Sy8MYDM/i+6Ho4E=
+		OIe1FDdfn/TipR39BJ/5mSu7gk0=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/ibw-fc-gny-view-Ebx-9p-cLP.nib/runtime.nib</key>
 		<data>
-		TKwfrFolSUIgQZwoeWCsbk3bWBI=
+		pwHLLDx11aV1iO6z1xb8DK+nzQg=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/w9G-Wu-2qK-view-KYV-zB-FVk.nib/objects.nib</key>
 		<data>
-		BldB87/5kbCKyufzi3Vmji/TXBU=
+		enpUsVAxa+79dcrJ+W+rRTMLA7c=
 		</data>
 		<key>Base.lproj/Main_iPhone.storyboardc/w9G-Wu-2qK-view-KYV-zB-FVk.nib/runtime.nib</key>
 		<data>
-		8EcC68QuETMnVUgwYaU/wJzb5cI=
+		dcxEzjyh3qGyluo8DWeXTgGxBQw=
 		</data>
 		<key>ComicDownloadIndicatorViewController.nib/objects.nib</key>
 		<data>
@@ -369,11 +385,11 @@
 		</data>
 		<key>ComicPagingScrollViewController.nib/objects.nib</key>
 		<data>
-		L3AjnClOmOz0BSNXxGsNW/ks3Kg=
+		HJjn4o+kDEd6lQc/DLeqlyBGH10=
 		</data>
 		<key>ComicPagingScrollViewController.nib/runtime.nib</key>
 		<data>
-		kudYiKZNliDIez1U0O7xh3CP+7Y=
+		F/xGSLkWFjXcb2j3r0GS0AgiVbA=
 		</data>
 		<key>ComicStorePreviewAndDownloadViewController.nib/objects.nib</key>
 		<data>
@@ -385,11 +401,11 @@
 		</data>
 		<key>ComicViewingViewController.nib/objects.nib</key>
 		<data>
-		YvfHcJkUY5MzO2MXWZOp3LQrwjs=
+		V73bf80EIL4+8nMe5eUL98/RPLE=
 		</data>
 		<key>ComicViewingViewController.nib/runtime.nib</key>
 		<data>
-		TeoXjNQrKWR8R7EtpiIvOPPNHXY=
+		eGkMflkh2LDFF7+GXhXu3yX4Y7I=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -409,11 +425,11 @@
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/objects.nib</key>
 		<data>
-		rfAyU+P1DBmQsocfT72XmZxmPJs=
+		/gMd/krJi5lWGukBq+oNBZd4k+g=
 		</data>
 		<key>ThinDownloadIndicatorViewController.nib/runtime.nib</key>
 		<data>
-		+lS9C4Yef760DZ4M3elO9MVf1V0=
+		Qya6fJ33Igp19xPtcszQ5QRPi1k=
 		</data>
 		<key>arrow icon.png</key>
 		<data>
@@ -461,7 +477,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Ksre/mM15FF9MG9wFASRRpmdsSA=
+		FdQUvNRpfjk9TxLqAgfuOg/VVts=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
