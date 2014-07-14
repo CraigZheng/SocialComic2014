@@ -33,6 +33,11 @@
     [urlConnection start];
 }
 
+-(void)cancel {
+    if (urlConnection)
+        [urlConnection cancel];
+}
+
 #pragma mark - NSURLConnection Delegate
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     receivedData = [NSMutableData new];

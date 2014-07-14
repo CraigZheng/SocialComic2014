@@ -1,0 +1,426 @@
+TZipArchive mac
+v6
+r1
+cCheck dependencies
+cProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005347668900000000000000AA
+t1397188233
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052A9D8AC000000000000044C
+t1386862764
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531FA61800000000000001DE
+t1394583064
+s478
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531FA61800000000000C9E38
+t1394583064
+s826936
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib
+c0000000052A9D8B200000000000044B8
+t1386862770
+s17592
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch
+t1401435025
+s117316
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch
+t1401435025
+s10483944
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ZipArchive-mac.LinkFileList
+c000000005388322B000000000000029E
+t1401434667
+s670
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ZipArchive.o
+t1401435025
+s48612
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ioapi.o
+t1401435025
+s14428
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/mztools.o
+t1401435025
+s11212
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/unzip.o
+t1401435025
+s50044
+
+N/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/zip.o
+t1401435025
+s54976
+
+N/Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a
+t1401434668
+s181800
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+c000000005309C0CA000000000000407E
+t1393148106
+s16510
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+c000000005309C0CA00000000000000BC
+t1393148106
+s188
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+c000000005309C0CA0000000000001DDD
+t1393148106
+s7645
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+c000000005309C0CA0000000000001EB3
+t1393148106
+s7859
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+c000000005309C0CA00000000000116CC
+t1393148106
+s71372
+
+N/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+c000000005309C0CA0000000000010085
+t1393148106
+s65669
+
+N/Users/craig/Downloads/ZipArchive-master/ZipArchive.h
+c000000005309C0CA0000000000000D7D
+t1393148106
+s3453
+
+N/Users/craig/Downloads/ZipArchive-master/ZipArchive.m
+c000000005309C0CA000000000000407E
+t1393148106
+s16510
+
+N/Users/craig/Downloads/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/crypt.h
+c000000005309C0CA0000000000001297
+t1393148106
+s4759
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c
+c000000005309C0CA0000000000001DDD
+t1393148106
+s7645
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.h
+c000000005309C0CA0000000000001AB5
+t1393148106
+s6837
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/mztools.c
+c000000005309C0CA0000000000001EB3
+t1393148106
+s7859
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/unzip.c
+c000000005309C0CA00000000000116CC
+t1393148106
+s71372
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/unzip.h
+c000000005309C0CA0000000000003FE6
+t1393148106
+s16358
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/zip.c
+c000000005309C0CA0000000000010085
+t1393148106
+s65669
+
+N/Users/craig/Downloads/ZipArchive-master/minizip/zip.h
+c000000005309C0CA0000000000003C06
+t1393148106
+s15366
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+r0
+
+CBuild AST from /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+r0
+
+CBuild AST from /Users/craig/Downloads/ZipArchive-master/ZipArchive.m
+r0
+
+CBuild AST from /Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c
+r0
+
+CBuild AST from /Users/craig/Downloads/ZipArchive-master/minizip/mztools.c
+r0
+
+CBuild AST from /Users/craig/Downloads/ZipArchive-master/minizip/unzip.c
+r0
+
+CBuild AST from /Users/craig/Downloads/ZipArchive-master/minizip/zip.c
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa8e21e116b38b941^17b62e116b38b941^---0#1#1#--18"Check dependencies36"98834F2C-2D1B-4528-B27E-9332C8732DD8-
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.790089
+e423127825.884704
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ZipArchive.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m287"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler6b61ca116b38b941^417ee2116b38b941^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m0000000000000000^3234"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o36"CD214264-B6F1-4A38-A507-8458ADD6854F-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Downloads/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s423127468.200108
+e423127468.418267
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ZipArchive.o
+x/Users/craig/Downloads/ZipArchive-master/ZipArchive.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Downloads/ZipArchive-master/ZipArchive.m
+d/Users/craig/Downloads/ZipArchive-master/ZipArchive.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/zip.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/unzip.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/craig/Downloads/ZipArchive-master/ZipArchive.m271"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Downloads/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler155533ac6938b941^c6156bac6938b941^---0#0#1#-19%DVTDocumentLocation2@60"file:///Users/craig/Downloads/ZipArchive-master/ZipArchive.m0000000000000000^3186"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o /Users/craig/Downloads/ZipArchive-master/ZipArchive.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Downloads/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.dia -c /Users/craig/Downloads/ZipArchive-master/ZipArchive.m -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive.o36"A0DBD63A-5AA8-4539-90FB-E4FCA5EDD386-
+b5F9383C8-F54A-40FF-A4FC-48CE4341C67A
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.788561
+e423127825.866850
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ioapi.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c275"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler51f7c9116b38b941^abeadd116b38b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c0000000000000000^3007"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o36"59BB6294-B0CC-4370-B50A-7B49B85ECE00-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127468.199082
+e423127468.402523
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/ioapi.o
+x/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c
+d/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c259"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler780833ac6938b941^cb4a67ac6938b941^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c0000000000000000^2959"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o /Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Downloads/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.dia -c /Users/craig/Downloads/ZipArchive-master/minizip/ioapi.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ioapi.o36"890D506A-A53E-45A7-91F1-BCBEAFAAFD6A-
+b5F9383C8-F54A-40FF-A4FC-48CE4341C67A
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.788883
+e423127825.865636
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/mztools.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c279"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler4a08ca116b38b941^7899dd116b38b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c0000000000000000^3019"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/mztools.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o36"E44F8CF9-57D2-409C-AC49-E651A4654801-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Downloads/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127468.199307
+e423127468.402514
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/mztools.o
+x/Users/craig/Downloads/ZipArchive-master/minizip/mztools.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Downloads/ZipArchive-master/minizip/mztools.c
+d/Users/craig/Downloads/ZipArchive-master/minizip/unzip.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Compile /Users/craig/Downloads/ZipArchive-master/minizip/mztools.c263"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Downloads/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler2b1633ac6938b941^ae4567ac6938b941^---0#0#1#-19%DVTDocumentLocation2@65"file:///Users/craig/Downloads/ZipArchive-master/minizip/mztools.c0000000000000000^2971"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o /Users/craig/Downloads/ZipArchive-master/minizip/mztools.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Downloads/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.dia -c /Users/craig/Downloads/ZipArchive-master/minizip/mztools.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/mztools.o36"0B1D8059-89A5-471B-92EC-2F85769C0D6D-
+b5F9383C8-F54A-40FF-A4FC-48CE4341C67A
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.789110
+e423127825.881422
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/unzip.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/crypt.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c275"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerc616ca116b38b941^a4aae1116b38b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c0000000000000000^3007"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/unzip.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o36"394BFAA4-C246-46EE-8BE6-C86E933A14BC-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Downloads/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127468.199505
+e423127468.408609
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/unzip.o
+x/Users/craig/Downloads/ZipArchive-master/minizip/unzip.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Downloads/ZipArchive-master/minizip/unzip.c
+d/Users/craig/Downloads/ZipArchive-master/minizip/unzip.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/crypt.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/craig/Downloads/ZipArchive-master/minizip/unzip.c259"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Downloads/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler392633ac6938b941^d49c68ac6938b941^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/craig/Downloads/ZipArchive-master/minizip/unzip.c0000000000000000^2959"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o /Users/craig/Downloads/ZipArchive-master/minizip/unzip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Downloads/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.dia -c /Users/craig/Downloads/ZipArchive-master/minizip/unzip.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/unzip.o36"9469281A-F892-4848-98D2-C9429E9C7194-
+b5F9383C8-F54A-40FF-A4FC-48CE4341C67A
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.789538
+e423127825.881396
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/zip.o
+x/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/crypt.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c271"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler2044ca116b38b941^38a4e1116b38b941^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c0000000000000000^2995"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.dia -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/minizip/zip.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o36"B90895C8-65CB-4D0D-9335-3E828589635B-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CCompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Downloads/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127468.199705
+e423127468.402541
+r1
+xCompileC
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive mac.build/Objects-normal/x86_64/zip.o
+x/Users/craig/Downloads/ZipArchive-master/minizip/zip.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Downloads/ZipArchive-master/minizip/zip.c
+d/Users/craig/Downloads/ZipArchive-master/minizip/zip.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/ioapi.h
+d/Users/craig/Downloads/ZipArchive-master/minizip/crypt.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/craig/Downloads/ZipArchive-master/minizip/zip.c255"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Downloads/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler763733ac6938b941^8c4d67ac6938b941^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/craig/Downloads/ZipArchive-master/minizip/zip.c0000000000000000^2947"CompileC /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o /Users/craig/Downloads/ZipArchive-master/minizip/zip.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Downloads/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug -include /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.d --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.dia -c /Users/craig/Downloads/ZipArchive-master/minizip/zip.c -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/zip.o36"3474CC03-4ED5-4FD8-8558-376681DCD268-
+b5F9383C8-F54A-40FF-A4FC-48CE4341C67A
+
+CLibtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a normal x86_64
+s423127825.885549
+e423127825.892325
+r1
+xLibtool
+x/Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a
+xnormal
+xx86_64
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+owarning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library
+owarning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Libtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a normal x86_64101"Libtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a normal x86_6466bfe2116b38b941^4370e4116b38b941^-725"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC warning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static librarywarning: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library2(21%IDEActivityLogMessage2@273"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library-423127825#159#283#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#40"Apple Mach-O Librarian (libtool) Warning--2@273"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib is a dynamic library, not added to the static library-423127825#442#283#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#40"Apple Mach-O Librarian (libtool) Warning--0#0#1#--868"Libtool /Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a normal x86_64    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/craig/Developer/SocialComic2014/Build/Products/Debug -filelist /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/Objects-normal/x86_64/ZipArchive-mac.LinkFileList -ObjC -framework Foundation /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib -o /Users/craig/Developer/SocialComic2014/Build/Products/Debug/libZipArchive-mac.a36"B9C1B07D-48BF-4101-92F1-DDDADB85C4A8-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.183090
+e423127825.201197
+r1
+xProcessPCH
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch
+xZipArchive_Prefix.pch
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile ZipArchive_Prefix.pch243"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler7bf42e116b38b941^e98133116b38b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch0000000000000000^2890"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.dia -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.d -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-ahvmqqhewuutyrfbqyhqbdtkiolo/ZipArchive_Prefix.pch.pch36"DCA39F70-91AB-479D-BCB0-FEF871DEA50B-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s423127825.183334
+e423127825.787589
+r1
+xProcessPCH
+x/Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch
+xZipArchive_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile ZipArchive_Prefix.pch253"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera3022f116b38b941^6ccec9116b38b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch0000000000000000^3103"ProcessPCH /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-generated-files.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-own-target-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-all-target-headers.hmap -iquote /Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/ZipArchive-mac-project-headers.hmap -I/Users/craig/Developer/SocialComic2014/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources/x86_64 -I/Users/craig/Developer/SocialComic2014/Build/Intermediates/ZipArchive.build/Debug/ZipArchive\ mac.build/DerivedSources -F/Users/craig/Developer/SocialComic2014/Build/Products/Debug --serialize-diagnostics /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.dia -MMD -MT dependencies -MF /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.d -c /Users/craig/Developer/SocialComic2014/ZipArchive-master/ZipArchive/ZipArchive_Prefix.pch -o /Users/craig/Developer/SocialComic2014/Build/Intermediates/PrecompiledHeaders/ZipArchive_Prefix-cnzvhspfrptnlmdszuwusjeyqbdp/ZipArchive_Prefix.pch.pch36"B5443C81-F553-44C0-8C63-0909256FF2CC-
+bB40F7D1D-488C-4F83-8B7B-FF9253172FC2
+
+CProcessPCH /Users/craig/Library/Developer/Xcode/DerivedData/SocialComic2014-akzpqtcxytzqlecmdhioiaaesmqx/Index/PrecompiledHeaders/ZipArchive_Prefix-aefnmogfiujkenajxvbzkvzlfwqk_ast/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/craig/Library/Developer/Xcode/DerivedData/SocialComic2014-akzpqtcxytzqlecmdhioiaaesmqx/Index/PrecompiledHeaders/ZipArchive_Prefix-aidfnlzpnaudavcmhubutprakyco_ast/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/craig/Library/Developer/Xcode/DerivedData/SocialComic2014-akzpqtcxytzqlecmdhioiaaesmqx/Index/PrecompiledHeaders/ZipArchive_Prefix-fwrdcfevckvcxqaojfaqcvqogfwx_ast/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/craig/Library/Developer/Xcode/DerivedData/SocialComic2014-akzpqtcxytzqlecmdhioiaaesmqx/Index/PrecompiledHeaders/ZipArchive_Prefix-gfrnwpzqkzncksazhweysrothgdl_ast/ZipArchive_Prefix.pch.pch ZipArchive_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+

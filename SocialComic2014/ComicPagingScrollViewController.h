@@ -13,9 +13,8 @@
 @interface ComicPagingScrollViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property Comic *myComic;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *pageNumberButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *titleButton;
-@property (strong, nonatomic) IBOutlet UIToolbar *topToolbar;
 @property (strong, nonatomic) IBOutlet UIToolbar *bottomToolbar;
 
 

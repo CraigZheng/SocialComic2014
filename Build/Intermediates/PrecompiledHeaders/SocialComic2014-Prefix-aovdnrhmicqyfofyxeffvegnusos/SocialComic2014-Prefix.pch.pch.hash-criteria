@@ -1,0 +1,43 @@
+Contents of /Users/craig/Developer/SocialComic2014/SocialComic2014/SocialComic2014-Prefix.pch
+-x
+objective-c
+-arch
+armv7
+-std=gnu99
+-fobjc-arc
+-fmodules
+-fmodules-cache-path=/Users/craig/Library/Developer/Xcode/DerivedData/ModuleCache
+-fpascal-strings
+-O0
+-DDEBUG=1
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk
+-g
+-miphoneos-version-min=6.0
+-iquote
+-iquote
+-iquote.
+-iquoteBuild
+-iquoteSocialComic2014
+-iquoteSocialComic2014Tests
+-iquoteZipArchive-master
+-iquoteSocialComic2014/DACircularProgress
+-iquoteSocialComic2014/Images.xcassets
+-iquoteSocialComic2014/Toast
+-iquoteZipArchive-master/minizip
+-iquoteZipArchive-master/ZipArchive
+-iquoteSocialComic2014/Images.xcassets/AppIcon.appiconset
+-iquoteSocialComic2014/Images.xcassets/first.imageset
+-iquoteSocialComic2014/Images.xcassets/LaunchImage.launchimage
+-iquoteSocialComic2014/Images.xcassets/second.imageset
+-iquoteZipArchive-master/ZipArchive/tests
+-iquoteZipArchive-master/ZipArchive/ZipArchive ios Tests
+-iquoteZipArchive-master/ZipArchive/ZipArchive mac Tests
+-iquoteZipArchive-master/ZipArchive/tests/test-files
+-I/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos/include
+-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+-F/Users/craig/Developer/SocialComic2014/Build/Products/Debug-iphoneos
+arm-apple-darwin13.2.0
+"4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)"
+SDK_PRODUCT_BUILD_VERSION=11D167
+11D167

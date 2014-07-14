@@ -59,13 +59,10 @@
     //listen to downloading notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadProgressUpdated:) name:@"ZipDownloadProgressUpdate" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - set my comic
 -(void)setMyComic:(Comic *)comic {
@@ -157,5 +154,10 @@
         [downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
         [UIView setAnimationsEnabled:YES];
     }
+}
+
+#pragma mark - image downloaded notification 
+-(void)imageDownloaded:(NSNotification*)notification {
+    
 }
 @end
