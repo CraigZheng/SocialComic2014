@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -28,9 +28,12 @@
                         <outletCollection property="gestureRecognizers" destination="EpO-e4-ZrA" appends="YES" id="XRI-vF-oEA"/>
                     </connections>
                 </scrollView>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcO-L8-3OV">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcO-L8-3OV">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Ygb-6C-9Z7"/>
+                    </constraints>
                     <items>
                         <navigationItem title="Title" id="UGX-WJ-jOc">
                             <barButtonItem key="leftBarButtonItem" title="&lt;" id="Py4-0H-iAQ">
@@ -72,11 +75,18 @@
             <constraints>
                 <constraint firstItem="3qS-zM-7xi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4cf-M8-HUX"/>
                 <constraint firstItem="3qS-zM-7xi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5DY-3x-Cbq"/>
+                <constraint firstItem="3qS-zM-7xi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="735-4J-CFa"/>
                 <constraint firstItem="Pun-A5-ysM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8aE-jJ-5xL"/>
                 <constraint firstAttribute="trailing" secondItem="Pun-A5-ysM" secondAttribute="trailing" id="BPf-nt-Y3h"/>
                 <constraint firstAttribute="bottom" secondItem="Pun-A5-ysM" secondAttribute="bottom" id="NF2-a9-wZW"/>
+                <constraint firstItem="WcO-L8-3OV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XQW-s9-ecM"/>
+                <constraint firstAttribute="trailing" secondItem="WcO-L8-3OV" secondAttribute="trailing" id="Xs0-Fj-KtF"/>
+                <constraint firstAttribute="trailing" secondItem="3qS-zM-7xi" secondAttribute="trailing" id="Z9E-zt-OQj"/>
+                <constraint firstItem="WcO-L8-3OV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c5c-zK-YVt"/>
+                <constraint firstAttribute="bottom" secondItem="3qS-zM-7xi" secondAttribute="bottom" id="qfC-HE-WGA"/>
                 <constraint firstAttribute="bottom" secondItem="3qS-zM-7xi" secondAttribute="bottom" id="tmS-4B-uH4"/>
                 <constraint firstAttribute="trailing" secondItem="3qS-zM-7xi" secondAttribute="trailing" id="tnU-4i-dW2"/>
+                <constraint firstItem="3qS-zM-7xi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z17-iC-BvK"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

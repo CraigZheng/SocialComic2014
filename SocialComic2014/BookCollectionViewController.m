@@ -229,7 +229,7 @@
 //        progressBackgroundView.hidden = YES;
 
         if ([visibleComic isEqual:downloadingComic]) {
-            NSLog(@"downloading comic is same as %@, progress %f", [visibleComic description], progress);
+//            NSLog(@"downloading comic is same as %@, progress %f", [visibleComic description], progress);
             //update progress
             circularProgressView.trackTintColor = [UIColor clearColor];
             circularProgressView.progressTintColor = [UIColor blueColor];

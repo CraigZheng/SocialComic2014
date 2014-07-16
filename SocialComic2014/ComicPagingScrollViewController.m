@@ -73,7 +73,7 @@
 {
     if (page >= self.comicFiles.count)
         return;
-    [pageNumberButton setTitle:[NSString stringWithFormat:@"%ld/%d", (long)page + 1, self.comicFiles.count]];
+    [pageNumberButton setTitle:[NSString stringWithFormat:@"%ld/%ld", (long)page + 1, (long)self.comicFiles.count]];
     // replace the placeholder if necessary
     ComicViewingViewController *controller = [self.viewControllers objectAtIndex:page];
     if ((NSNull *)controller == [NSNull null])
@@ -85,13 +85,13 @@
         [self.viewControllers replaceObjectAtIndex:page withObject:controller];
     }
     
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = CGRectGetWidth(frame) * page;
+    frame.origin.y = 0;
+    controller.view.frame = frame;
     // add the controller's view to the scroll view
     if (controller.view.superview == nil)
     {
-        CGRect frame = self.scrollView.frame;
-        frame.origin.x = CGRectGetWidth(frame) * page;
-        frame.origin.y = 0;
-        controller.view.frame = frame;
         
         [self addChildViewController:controller];
         [self.scrollView addSubview:controller.view];
@@ -219,5 +219,6 @@
         if ((NSNull*)controller != [NSNull null])
             [controller didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     }
+    
 }
 @end

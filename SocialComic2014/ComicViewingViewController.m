@@ -40,7 +40,10 @@
 //    }
     imageView.image = [UIImage imageWithContentsOfFile:comicFile];
 //    [topToolbarTitleButton setTitle:myComic.name];
-    [self setupImageViewForPortrait];
+    if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
+        [self setupImageViewForPortrait];
+    else
+        [self setupImageViewForLandscape];
     [self setupToolbars];
 }
 
@@ -91,9 +94,9 @@
     imageView.frame = CGRectMake(0, 0, imageView.image.size.width, imageView.image.size.height);
     scrollView.contentSize = imageView.frame.size;
     scrollView.maximumZoomScale = 1;
-    scrollView.minimumZoomScale = self.view.frame.size.height / imageView.image.size.height;
+    scrollView.minimumZoomScale = self.view.frame.size.height / imageView.image.size.width;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
-//    [self logViewFrames];
+    [self logViewFrames];
 //    NSLog(@"minimumscale %f / current scale %f", scrollView.minimumZoomScale, scrollView.zoomScale);
 }
 
@@ -101,14 +104,13 @@
     [scrollView setZoomScale:1];
     
     CGRect frame = CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, imageView.image.size.width, imageView.image.size.height);
-    
     imageView.frame = frame;
     
-    scrollView.contentSize = imageView.frame.size;
+    scrollView.contentSize = imageView.image.size;
     scrollView.maximumZoomScale = 1;
     scrollView.minimumZoomScale = self.view.frame.size.width / imageView.image.size.width;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
-//    [self logViewFrames];
+    [self logViewFrames];
 //    NSLog(@"minimumscale %f / current scale %f", scrollView.minimumZoomScale, scrollView.zoomScale);
 }
 
@@ -118,11 +120,11 @@
 }
 
 -(void)logViewFrames{
-    [self logViewFrame:[[AppDelegate sharedAppDelegate] window]];
+//    [self logViewFrame:[[AppDelegate sharedAppDelegate] window]];
     [self logViewFrame:self.view];
     [self logViewFrame:scrollView];
-    NSLog(@"contentSize : %@", [NSValue valueWithCGSize:scrollView.contentSize]);
     [self logViewFrame:imageView];
+    NSLog(@"contentSize : %@", [NSValue valueWithCGSize:scrollView.contentSize]);
 }
 
 -(void)logViewFrame:(UIView*)view {
@@ -135,10 +137,6 @@
 
 -(void)quitComicViewingMode {
     [self.navigationController popViewControllerAnimated:YES];
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
-//    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
-//    comicViewingTabBarController.selectedIndex = 1; //show library view controller
-//    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
 
 }
 
