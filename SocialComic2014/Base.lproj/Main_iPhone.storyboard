@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ho8-cO-8WC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -18,12 +18,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="ibw-fc-gny" kind="relationship" relationship="viewControllers" id="G9Q-jf-EuW"/>
-                        <segue destination="ib0-qr-1Oz" kind="relationship" relationship="viewControllers" id="ikA-I9-Gxb"/>
+                        <segue destination="Ho8-cO-8WC" kind="relationship" relationship="viewControllers" id="0os-LV-Fg9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="80" y="118"/>
         </scene>
         <!--Download Manager Table View Controller - DL Manager-->
         <scene sceneID="IxP-Hf-zZR">
@@ -269,23 +269,24 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ox-sZ-Ixx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="498"/>
+            <point key="canvasLocation" x="1072" y="494"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Item-->
         <scene sceneID="L8S-f2-xEm">
             <objects>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Ho8-cO-8WC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zJ8-Ls-vub"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ycx-Xj-D0R">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8YX-ce-x5E" kind="relationship" relationship="rootViewController" id="70p-sA-Wu2"/>
+                        <segue destination="ib0-qr-1Oz" kind="relationship" relationship="rootViewController" id="veZ-jU-P9u"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idO-VD-7Qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="180"/>
+            <point key="canvasLocation" x="633" y="494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tXR-Qb-nFO">
