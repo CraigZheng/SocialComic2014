@@ -43,6 +43,7 @@
         {
             [downloader stop];
             [downloadingZip removeObject:downloader];
+            [self postDownloadFailedNotification];
             break;
         }
     }
@@ -83,6 +84,7 @@
 -(void)stopAllDownloading {
     for (ZIPDownloader *downloader in downloadingZip) {
         [downloader stop];
+        [self postDownloadFailedNotification];
     }
     [downloadingZip removeAllObjects];
     [downloadQueue removeAllObjects];
@@ -93,15 +95,19 @@
     //remove the just finished downloader
     [downloadingZip removeObject:downloader];
     //notify listener that a download is finished
-    NSDictionary *userInfo;
     if (success) {
-        userInfo = [NSDictionary dictionaryWithObjects:@[downloader, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPDownloader", @"SavePath", @"Success"]];
+        NSDictionary* userInfo = [NSDictionary dictionaryWithObjects:@[downloader, savePath, [NSNumber numberWithBool:success]] forKeys:@[@"ZIPDownloader", @"SavePath", @"Success"]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];
     }
     else
-        userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:success] forKey:@"Success"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];
-
+        [self postDownloadFailedNotification];
+        
     [self activateNextDownload];
+}
+
+-(void)postDownloadFailedNotification {
+    NSDictionary* userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:@"Success"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ZIPDownloaded" object:nil userInfo:userInfo];
 }
 
 -(void)ZIPDownloadProgressUpdated:(ZIPDownloader*)downloader :(NSString *)zipURL :(CGFloat)progress {

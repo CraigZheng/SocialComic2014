@@ -19,7 +19,7 @@
 #import "ZIPDownloader.h"
 #import "ZIPCentre.h"
 
-@interface BookCollectionViewController ()<UnzipperDelegate>
+@interface BookCollectionViewController ()<UnzipperDelegate, UIAlertViewDelegate>
 @property NSMutableArray *comics;
 @property AppDelegate *mAppDelegate;
 @property DACircularProgressView *currentProgressView;
@@ -56,7 +56,6 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.tabBarItem.badgeValue = nil;
     [self scanForComicFiles];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
@@ -140,17 +139,23 @@
         currentProgressBackgroundView.layer.shadowOpacity = 0.5;
         currentProgressBackgroundView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
 
-//        [selectedCell addSubview:currentProgressBackgroundView];
-//        [selectedCell addSubview:circularProgressView];
-//        [[AppDelegate sharedAppDelegate].window makeToast:@"Unzipping, please wait..."];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             [self unzip:selectedComic];
         });
     } else {
-        NSLog(@"TODO: inform user that this comic is currently being downloaded");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Stop Downloading" message:[NSString stringWithFormat:@"Would you like to stop the download for %@?", selectedComic.name] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+        [alertView show];
     }
 }
 
+#pragma mark - UIAlertViewDelegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([alertView.title isEqualToString:@"Stop Downloading"] && buttonIndex != alertView.cancelButtonIndex) {
+        [[ZIPCentre getInstance] stopDownloadingComic:selectedComic];
+        [self scanForComicFiles];
+        [[[UIAlertView alloc] initWithTitle:@"Download Stopped" message:[NSString stringWithFormat:@"The download for %@ has been stopped!", selectedComic.name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+}
 #pragma mark - Unzipping comic
 -(BOOL)unzip:(Comic*)comic {
     if ([unzipper unzipComic:comic :mAppDelegate.unzipFolder]) {

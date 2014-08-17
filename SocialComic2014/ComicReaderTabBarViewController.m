@@ -75,14 +75,13 @@
 #pragma mark - notification handler
 
 -(void)zipDownloaded:(NSNotification*)notification {
-    if (self.selectedIndex != 1) {
-        UITabBarItem *selectedItem = [self.tabBar.items objectAtIndex:1];
-        if (selectedItem.badgeValue != nil) {
-            NSInteger count = [selectedItem.badgeValue integerValue] + 1;
-            selectedItem.badgeValue = [NSString stringWithFormat:@"%ld", (long)count];
-        } else {
-            selectedItem.badgeValue = [NSString stringWithFormat:@"%ld", (long)1];
-        }
+    UITabBarItem *bookCollectionTab = [self.tabBar.items objectAtIndex:1];
+    if (bookCollectionTab.badgeValue != nil) {
+        NSInteger count = [bookCollectionTab.badgeValue integerValue] - 1;
+        if (count > 0)
+            bookCollectionTab.badgeValue = [NSString stringWithFormat:@"%ld", (long)count];
+        else
+            bookCollectionTab.badgeValue = nil;
     }
     if ([[ZIPCentre getInstance] downloadingZip].count == 0 && [[ZIPCentre getInstance] downloadQueue].count == 0) {
         [thinDownloadIndicatorViewController hide];
@@ -91,6 +90,14 @@
 }
 
 -(void)zipDownloadStarted:(NSNotification*)notification {
+    UITabBarItem *bookCollectionTab = [self.tabBar.items objectAtIndex:1];
+    if (bookCollectionTab) {
+        NSInteger count = [bookCollectionTab.badgeValue integerValue] + 1;
+        if (count > 0)
+            bookCollectionTab.badgeValue = [NSString stringWithFormat:@"%ld", (long)count];
+        else
+            bookCollectionTab.badgeValue = nil;
+    }
     if (thinDownloadIndicatorViewController.view.hidden) {
         if (!thinDownloadIndicatorViewController.view.superview)
             [self.view addSubview:thinDownloadIndicatorViewController.view];
