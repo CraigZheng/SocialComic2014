@@ -32,11 +32,6 @@
     [super viewWillAppear:animated];
     thinDownloadIndicatorViewController = [[ThinDownloadIndicatorViewController alloc] initWithNibName:@"ThinDownloadIndicatorViewController" bundle:[NSBundle mainBundle]];
     [self didRotateFromInterfaceOrientation:self.interfaceOrientation];
-//    thinDownloadIndicatorViewController.view.frame = CGRectMake(
-//                                                                [UIScreen mainScreen].bounds.size.width - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2,
-//                                                                self.tabBar.frame.origin.y - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2,
-//                                                                thinDownloadIndicatorViewController.view.frame.size.width,
-//                                                                thinDownloadIndicatorViewController.view.frame.size.height);
     [thinDownloadIndicatorViewController.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(OpenMyLibraryTab)]];
     [thinDownloadIndicatorViewController hide];
 }
@@ -55,7 +50,7 @@
         screenHeight = [UIScreen mainScreen].bounds.size.width;
     }
     indicatorFrame.origin.x = screenWidth - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2;
-    indicatorFrame.origin.y = screenHeight - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height / 2;
+    indicatorFrame.origin.y = screenHeight - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height * 1.5;
     indicatorFrame.size.width = 50;
     indicatorFrame.size.height = 50;
     
@@ -65,6 +60,16 @@
             [self.view addSubview:thinDownloadIndicatorViewController.view];
         [thinDownloadIndicatorViewController show];
     }
+}
+
+
+-(NSUInteger)supportedInterfaceOrientations {
+    if ([AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation) {
+        //return all interface orientation
+        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+    }
+    //return portrait only
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 #pragma mark - notification handler
@@ -109,4 +114,5 @@
 -(void)OpenMyLibraryTab {
     self.selectedIndex = 1;
 }
+
 @end

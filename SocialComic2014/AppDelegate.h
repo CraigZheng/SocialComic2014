@@ -15,6 +15,7 @@
 @property NSString *descriptionFileFolder;
 @property NSString *zipFileFolder;
 @property NSString *unzipFolder;
+@property BOOL shouldAllowMultipleInterfaceOrientation;
 
 +(AppDelegate*)sharedAppDelegate;
 +(void)fadeInView:(UIView*)view;

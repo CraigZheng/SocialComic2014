@@ -8,6 +8,7 @@
 
 #import "ComicPagingScrollViewController.h"
 #import "ComicViewingViewController.h"
+#import "ComicReaderTabBarViewController.h"
 
 @interface ComicPagingScrollViewController ()<UIScrollViewDelegate>
 @property NSMutableArray *comicFiles;
@@ -62,11 +63,13 @@
     [self showToolbars: YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nextAction:) name:NEXT_PAGE_COMMAND object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(previousAction:) name:PREVIOUS_PAGE_COMMAND object:nil];
+    [AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation = YES;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation = NO;
 }
 
 - (void)loadScrollViewWithPage:(NSUInteger)page
@@ -78,7 +81,6 @@
     ComicViewingViewController *controller = [self.viewControllers objectAtIndex:page];
     if ((NSNull *)controller == [NSNull null])
     {
-//        controller = [[ComicViewingViewController alloc] initWithPageNumber:page];
         controller = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
         controller.comicFile = [comicFiles objectAtIndex:page];
         controller.parentPagingScrollView = self;
@@ -116,6 +118,7 @@
     }
 
     // a possible optimization would be to unload the views+controllers which are no longer visible
+    
 }
 
 - (void)gotoPage:(BOOL)animated
@@ -169,11 +172,14 @@
 }
 
 - (IBAction)quitAction:(id)sender {
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
-    UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
-    comicViewingTabBarController.selectedIndex = 1; //show library view controller
-    [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
-
+    if (self.navigationController)
+        [self.navigationController popViewControllerAnimated:YES];
+    else {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
+        UITabBarController *comicViewingTabBarController = [storyBoard instantiateViewControllerWithIdentifier:@"comic_reader_tab_bar_controller"];
+        comicViewingTabBarController.selectedIndex = 1; //show library view controller
+        [AppDelegate sharedAppDelegate].window.rootViewController = comicViewingTabBarController;
+    }
 }
 
 - (IBAction)previousAction:(id)sender {

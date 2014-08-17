@@ -46,7 +46,7 @@
     mAppDelegate = [AppDelegate sharedAppDelegate];
     comics = [NSArray new];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 44, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, self.tabBarController.tabBar.frame.size.height, 0)];
     //add comic preview controller
     previewAndDownloadController = [[ComicStorePreviewAndDownloadViewController alloc] initWithNibName:@"ComicStorePreviewAndDownloadViewController" bundle:[NSBundle mainBundle]];
     //force the preview controller to be loaded into memory
@@ -214,14 +214,9 @@
                 comic.localCoverFile = saveToPath;
                 NSIndexPath *indexToUpdate = [NSIndexPath indexPathForRow:[comics indexOfObject:comic] inSection:0];
                 [self.tableView reloadRowsAtIndexPaths:@[indexToUpdate] withRowAnimation:UITableViewRowAnimationAutomatic];
+                break;
             }
         }
-        /*
-        for (NSIndexPath *indexPath in [self.tableView indexPathsForVisibleRows]) {
-            
-        }
-        [self.tableView reloadRowsAtIndexPaths: withRowAnimation:UITableViewRowAnimationAutomatic];
-         */
     }
 }
 

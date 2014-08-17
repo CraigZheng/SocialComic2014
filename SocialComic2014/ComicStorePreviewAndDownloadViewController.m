@@ -105,13 +105,7 @@
     {
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:myComic forKey:@"SelectedComic"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldDownloadComicCommand" object:nil userInfo:userInfo];
-        /*
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.2];
-        stopDownloadButton.alpha = 1;
-        stopDownloadButton.hidden = NO;
-        [UIView commitAnimations];
-         */
+        
         [self dismissSelf];
         return;
     }
@@ -149,7 +143,7 @@
     ZIPDownloader *downloader = [userInfo objectForKey:@"ZIPDownloader"];
     if ([downloader.comic isEqual:myComic]) {
         [UIView setAnimationsEnabled:NO];
-        NSString *buttonTitle = [NSString stringWithFormat:@"%d%%...", (NSInteger)progress];
+        NSString *buttonTitle = [NSString stringWithFormat:@"%ld%%...", (long)(NSInteger)progress];
         [downloadButton setImage:nil forState:UIControlStateNormal];
         [downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
         [UIView setAnimationsEnabled:YES];

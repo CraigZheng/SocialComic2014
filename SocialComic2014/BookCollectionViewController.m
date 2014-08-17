@@ -185,22 +185,9 @@
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
     dispatch_async(dispatch_get_main_queue(), ^{
-//        ComicViewATPagingViewController *comicATPagingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_view_at_paging_view_controller"];
-//        ComicViewingViewController *comicViewingController = [[ComicViewingViewController alloc] initWithNibName:@"ComicViewingViewController" bundle:[NSBundle mainBundle]];
         comicViewingController.myComic = comic;
+        comicViewingController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:comicViewingController animated:YES];
-        
-//        UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"comic_viewing_navigation_controller"];
-//        [UIView transitionWithView:[AppDelegate sharedAppDelegate].window
-//                          duration:0.2
-//                           options:UIViewAnimationOptionCurveEaseInOut
-//                        animations:^{
-//                            [AppDelegate sharedAppDelegate].window.rootViewController = navigationController;
-//                            [navigationController pushViewController:comicViewingController animated:YES];
-//                            
-//                        }
-//                        completion:nil];
-
     });
 }
 
@@ -225,11 +212,8 @@
         UICollectionViewCell *visibleCell = [self.collectionView cellForItemAtIndexPath:indexPath];
         DACircularProgressView *circularProgressView = (DACircularProgressView*)[visibleCell viewWithTag:3];
         UIView *progressBackgroundView = circularProgressView;
-//        circularProgressView.hidden = YES;
-//        progressBackgroundView.hidden = YES;
 
         if ([visibleComic isEqual:downloadingComic]) {
-//            NSLog(@"downloading comic is same as %@, progress %f", [visibleComic description], progress);
             //update progress
             circularProgressView.trackTintColor = [UIColor clearColor];
             circularProgressView.progressTintColor = [UIColor blueColor];
