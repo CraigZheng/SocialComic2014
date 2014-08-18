@@ -121,7 +121,7 @@
     
 }
 
-- (void)gotoPage:(BOOL)animated
+- (void)alignCurrentPageWithAnimation:(BOOL)animated
 {
     NSInteger page = currentPage;
     
@@ -185,7 +185,7 @@
 - (IBAction)previousAction:(id)sender {
     if (currentPage > 0) {
         currentPage --;
-        [self gotoPage:YES];
+        [self alignCurrentPageWithAnimation:YES];
     }
     [self updateAutoDismissTimer];
 }
@@ -193,7 +193,7 @@
 - (IBAction)nextAction:(id)sender {
     if (currentPage < comicFiles.count) {
         currentPage ++;
-        [self gotoPage:YES];
+        [self alignCurrentPageWithAnimation:YES];
     }
     [self updateAutoDismissTimer];
 }
@@ -219,7 +219,7 @@
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self gotoPage:NO];
+    [self alignCurrentPageWithAnimation:NO];
     [self showToolbars:YES];
     for (UIViewController* controller in viewControllers) {
         if ((NSNull*)controller != [NSNull null])

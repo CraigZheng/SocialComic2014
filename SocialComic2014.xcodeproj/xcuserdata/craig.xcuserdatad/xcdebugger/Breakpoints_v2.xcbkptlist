@@ -10,29 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialComic2014/BookCollectionViewController.m"
-            timestampString = "425792021.917844"
+            timestampString = "430038236.598419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "-zipDownloadProgressUpdated:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SocialComic2014/ComicViewingViewController.m"
-            timestampString = "425791873.209196"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "@implementation ComicViewingViewController"
-            landmarkType = "3">
+            startingLineNumber = "251"
+            endingLineNumber = "251">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
