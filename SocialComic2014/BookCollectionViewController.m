@@ -192,6 +192,7 @@
         comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
         comicViewingController.myComic = comic;
         comicViewingController.hidesBottomBarWhenPushed = YES;
+        [AppDelegate sharedAppDelegate].comicPagingScrollViewController = comicViewingController;
         [self.navigationController pushViewController:comicViewingController animated:YES];
     });
 }

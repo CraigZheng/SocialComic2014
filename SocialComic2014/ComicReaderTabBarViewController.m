@@ -11,6 +11,7 @@
 #import "Toast+UIView.h"
 #import "ThinDownloadIndicatorViewController.h"
 #import "ZIPCentre.h"
+#import "ComicPagingScrollViewController.h"
 
 @interface ComicReaderTabBarViewController ()
 @property ThinDownloadIndicatorViewController *thinDownloadIndicatorViewController;
@@ -39,6 +40,7 @@
 #pragma mark - Rotation events
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [thinDownloadIndicatorViewController hide];
+    [[AppDelegate sharedAppDelegate].comicPagingScrollViewController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
@@ -60,6 +62,7 @@
             [self.view addSubview:thinDownloadIndicatorViewController.view];
         [thinDownloadIndicatorViewController show];
     }
+    [[AppDelegate sharedAppDelegate].comicPagingScrollViewController didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 
 -(NSUInteger)supportedInterfaceOrientations {
