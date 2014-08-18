@@ -51,7 +51,6 @@
     mAppDelegate = [AppDelegate sharedAppDelegate];
     unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
-    comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -190,6 +189,7 @@
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
     dispatch_async(dispatch_get_main_queue(), ^{
+        comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
         comicViewingController.myComic = comic;
         comicViewingController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:comicViewingController animated:YES];

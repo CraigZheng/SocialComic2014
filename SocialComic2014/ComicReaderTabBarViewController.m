@@ -62,7 +62,6 @@
     }
 }
 
-
 -(NSUInteger)supportedInterfaceOrientations {
     if ([AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation) {
         //return all interface orientation
