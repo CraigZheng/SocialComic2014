@@ -53,9 +53,14 @@
             [viewControllers addObject:[NSNull null]];
         }
     }
+    [self loadComicPages];
+}
+
+-(void)loadComicPages {
     scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.frame) * comicFiles.count, CGRectGetHeight(scrollView.frame));
-    [self loadScrollViewWithPage:0];
-    [self loadScrollViewWithPage:1];
+    for (int i = 0; i < viewControllers.count; i++) {
+        [self loadScrollViewWithPage:i];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -108,9 +113,9 @@
     NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     currentPage = page;
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-    [self loadScrollViewWithPage:page - 1];
-    [self loadScrollViewWithPage:page];
-    [self loadScrollViewWithPage:page + 1];
+//    [self loadScrollViewWithPage:page - 1];
+//    [self loadScrollViewWithPage:page];
+//    [self loadScrollViewWithPage:page + 1];
     
     for (ComicViewingViewController *viewingViewController in self.viewControllers) {
         if ((NSNull*)viewingViewController != [NSNull null])
@@ -126,9 +131,9 @@
     NSInteger page = currentPage;
     
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-    [self loadScrollViewWithPage:page - 1];
-    [self loadScrollViewWithPage:page];
-    [self loadScrollViewWithPage:page + 1];
+//    [self loadScrollViewWithPage:page - 1];
+//    [self loadScrollViewWithPage:page];
+//    [self loadScrollViewWithPage:page + 1];
     
 	// update the scroll view to the appropriate page
     CGRect bounds = self.scrollView.bounds;
@@ -219,6 +224,7 @@
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self loadComicPages];
     [self alignCurrentPageWithAnimation:NO];
     [self showToolbars:YES];
     for (UIViewController* controller in viewControllers) {
