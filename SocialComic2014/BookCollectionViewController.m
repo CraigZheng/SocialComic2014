@@ -11,8 +11,6 @@
 #import "Comic.h"
 #import "LocalComicSingleton.h"
 #import "Toast+UIView.h"
-#import "ComicViewingViewController.h"
-#import "ComicPagingScrollViewController.h"
 #import "DACircularProgress/DACircularProgressView.h"
 #import "Unzipper.h"
 //#import "ComicViewATPagingViewController.h"
@@ -30,7 +28,6 @@
 @property Comic *selectedComic;
 @property NSTimeInterval updateInterval;
 @property NSDate *lastUpdateTime;
-@property ComicPagingScrollViewController *comicViewingController;
 @property MWPhotoBrowser *browser;
 @property NSMutableArray *comicFiles;
 @property NSInteger currentPageIndex;
@@ -46,7 +43,6 @@
 @synthesize updateInterval;
 @synthesize lastUpdateTime;
 @synthesize currentProgressBackgroundView;
-@synthesize comicViewingController;
 @synthesize browser;
 @synthesize comicFiles;
 @synthesize currentPageIndex;
@@ -206,20 +202,23 @@
 
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
-    //read path to comic files
-    NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:comic.unzipToFolder error:nil];
-    comicFiles = [NSMutableArray new];
-    for (NSString *file in files) {
-        if ([file hasSuffix:@"png"]
-            || [file hasSuffix:@"jpg"]
-            || [file hasSuffix:@"jpeg"]
-            || [file hasSuffix:@"gif"]) {
-            //            [comicFiles addObject:[myComic.unzipToFolder stringByAppendingPathComponent:file]];
-            NSString *filePath = [comic.unzipToFolder stringByAppendingPathComponent:file];
-            [comicFiles addObject:[MWPhoto photoWithURL:[NSURL fileURLWithPath:filePath]]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //read path to comic files
+        NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:comic.unzipToFolder error:nil];
+        comicFiles = [NSMutableArray new];
+        for (NSString *file in files) {
+            if ([file hasSuffix:@"png"]
+                || [file hasSuffix:@"jpg"]
+                || [file hasSuffix:@"jpeg"]
+                || [file hasSuffix:@"gif"]) {
+                //            [comicFiles addObject:[myComic.unzipToFolder stringByAppendingPathComponent:file]];
+                NSString *filePath = [comic.unzipToFolder stringByAppendingPathComponent:file];
+                [comicFiles addObject:[MWPhoto photoWithURL:[NSURL fileURLWithPath:filePath]]];
+            }
         }
-    }
-    [self presentPhotoBrowser];
+        [self presentPhotoBrowser:comic];
+ 
+    });
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [[[AppDelegate sharedAppDelegate] window] makeToastActivity];
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -282,7 +281,7 @@
 }
 
 #pragma mark - MWPhotoBrowser
--(void)presentPhotoBrowser {
+-(void)presentPhotoBrowser:(Comic*)comic {
     browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
     //    browser.displayActionButton = NO; // Show action button to allow sharing, copying, etc (defaults to YES)
     browser.displayNavArrows = YES; // Whether to display left and right nav arrows on toolbar (defaults to NO)
@@ -294,6 +293,7 @@
     browser.wantsFullScreenLayout = YES; // iOS 5 & 6 only: Decide if you want the photo browser full screen, i.e. whether the status bar is affected (defaults to YES)
     browser.delayToHideElements = 2.0;
     browser.displayActionButton = NO;
+    browser.title = comic.name;
     
     [browser setCurrentPhotoIndex:0];
     [self.navigationController pushViewController:browser animated:YES];
