@@ -18,8 +18,9 @@
 //#import "ComicViewATPagingViewController.h"
 #import "ZIPDownloader.h"
 #import "ZIPCentre.h"
+#import "MWPhotoBrowser.h"
 
-@interface BookCollectionViewController ()<UnzipperDelegate, UIAlertViewDelegate>
+@interface BookCollectionViewController ()<UnzipperDelegate, UIAlertViewDelegate, MWPhotoBrowserDelegate>
 @property NSMutableArray *comics;
 @property AppDelegate *mAppDelegate;
 @property DACircularProgressView *currentProgressView;
@@ -30,6 +31,9 @@
 @property NSTimeInterval updateInterval;
 @property NSDate *lastUpdateTime;
 @property ComicPagingScrollViewController *comicViewingController;
+@property MWPhotoBrowser *browser;
+@property NSMutableArray *comicFiles;
+@property NSInteger currentPageIndex;
 @end
 
 @implementation BookCollectionViewController
@@ -43,6 +47,9 @@
 @synthesize lastUpdateTime;
 @synthesize currentProgressBackgroundView;
 @synthesize comicViewingController;
+@synthesize browser;
+@synthesize comicFiles;
+@synthesize currentPageIndex;
 
 - (void)viewDidLoad
 {
@@ -51,6 +58,8 @@
     mAppDelegate = [AppDelegate sharedAppDelegate];
     unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
+    [[[AppDelegate sharedAppDelegate] viewControllersAwaitingRotationEvents] addObject:self];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -147,6 +156,15 @@
     }
 }
 
+#pragma mark - rotation events
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    currentPageIndex = browser.currentIndex;
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [browser setCurrentPhotoIndex:currentPageIndex];
+}
+
 #pragma mark - UIAlertViewDelegate
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if ([alertView.title isEqualToString:@"Stop Downloading"] && buttonIndex != alertView.cancelButtonIndex) {
@@ -188,13 +206,34 @@
 
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
-        comicViewingController.myComic = comic;
-        comicViewingController.hidesBottomBarWhenPushed = YES;
-        [AppDelegate sharedAppDelegate].comicPagingScrollViewController = comicViewingController;
-        [self.navigationController pushViewController:comicViewingController animated:YES];
-    });
+    //read path to comic files
+    NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:comic.unzipToFolder error:nil];
+    comicFiles = [NSMutableArray new];
+    for (NSString *file in files) {
+        if ([file hasSuffix:@"png"]
+            || [file hasSuffix:@"jpg"]
+            || [file hasSuffix:@"jpeg"]
+            || [file hasSuffix:@"gif"]) {
+            //            [comicFiles addObject:[myComic.unzipToFolder stringByAppendingPathComponent:file]];
+            NSString *filePath = [comic.unzipToFolder stringByAppendingPathComponent:file];
+            [comicFiles addObject:[MWPhoto photoWithURL:[NSURL fileURLWithPath:filePath]]];
+        }
+    }
+    [self presentPhotoBrowser];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [[[AppDelegate sharedAppDelegate] window] makeToastActivity];
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//            comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
+//            comicViewingController.myComic = comic;
+//            comicViewingController.hidesBottomBarWhenPushed = YES;
+//            [AppDelegate sharedAppDelegate].comicPagingScrollViewController = comicViewingController;
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self.navigationController pushViewController:comicViewingController animated:YES];
+//                [[[AppDelegate sharedAppDelegate] window] hideToastActivity];
+//
+//            });
+//        });
+//    });
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded
@@ -242,5 +281,32 @@
     lastUpdateTime = [NSDate new];
 }
 
+#pragma mark - MWPhotoBrowser
+-(void)presentPhotoBrowser {
+    browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    //    browser.displayActionButton = NO; // Show action button to allow sharing, copying, etc (defaults to YES)
+    browser.displayNavArrows = YES; // Whether to display left and right nav arrows on toolbar (defaults to NO)
+    browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
+    browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
+    browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
+    browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
+    browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+    browser.wantsFullScreenLayout = YES; // iOS 5 & 6 only: Decide if you want the photo browser full screen, i.e. whether the status bar is affected (defaults to YES)
+    browser.delayToHideElements = 2.0;
+    browser.displayActionButton = NO;
+    
+    [browser setCurrentPhotoIndex:0];
+    [self.navigationController pushViewController:browser animated:YES];
+}
 
+#pragma mark - MWPhotoBrowserDelegate
+-(id<MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < self.comicFiles.count)
+        return [self.comicFiles objectAtIndex:index];
+    return nil;
+}
+
+-(NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return comicFiles.count;
+}
 @end

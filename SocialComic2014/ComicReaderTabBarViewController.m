@@ -39,17 +39,21 @@
 
 #pragma mark - Rotation events
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [thinDownloadIndicatorViewController hide];
-    [[AppDelegate sharedAppDelegate].comicPagingScrollViewController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+//    [thinDownloadIndicatorViewController hide];
+    for (id controller in [[AppDelegate sharedAppDelegate] viewControllersAwaitingRotationEvents]) {
+        if (controller && [controller isKindOfClass:[UIViewController class]]) {
+            [controller willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+        }
+    }
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
     CGRect indicatorFrame = thinDownloadIndicatorViewController.view.frame;
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat screenWidth = [[AppDelegate sharedAppDelegate] window].frame.size.width;
+    CGFloat screenHeight = [[AppDelegate sharedAppDelegate] window].frame.size.height;
     if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
-        screenWidth = [UIScreen mainScreen].bounds.size.height;
-        screenHeight = [UIScreen mainScreen].bounds.size.width;
+        screenWidth = [[AppDelegate sharedAppDelegate] window].frame.size.height;
+        screenHeight = [[AppDelegate sharedAppDelegate] window].frame.size.width;
     }
     indicatorFrame.origin.x = screenWidth - thinDownloadIndicatorViewController.view.frame.size.width - thinDownloadIndicatorViewController.view.frame.size.width / 2;
     indicatorFrame.origin.y = screenHeight - thinDownloadIndicatorViewController.view.frame.size.height - thinDownloadIndicatorViewController.view.frame.size.height * 1.5;
@@ -59,19 +63,29 @@
     thinDownloadIndicatorViewController.view.frame = indicatorFrame;
     if (thinDownloadIndicatorViewController.isSpinning) {
         if (!thinDownloadIndicatorViewController.view.superview)
-            [self.view addSubview:thinDownloadIndicatorViewController.view];
+            [[[AppDelegate sharedAppDelegate] window] addSubview:thinDownloadIndicatorViewController.view];
         [thinDownloadIndicatorViewController show];
     }
-    [[AppDelegate sharedAppDelegate].comicPagingScrollViewController didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    for (id controller in [[AppDelegate sharedAppDelegate] viewControllersAwaitingRotationEvents]) {
+        if (controller && [controller isKindOfClass:[UIViewController class]]) {
+            [controller didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+        }
+    }
+
 }
 
 -(NSUInteger)supportedInterfaceOrientations {
-    if ([AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation) {
-        //return all interface orientation
-        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
-    }
-    //return portrait only
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAll;
+//    if ([AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation) {
+//        //return all interface orientation
+//        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+//    }
+//    //return portrait only
+//    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(BOOL)shouldAutorotate {
+    return YES;
 }
 
 #pragma mark - notification handler
@@ -102,7 +116,7 @@
     }
     if (thinDownloadIndicatorViewController.view.hidden) {
         if (!thinDownloadIndicatorViewController.view.superview)
-            [self.view addSubview:thinDownloadIndicatorViewController.view];
+            [[[AppDelegate sharedAppDelegate] window] addSubview:thinDownloadIndicatorViewController.view];
         [thinDownloadIndicatorViewController show];
         [thinDownloadIndicatorViewController beginAnimation];
     }

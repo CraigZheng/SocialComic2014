@@ -16,7 +16,7 @@
 @property NSString *descriptionFileFolder;
 @property NSString *zipFileFolder;
 @property NSString *unzipFolder;
-@property ComicPagingScrollViewController *comicPagingScrollViewController;
+@property NSMutableSet *viewControllersAwaitingRotationEvents;
 @property BOOL shouldAllowMultipleInterfaceOrientation;
 
 +(AppDelegate*)sharedAppDelegate;

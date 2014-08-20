@@ -13,10 +13,12 @@
 @synthesize zipFileFolder;
 @synthesize descriptionFileFolder;
 @synthesize unzipFolder;
+@synthesize viewControllersAwaitingRotationEvents;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    viewControllersAwaitingRotationEvents = [NSMutableSet new];
     [self checkFolders];
     return YES;
 }
