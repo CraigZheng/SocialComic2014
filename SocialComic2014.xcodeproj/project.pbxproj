@@ -134,6 +134,8 @@
 		44BE2594193801D300601943 /* arrow icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BE2593193801D300601943 /* arrow icon.png */; };
 		44D2539F18F7C2EA00DB883A /* LocalComicSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */; };
 		44D253A218F7D56A00DB883A /* DownloadManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */; };
+		44E148F219B4814800108334 /* BookmarkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E148F119B4814800108334 /* BookmarkUtil.m */; };
+		44E148FB19B48DA600108334 /* BookmarkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E148FA19B48DA600108334 /* BookmarkTableViewController.m */; };
 		5A27E13B193B11F900D0094F /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5A27E13A193B11F900D0094F /* test.xml */; };
 /* End PBXBuildFile section */
 
@@ -383,6 +385,10 @@
 		44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalComicSingleton.m; sourceTree = "<group>"; };
 		44D253A018F7D56A00DB883A /* DownloadManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerTableViewController.h; sourceTree = "<group>"; };
 		44D253A118F7D56A00DB883A /* DownloadManagerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManagerTableViewController.m; sourceTree = "<group>"; };
+		44E148F019B4814800108334 /* BookmarkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkUtil.h; sourceTree = "<group>"; };
+		44E148F119B4814800108334 /* BookmarkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkUtil.m; sourceTree = "<group>"; };
+		44E148F919B48DA600108334 /* BookmarkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkTableViewController.h; sourceTree = "<group>"; };
+		44E148FA19B48DA600108334 /* BookmarkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkTableViewController.m; sourceTree = "<group>"; };
 		5A27E13A193B11F900D0094F /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -495,6 +501,8 @@
 				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
 				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
 				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
+				44E148F019B4814800108334 /* BookmarkUtil.h */,
+				44E148F119B4814800108334 /* BookmarkUtil.m */,
 			);
 			name = BookCollection;
 			sourceTree = "<group>";
@@ -748,11 +756,13 @@
 				448CC71518F2342D00FF49A6 /* Main_iPhone.storyboard */,
 				440CCA9D1907A19200C8CEF4 /* ComicReaderTabBarViewController.h */,
 				440CCA9E1907A19200C8CEF4 /* ComicReaderTabBarViewController.m */,
+				44E148FC19B48DAA00108334 /* BookmarkViewController */,
 				446EFE3A19A452DC00D75ABE /* MWPhotoBrowser */,
 				441BA3F51925DBE7001B963D /* ComicStore */,
 				441BA3F31925DBC8001B963D /* StorePreview */,
 				441BA3F21925DBBD001B963D /* BookCollection */,
 				441BA3F11925DBA7001B963D /* ComicViewing */,
+				44E148F819B481BA00108334 /* Comic */,
 				44134B6A19330BA900681176 /* Reachability */,
 				441BA3F01925DB05001B963D /* ATPagingView */,
 				44484C6819138304000FECB1 /* FPPopoverController */,
@@ -765,8 +775,6 @@
 				448CC75418F24B2700FF49A6 /* Image */,
 				448CC74E18F248BE00FF49A6 /* XML */,
 				440CCAD81907A49500C8CEF4 /* icons */,
-				448CC74B18F23C0E00FF49A6 /* Comic.h */,
-				448CC74C18F23C0E00FF49A6 /* Comic.m */,
 				448CC72118F2342D00FF49A6 /* Images.xcassets */,
 				448CC70A18F2342D00FF49A6 /* Supporting Files */,
 				448CC75B18F24FA500FF49A6 /* Constants.h */,
@@ -891,6 +899,24 @@
 				448CC77918F2927A00FF49A6 /* Toast+UIView.m */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		44E148F819B481BA00108334 /* Comic */ = {
+			isa = PBXGroup;
+			children = (
+				448CC74B18F23C0E00FF49A6 /* Comic.h */,
+				448CC74C18F23C0E00FF49A6 /* Comic.m */,
+			);
+			name = Comic;
+			sourceTree = "<group>";
+		};
+		44E148FC19B48DAA00108334 /* BookmarkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44E148F919B48DA600108334 /* BookmarkTableViewController.h */,
+				44E148FA19B48DA600108334 /* BookmarkTableViewController.m */,
+			);
+			name = BookmarkViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1078,6 +1104,7 @@
 				448CC76E18F2887200FF49A6 /* ZIPCentre.m in Sources */,
 				446EFE2D19A452D400D75ABE /* SDImageCache.m in Sources */,
 				446EFE3019A452D400D75ABE /* SDWebImageDownloader.m in Sources */,
+				44E148F219B4814800108334 /* BookmarkUtil.m in Sources */,
 				446EFE1E19A452D400D75ABE /* PSTCollectionViewController.m in Sources */,
 				446EFE3619A452D400D75ABE /* UIImage+MultiFormat.m in Sources */,
 				446EFE2019A452D400D75ABE /* PSTCollectionViewFlowLayout.m in Sources */,
@@ -1110,6 +1137,7 @@
 				446EFE2619A452D400D75ABE /* PSTGridLayoutRow.m in Sources */,
 				448CC76A18F2885A00FF49A6 /* TXTCentre.m in Sources */,
 				448CC75A18F24C5B00FF49A6 /* ImageDownloader.m in Sources */,
+				44E148FB19B48DA600108334 /* BookmarkTableViewController.m in Sources */,
 				446EFE2319A452D400D75ABE /* PSTCollectionViewUpdateItem.m in Sources */,
 				4412FA11193461DC00681438 /* ComicPagingScrollViewController.m in Sources */,
 				448CC74318F237E500FF49A6 /* XMLDownloader.m in Sources */,

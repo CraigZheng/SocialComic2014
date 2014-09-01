@@ -195,6 +195,9 @@
         }
         if (selectedComic) {
             selectedComic.unzipToFolder = [mAppDelegate.unzipFolder stringByAppendingPathComponent:selectedComic.localZipFile.lastPathComponent.stringByDeletingPathExtension];
+            NSError *error;
+            NSArray *unzipedFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:selectedComic.unzipToFolder error:&error];
+            selectedComic.localCoverFile = [selectedComic.unzipToFolder stringByAppendingPathComponent:unzipedFiles.firstObject];
             [self presentComicViewingControllerWithComic:selectedComic];
         }
     }
@@ -219,20 +222,6 @@
         [self presentPhotoBrowser:comic];
  
     });
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [[[AppDelegate sharedAppDelegate] window] makeToastActivity];
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//            comicViewingController = [[ComicPagingScrollViewController alloc] initWithNibName:@"ComicPagingScrollViewController" bundle:[NSBundle mainBundle]];
-//            comicViewingController.myComic = comic;
-//            comicViewingController.hidesBottomBarWhenPushed = YES;
-//            [AppDelegate sharedAppDelegate].comicPagingScrollViewController = comicViewingController;
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self.navigationController pushViewController:comicViewingController animated:YES];
-//                [[[AppDelegate sharedAppDelegate] window] hideToastActivity];
-//
-//            });
-//        });
-//    });
 }
 
 #pragma mark - NSNotification handler - comic zip file downloaded
