@@ -501,8 +501,6 @@
 				448CC78218F6657100FF49A6 /* BookCollectionViewController.m */,
 				44D2539D18F7C2EA00DB883A /* LocalComicSingleton.h */,
 				44D2539E18F7C2EA00DB883A /* LocalComicSingleton.m */,
-				44E148F019B4814800108334 /* BookmarkUtil.h */,
-				44E148F119B4814800108334 /* BookmarkUtil.m */,
 			);
 			name = BookCollection;
 			sourceTree = "<group>";
@@ -913,6 +911,8 @@
 		44E148FC19B48DAA00108334 /* BookmarkViewController */ = {
 			isa = PBXGroup;
 			children = (
+				44E148F019B4814800108334 /* BookmarkUtil.h */,
+				44E148F119B4814800108334 /* BookmarkUtil.m */,
 				44E148F919B48DA600108334 /* BookmarkTableViewController.h */,
 				44E148FA19B48DA600108334 /* BookmarkTableViewController.m */,
 			);
