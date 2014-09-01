@@ -45,7 +45,9 @@
 }
 
 -(void)show {
-    self.view.hidden = NO;
+#warning this view is no longer in use, therefore should never be seen
+    self.view.hidden = YES;
+//    self.view.hidden = NO;
 }
 
 -(void)hide {

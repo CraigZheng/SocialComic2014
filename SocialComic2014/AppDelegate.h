@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class ComicPagingScrollViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -15,6 +16,7 @@
 @property NSString *descriptionFileFolder;
 @property NSString *zipFileFolder;
 @property NSString *unzipFolder;
+@property NSMutableSet *viewControllersAwaitingRotationEvents;
 @property BOOL shouldAllowMultipleInterfaceOrientation;
 
 +(AppDelegate*)sharedAppDelegate;

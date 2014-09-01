@@ -63,6 +63,7 @@
     [super viewWillDisappear:animated];
 }
 
+#pragma mark - rotation events
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
         //[self performSelector:@selector(setupImageViewForLandscape) withObject:nil afterDelay:0.5];
@@ -96,7 +97,7 @@
     scrollView.maximumZoomScale = 1;
     scrollView.minimumZoomScale = self.view.frame.size.height / imageView.image.size.width;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
-    [self logViewFrames];
+//    [self logViewFrames];
 //    NSLog(@"minimumscale %f / current scale %f", scrollView.minimumZoomScale, scrollView.zoomScale);
 }
 
@@ -110,7 +111,7 @@
     scrollView.maximumZoomScale = 1;
     scrollView.minimumZoomScale = self.view.frame.size.width / imageView.image.size.width;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
-    [self logViewFrames];
+//    [self logViewFrames];
 //    NSLog(@"minimumscale %f / current scale %f", scrollView.minimumZoomScale, scrollView.zoomScale);
 }
 

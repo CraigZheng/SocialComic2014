@@ -65,6 +65,8 @@
     [super viewDidAppear:animated];
     if (comics.count == 0)
         [self startDownloadingComicList];
+    else
+        [self.tableView reloadData];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldDownloadComic:) name:@"ShouldDownloadComicCommand" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageDownloaded:) name:@"ImageDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(txtDownloaded:) name:@"TXTDownloaded" object:nil];
@@ -213,7 +215,8 @@
             if ([comic.coverFileURL isEqualToString:[userInfo objectForKey:@"ImageURL"]]) {
                 comic.localCoverFile = saveToPath;
                 NSIndexPath *indexToUpdate = [NSIndexPath indexPathForRow:[comics indexOfObject:comic] inSection:0];
-                [self.tableView reloadRowsAtIndexPaths:@[indexToUpdate] withRowAnimation:UITableViewRowAnimationAutomatic];
+                if (self.tabBarController.selectedViewController == self)
+                    [self.tableView reloadRowsAtIndexPaths:@[indexToUpdate] withRowAnimation:UITableViewRowAnimationAutomatic];
                 break;
             }
         }
