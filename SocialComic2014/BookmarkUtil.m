@@ -105,17 +105,21 @@
     [NSKeyedArchiver archiveRootObject:orderedKey toFile:keyPath];
 }
 
+-(void)restoreBookmarks {
+    bookmarks = [NSMutableDictionary new];
+    if ([self recoverBookmark]) {
+        bookmarks = [self recoverBookmark];
+    }
+    orderedKey = [NSMutableArray new];
+    if ([self recoverOrderedKey])
+        orderedKey = [self recoverOrderedKey];
+}
+
 -(id)init {
     self = [super init];
     if (self) {
         //recover recorded bookmark
-        bookmarks = [NSMutableDictionary new];
-        if ([self recoverBookmark]) {
-            bookmarks = [self recoverBookmark];
-        }
-        orderedKey = [NSMutableArray new];
-        if ([self recoverOrderedKey])
-            orderedKey = [self recoverOrderedKey];
+        [self restoreBookmarks];
     }
     return self;
 }

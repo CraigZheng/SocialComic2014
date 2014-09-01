@@ -17,6 +17,8 @@
 #import "ZIPDownloader.h"
 #import "ZIPCentre.h"
 #import "MWPhotoBrowser.h"
+#import "BookmarkUtil.h"
+
 
 @interface BookCollectionViewController ()<UnzipperDelegate, UIAlertViewDelegate, MWPhotoBrowserDelegate>
 @property NSMutableArray *comics;
@@ -55,7 +57,6 @@
     unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
     [[[AppDelegate sharedAppDelegate] viewControllersAwaitingRotationEvents] addObject:self];
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -297,5 +298,11 @@
 
 -(NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
     return comicFiles.count;
+}
+
+-(void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
+    BookmarkUtil *util = [BookmarkUtil getInstance];
+    [util bookmarkPage:index forComic:selectedComic];
+
 }
 @end

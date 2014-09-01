@@ -16,6 +16,7 @@
 -(void)bookmarkPage:(NSInteger)page forComic:(Comic*)comic;
 -(NSInteger)bookmarkForComic:(Comic*)comic;
 -(void)removeBookmarkForComic:(Comic*)comic;
+-(void)restoreBookmarks;
 
 +(id)getInstance;
 @end

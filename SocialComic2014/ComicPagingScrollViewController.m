@@ -86,20 +86,11 @@
     if (!UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
         windowWidth = [[[AppDelegate sharedAppDelegate] window] frame].size.height;
     }
-//    scrollView.contentSize = CGSizeMake(CGRectGetWidth(scrollView.frame) * comicFiles.count, CGRectGetHeight(scrollView.frame));
     scrollView.contentSize = CGSizeMake(windowWidth * comicFiles.count, CGRectGetHeight(scrollView.frame));
     for (int i = 0; i < viewControllers.count; i++) {
         [self loadScrollViewWithPage:i];
     }
 }
-
-//-(void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//    [self showToolbars: YES];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nextAction:) name:NEXT_PAGE_COMMAND object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(previousAction:) name:PREVIOUS_PAGE_COMMAND object:nil];
-//    [AppDelegate sharedAppDelegate].shouldAllowMultipleInterfaceOrientation = YES;
-//}
 
 -(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];

@@ -25,11 +25,20 @@
     [super viewDidLoad];
     bookmarks = [NSMutableArray new];
     bookmarkUtil = [BookmarkUtil getInstance];
-    if ([bookmarkUtil bookmarkedComics]) {
-        [bookmarks addObjectsFromArray:[bookmarkUtil bookmarkedComics]];
-    }
     [self.tableView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
 
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [bookmarks removeAllObjects];
+    [bookmarkUtil restoreBookmarks];
+    NSArray *bookmarkedComics = [bookmarkUtil bookmarkedComics];
+    if (bookmarkedComics.count > 0) {
+        [bookmarks addObjectsFromArray:bookmarkedComics];
+    }
+    bookmarks = [NSMutableArray arrayWithArray:[bookmarks reverseObjectEnumerator].allObjects];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -49,9 +58,10 @@
         UIImageView *coverImageView = (UIImageView*) [cell viewWithTag:1];
         UILabel *titleLabel = (UILabel*) [cell viewWithTag:2];
         UILabel *descriptionLabel = (UILabel*) [cell viewWithTag:3];
-        coverImageView.image = comic.cover;
+        UIImage *image = comic.cover;
+        coverImageView.image = image;
         titleLabel.text = comic.name;
-        descriptionLabel.text = [NSString stringWithFormat:@"Bookmark at page %ld", (long) [bookmarkUtil bookmarkForComic:comic]];
+        descriptionLabel.text = [NSString stringWithFormat:@"Bookmark at page %ld", (long) ([bookmarkUtil bookmarkForComic:comic ] + 1)];
     }
     return cell;
 }

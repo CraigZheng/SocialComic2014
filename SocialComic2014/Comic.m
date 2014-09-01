@@ -30,7 +30,13 @@
 -(UIImage*)cover {
     if (self.localCoverFile) {
         UIImage *image = [UIImage imageWithContentsOfFile:self.localCoverFile];
-        return image;
+        if (image)
+            return image;
+    }
+    if (self.unzipToFolder) {
+        NSString *imageFile = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.unzipToFolder error:nil] firstObject];
+        imageFile = [self.unzipToFolder stringByAppendingPathComponent:imageFile];
+        return [UIImage imageWithContentsOfFile:imageFile];
     }
     return nil;
 }
