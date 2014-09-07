@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Comic.h"
 @interface BookCollectionViewController : UICollectionViewController
 
+-(void)openBookmarkComic:(Comic*)comic toPage:(NSInteger)page;
 @end

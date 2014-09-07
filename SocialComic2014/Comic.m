@@ -14,7 +14,10 @@
     if (self.localZipFile || self.zipFileURL)
     {
         NSString *fileURL = self.localZipFile ? self.localZipFile : self.zipFileURL;
-        return [[[fileURL.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension];
+        NSString *name = [[[fileURL.lastPathComponent componentsSeparatedByString:@"_"] lastObject] stringByDeletingPathExtension];
+        if (name.length > 0)
+            name = [self capitalString:name];
+        return name;
     }
     return @"Name Not Available";
 }
@@ -39,6 +42,14 @@
         return [UIImage imageWithContentsOfFile:imageFile];
     }
     return nil;
+}
+
+//capitalise the string
+-(NSString*)capitalString:(NSString*)str {
+    if (str.length > 0) {
+        return [str stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[str substringToIndex:1] capitalizedString]];
+    }
+    return str;
 }
 
 -(BOOL)isEqual:(id)object {

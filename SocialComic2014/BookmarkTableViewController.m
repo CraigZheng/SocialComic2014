@@ -9,6 +9,7 @@
 #import "BookmarkTableViewController.h"
 #import "Comic.h"
 #import "BookmarkUtil.h"
+#import "AppDelegate.h"
 #import "LocalComicSingleton.h"
 
 @interface BookmarkTableViewController ()
@@ -65,5 +66,12 @@
     }
     return cell;
 }
- 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Comic *comic = [bookmarks objectAtIndex:indexPath.row];
+    NSNumber *page = [NSNumber numberWithInteger:[bookmarkUtil bookmarkForComic:comic]];
+    NSDictionary *userInfo = @{SELECTED_COMIC_KEY: comic, SELECTED_PAGE_KEY: page};
+    [[NSNotificationCenter defaultCenter] postNotificationName:COMIC_SELECTED_NOTIFICATION object:nil userInfo:userInfo];
+}
+
 @end

@@ -8,7 +8,6 @@
 
 #import "BookCollectionViewController.h"
 #import "AppDelegate.h"
-#import "Comic.h"
 #import "LocalComicSingleton.h"
 #import "Toast+UIView.h"
 #import "DACircularProgress/DACircularProgressView.h"
@@ -57,6 +56,7 @@
     unzipper = [[Unzipper alloc] initWithDelegate:self];
     [self.collectionView setContentInset:UIEdgeInsetsMake(20, 0, self.tabBarController.tabBar.frame.size.height, 0)];
     [[[AppDelegate sharedAppDelegate] viewControllersAwaitingRotationEvents] addObject:self];
+    [[AppDelegate sharedAppDelegate] setBookcollectionViewController:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -148,7 +148,7 @@
             [self unzip:selectedComic];
         });
     } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Stop Downloading" message:[NSString stringWithFormat:@"Would you like to stop the download for %@?", selectedComic.name] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Comic Downloading" message:[NSString stringWithFormat:@"Would you like to stop the download for %@?", selectedComic.name] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
         [alertView show];
     }
 }
@@ -164,7 +164,7 @@
 
 #pragma mark - UIAlertViewDelegate
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([alertView.title isEqualToString:@"Stop Downloading"] && buttonIndex != alertView.cancelButtonIndex) {
+    if ([alertView.title isEqualToString:@"Comic Downloading"] && buttonIndex != alertView.cancelButtonIndex) {
         [[ZIPCentre getInstance] stopDownloadingComic:selectedComic];
         [self scanForComicFiles];
         [[[UIAlertView alloc] initWithTitle:@"Download Stopped" message:[NSString stringWithFormat:@"The download for %@ has been stopped!", selectedComic.name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
@@ -206,6 +206,10 @@
 
 #pragma mark - present comic viewing controller with given comic
 -(void)presentComicViewingControllerWithComic:(Comic*)comic {
+    [self presentComicViewingControllerWithComic:comic toPage:0];
+}
+
+-(void)presentComicViewingControllerWithComic:(Comic*)comic toPage:(NSInteger)page {
     dispatch_async(dispatch_get_main_queue(), ^{
         //read path to comic files
         NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:comic.unzipToFolder error:nil];
@@ -220,8 +224,8 @@
                 [comicFiles addObject:[MWPhoto photoWithURL:[NSURL fileURLWithPath:filePath]]];
             }
         }
-        [self presentPhotoBrowser:comic];
- 
+        [self presentPhotoBrowser:comic toPage:page];
+        
     });
 }
 
@@ -270,8 +274,24 @@
     lastUpdateTime = [NSDate new];
 }
 
+#pragma mark - Notification handler, open selected comic 
+-(void)openBookmarkComic:(Comic*)comic toPage:(NSInteger)page {
+    if (comic.unzipToFolder) {
+        [self presentComicViewingControllerWithComic:comic toPage:page];
+    } else if (comic.localZipFile) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            [self unzip:comic];
+        });
+    }
+}
+
 #pragma mark - MWPhotoBrowser
+
 -(void)presentPhotoBrowser:(Comic*)comic {
+    [self presentPhotoBrowser:comic toPage:0];
+}
+
+-(void)presentPhotoBrowser:(Comic*)comic toPage:(NSInteger)page {
     browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
     //    browser.displayActionButton = NO; // Show action button to allow sharing, copying, etc (defaults to YES)
     browser.displayNavArrows = YES; // Whether to display left and right nav arrows on toolbar (defaults to NO)
@@ -285,8 +305,9 @@
     browser.displayActionButton = NO;
     browser.title = comic.name;
     
-    [browser setCurrentPhotoIndex:0];
+    [browser setCurrentPhotoIndex:page];
     [self.navigationController pushViewController:browser animated:YES];
+
 }
 
 #pragma mark - MWPhotoBrowserDelegate

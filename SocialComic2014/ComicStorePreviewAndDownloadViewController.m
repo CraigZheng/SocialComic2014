@@ -96,9 +96,10 @@
 
 - (IBAction)downloadAction:(id)sender {
     if (comicReady) {
+        NSNumber *page = [NSNumber numberWithInteger:0];
+        NSDictionary *userInfo = @{SELECTED_COMIC_KEY: myComic, SELECTED_PAGE_KEY: page};
+        [[NSNotificationCenter defaultCenter] postNotificationName:COMIC_SELECTED_NOTIFICATION object:nil userInfo:userInfo];
         [self dismissSelf];
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:@[[NSNumber numberWithInteger:1]] forKeys:@[@"ShouldOpenTab",]];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ShouldOpenTabCommand" object:self userInfo:userInfo];
         return;
     }
     if (myComic && myComic.zipFileURL && !comicReady)
@@ -109,7 +110,6 @@
         [self dismissSelf];
         return;
     }
-    //[self performSelector:@selector(resetViews) withObject:nil afterDelay:1];
 }
 
 - (IBAction)stopDownloadAction:(id)sender {

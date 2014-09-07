@@ -12,6 +12,7 @@
 #import "ThinDownloadIndicatorViewController.h"
 #import "ZIPCentre.h"
 #import "ComicPagingScrollViewController.h"
+#import "BookCollectionViewController.h"
 
 @interface ComicReaderTabBarViewController ()
 @property ThinDownloadIndicatorViewController *thinDownloadIndicatorViewController;
@@ -27,6 +28,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldOpenTab:) name:@"ShouldOpenTabCommand" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloaded:) name:@"ZIPDownloaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(zipDownloadStarted:) name:@"ZipDownloadStarted" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openComicNotificationReceived:) name:COMIC_SELECTED_NOTIFICATION object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -128,6 +130,16 @@
     NSString *message = [notification.userInfo objectForKey:@"Message"];
     if (message) {
         [[[AppDelegate sharedAppDelegate] window] makeToast:message duration:1.0 position:@"bottom"];
+    }
+}
+
+#pragma mark - open comic notification 
+-(void)openComicNotificationReceived:(NSNotification*)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    self.selectedIndex = 1; //open book collection tab
+
+    if ([[AppDelegate sharedAppDelegate] bookcollectionViewController]) {
+        [(BookCollectionViewController*)[[AppDelegate sharedAppDelegate] bookcollectionViewController] openBookmarkComic:[userInfo objectForKey:SELECTED_COMIC_KEY] toPage:[[userInfo objectForKey:SELECTED_PAGE_KEY] integerValue]];
     }
 }
 

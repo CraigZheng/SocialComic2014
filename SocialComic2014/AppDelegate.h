@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Craig. All rights reserved.
 //
 
+#define COMIC_SELECTED_NOTIFICATION @"COMIC_SELECTED_NOTIFICATION"
+#define SELECTED_COMIC_KEY @"SELECTED_COMIC_KEY"
+#define SELECTED_PAGE_KEY @"SELECTED_PAGE_KEY"
+
 #import <UIKit/UIKit.h>
 
 @class ComicPagingScrollViewController;
@@ -18,6 +22,7 @@
 @property NSString *unzipFolder;
 @property NSMutableSet *viewControllersAwaitingRotationEvents;
 @property BOOL shouldAllowMultipleInterfaceOrientation;
+@property UIViewController *bookcollectionViewController;
 
 +(AppDelegate*)sharedAppDelegate;
 +(void)fadeInView:(UIView*)view;

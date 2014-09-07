@@ -61,7 +61,34 @@
     [self checkOrCreateFolder:zipFileFolder];
     [self checkOrCreateFolder:descriptionFileFolder];
     [self checkOrCreateFolder:unzipFolder];
+    [self addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:coverImageFolder]];
+    [self addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:zipFileFolder]];
+    [self addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:descriptionFileFolder]];
+    [self addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:unzipFolder]];
 }
+
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
+{
+    
+    assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+    NSError *error = nil;
+    
+    id flag = nil;
+    [URL getResourceValue: &flag
+                   forKey: NSURLIsExcludedFromBackupKey error: &error];
+    NSLog (@"NSURLIsExcludedFromBackupKey flag value is %@", flag);
+    if (flag > 0)
+        return YES;
+    
+    BOOL success = [URL setResourceValue:[NSNumber numberWithBool: YES]
+                                  forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+    }
+    
+    return success;
+}
+
 
 -(BOOL)checkOrCreateFolder:(NSString*)folder {
     NSError *error;

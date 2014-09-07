@@ -33,6 +33,15 @@ static LocalComicSingleton *_instance;
                 [comics addObject:newComic];
         }
     }
+    
+    @try {
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+        comics = [NSMutableArray arrayWithArray:[comics sortedArrayUsingDescriptors:@[sort]]];
+    }
+    @catch (NSException *exception) {
+        
+    }
+
     self.localComics = comics;
 }
 
