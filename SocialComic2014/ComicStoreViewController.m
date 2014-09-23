@@ -51,7 +51,14 @@
     previewAndDownloadController = [[ComicStorePreviewAndDownloadViewController alloc] initWithNibName:@"ComicStorePreviewAndDownloadViewController" bundle:[NSBundle mainBundle]];
     //force the preview controller to be loaded into memory
     previewAndDownloadController.view.alpha = 0;
+    //center the preview controller
+    /*
+    CGPoint center = CGPointMake((self.view.frame.size.width - previewAndDownloadController.view.frame.size.width) / 2, (self.view.frame.size.height - previewAndDownloadController.view.frame.size.height) / 2);
+    CGRect frame = previewAndDownloadController.view.frame;
+    frame.origin = center;
+    previewAndDownloadController.view.frame = frame;
     [self.view addSubview:previewAndDownloadController.view];
+     */
     [previewAndDownloadController.view removeFromSuperview];
     //add header view
     UIImage *bannerImage = [UIImage imageNamed:@"bannerImage"];
@@ -145,7 +152,7 @@
             descriptionTextView.text = comic.description;
         }
     }
-    
+    cell.contentView.backgroundColor = [UIColor blackColor];
     return cell;
 }
 

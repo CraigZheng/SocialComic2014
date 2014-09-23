@@ -64,6 +64,7 @@
         titleLabel.text = comic.name;
         descriptionLabel.text = [NSString stringWithFormat:@"Bookmark at page %ld", (long) ([bookmarkUtil bookmarkForComic:comic ] + 1)];
     }
+    cell.contentView.backgroundColor = [UIColor blackColor];
     return cell;
 }
 
